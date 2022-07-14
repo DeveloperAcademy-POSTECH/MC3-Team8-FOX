@@ -20,7 +20,7 @@ Insert gif or link to demo
 ## :sparkles: Skills & Tech Stack
 UIKit, CoreData, URLSession, Codable, Combine
 
-## : sparkles: Skills & Design Stack
+## :sparkles: Skills & Design Stack
 Figma
 
 ## ✔️ History
