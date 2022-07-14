@@ -7,6 +7,9 @@ Apple developer Academy Team 'Fox' 프로젝트 레포입니다.
 
 ## :people_hugging: Authors
 
+|<img src="https://github.com/JUNY0110.png">|<img src="https://github.com/sunchoi22.png">|<img src="https://github.com/yungahui.png">|<img src="https://github.com/YeeunKim-archive.png">|<img src="https://github.com/yeahaluu">|
+|:-:|:-:|:-:|:-:|:-:|
+|[Eddy](https://www.github.com/JUNY0110)|[Livvy](https://github.com/sunchoi22)|[Aesop](https://github.com/yungahui)|[Keily](https://github.com/YeeunKim-archive)|[Sherry](https://github.com/yeahaluu)|
 
 ## :framed_picture: Demo
 
