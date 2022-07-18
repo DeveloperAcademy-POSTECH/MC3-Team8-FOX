@@ -2,8 +2,8 @@
 name: "[Feat] 템플릿"
 about: '기능 추가 이슈템플릿입니다. '
 title: "[Feat] 제목"
-labels: documentation, enhancement, @Keily
-assignees: YeeunKim-archive
+labels: enhancement
+assignees: 
 
 ---
 
