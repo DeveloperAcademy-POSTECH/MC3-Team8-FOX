@@ -9,6 +9,9 @@ import UIKit
 
 class RecentRequestViewController: UIViewController {
 
+    @IBOutlet weak var receiveRequestList: UITableView!
+    @IBOutlet weak var writeRequestList: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
