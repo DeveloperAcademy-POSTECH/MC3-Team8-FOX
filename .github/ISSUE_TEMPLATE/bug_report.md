@@ -2,8 +2,8 @@
 name: "[Bug] 템플릿"
 about: '버그 이슈 관련 템플릿입니다. '
 title: "[Bug] 제목"
-labels: documentation, enhancement, @Keily
-assignees: YeeunKim-archive
+labels: bug
+assignees: 
 
 ---
 
