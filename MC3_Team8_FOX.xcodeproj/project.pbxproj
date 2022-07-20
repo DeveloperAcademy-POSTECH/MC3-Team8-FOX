@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15B46AED288781DD00AA00F9 /* MeetScheduleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */; };
+		15B46AEF288781FC00AA00F9 /* MeetScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */; };
 		9889796228800B1100840198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889796128800B1100840198 /* AppDelegate.swift */; };
 		9889796428800B1100840198 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889796328800B1100840198 /* SceneDelegate.swift */; };
 		9889796628800B1100840198 /* AcceptRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889796528800B1100840198 /* AcceptRequestViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeetScheduleView.storyboard; sourceTree = "<group>"; };
+		15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetScheduleViewController.swift; sourceTree = "<group>"; };
 		9889795E28800B1100840198 /* MC3_Team8_FOX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3_Team8_FOX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9889796128800B1100840198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9889796328800B1100840198 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				9889796F28800B1200840198 /* LaunchScreen.storyboard */,
+				15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */,
 				9889798028800C2D00840198 /* AcceptRequest.storyboard */,
 				9889797E28800C2D00840198 /* CompleteRequest.storyboard */,
 				9889798128800C2D00840198 /* Connecting.storyboard */,
@@ -138,6 +143,7 @@
 				9889798D28800D2E00840198 /* ConnectingViewController.swift */,
 				9889799128800D4900840198 /* RejectReasonViewController.swift */,
 				9889799328800D5500840198 /* WriteRequestViewController.swift */,
+				15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9889798628800C2D00840198 /* AcceptRequest.storyboard in Resources */,
+				15B46AED288781DD00AA00F9 /* MeetScheduleView.storyboard in Resources */,
 				9889797128800B1200840198 /* LaunchScreen.storyboard in Resources */,
 				9889798728800C2D00840198 /* Connecting.storyboard in Resources */,
 				9889798228800C2D00840198 /* RecentRequest.storyboard in Resources */,
@@ -240,6 +247,7 @@
 				9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */,
 				9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */,
 				9889799028800D3900840198 /* RecentRequestViewController.swift in Sources */,
+				15B46AEF288781FC00AA00F9 /* MeetScheduleViewController.swift in Sources */,
 				9889796428800B1100840198 /* SceneDelegate.swift in Sources */,
 				9889796C28800B1100840198 /* MC3_Team8_FOX.xcdatamodeld in Sources */,
 				9889799928800E2000840198 /* UIButtonComponent.swift in Sources */,
