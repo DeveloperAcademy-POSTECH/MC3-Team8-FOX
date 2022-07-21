@@ -4,7 +4,6 @@
         "userID": 1,
         "partnerID": 2,
         "randomCode": "connected",
-        "checkRequest": true
       },
       "appointmentID": 1,
       "title": "할머니 생신",
@@ -14,8 +13,7 @@
       "activity": "밥 먹기, 바다 산책",
       "pickUpLocation": "효자교회",
       "approval": "approved",
-      "display": true,
-      "naverRead": true,
+      "isUnreading": false,
       "rejectReason": ""
     },
     {
@@ -23,7 +21,6 @@
         "userID": 1,
         "partnerID": 2,
         "randomCode": "connected",
-        "checkRequest": true
       },
       "appointmentID": 2,
       "title": "생일파티",
@@ -33,8 +30,7 @@
       "activity": "치킨 먹는 날",
       "pickUpLocation": "효자교회",
       "approval": "approved",
-      "display": true,
-      "naverRead": true,
+      "isUnreading": false,
       "rejectReason": ""
     },
     {
@@ -42,7 +38,6 @@
         "userID": 1,
         "partnerID": 2,
         "randomCode": "connected",
-        "checkRequest": true
       },
       "appointmentID": 3,
       "title": "뽁스 생일",
@@ -52,8 +47,7 @@
       "activity": "밥 먹기, 바다 산책",
       "pickUpLocation": "효자교회",
       "approval": "approved",
-      "display": true,
-      "naverRead": true,
+      "isUnreading": false,
       "rejectReason": ""
     },
     {
@@ -61,7 +55,6 @@
         "userID": 1,
         "partnerID": 2,
         "randomCode": "connected",
-        "checkRequest": true
       },
       "appointmentID": 4,
       "title": "정기만남",
@@ -71,8 +64,24 @@
       "activity": "놀이공원",
       "pickUpLocation": "효자교회",
       "approval": "approved",
-      "display": true,
-      "naverRead": true,
+      "isUnreading": false,
+      "rejectReason": ""
+    },
+    {
+      "userID": {
+        "userID": 1,
+        "partnerID": 2,
+        "randomCode": "connected",
+      },
+      "appointmentID": 5,
+      "title": "나는 만남일정에 나올 수 없다",
+      "destination": "어디로 갈까",
+      "startTime": "2022-08-13T13:00:00.000Z",
+      "endTime": "2022-08-14T00:00:00.000Z",
+      "activity": "포항 송도 해수욕장",
+      "pickUpLocation": "C5 투썸",
+      "approval": "approved",
+      "isUnreading": true,
       "rejectReason": ""
     }
 ]
