@@ -17,11 +17,13 @@ Insert gif or link to demo
 
 ![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
 
-## :sparkles: Skills & Tech Stack
+## :sparkles: Skills
+### Tech Stack
 UIKit, CoreData, URLSession, Codable, Combine
 
-## :sparkles: Skills & Design Stack
+### Design Stack
 Figma
+
 
 ## ✔️ History
 2022.07.14. GIT REPO CREATED
