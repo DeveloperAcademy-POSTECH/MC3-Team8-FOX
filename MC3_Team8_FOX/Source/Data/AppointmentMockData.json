@@ -1,11 +1,3 @@
-/* 
-  AppointmentMockData.json
-  MC3_Team8_FOX
-
-  Created by yeekim on 2022/07/19.
-  
-*/
-
 [
     {
       "userID": {
@@ -17,7 +9,7 @@
       "appointmentID": 1,
       "title": "할머니 생신",
       "destination": "영일대",
-      "startTime": "2022-07-10T00:00:00.000Z",
+      "startTime": "2022-07-10T11:00:00.000Z",
       "endTime": "2022-07-10T00:00:00.000Z",
       "activity": "밥 먹기, 바다 산책",
       "pickUpLocation": "효자교회",
@@ -36,8 +28,8 @@
       "appointmentID": 2,
       "title": "생일파티",
       "destination": "효자동",
-      "startTime": "2022-07-30T00:00:00.000Z",
-      "endTime": "2022-07-30T00:00:00.000Z",
+      "startTime": "2022-07-27T13:00:00.000Z",
+      "endTime": "2022-07-27T00:00:00.000Z",
       "activity": "치킨 먹는 날",
       "pickUpLocation": "효자교회",
       "approval": "approved",
@@ -55,7 +47,7 @@
       "appointmentID": 3,
       "title": "뽁스 생일",
       "destination": "C5",
-      "startTime": "2022-07-30T00:00:00.000Z",
+      "startTime": "2022-07-30T15:00:00.000Z",
       "endTime": "2022-07-30T00:00:00.000Z",
       "activity": "밥 먹기, 바다 산책",
       "pickUpLocation": "효자교회",
@@ -74,8 +66,8 @@
       "appointmentID": 4,
       "title": "정기만남",
       "destination": "경주랜드",
-      "startTime": "2022-07-10T00:00:00.000Z",
-      "endTime": "2022-07-10T00:00:00.000Z",
+      "startTime": "2022-08-10T12:00:00.000Z",
+      "endTime": "2022-08-10T00:00:00.000Z",
       "activity": "놀이공원",
       "pickUpLocation": "효자교회",
       "approval": "approved",

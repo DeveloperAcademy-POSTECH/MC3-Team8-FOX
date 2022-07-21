@@ -28,8 +28,3 @@ struct UserID: Codable {
     let randomCode: String
     let checkRequest: Bool
 }
-
-//let decoder = JSONDecoder()
-
-//let appointments = try? newJSONDecoder().decode(Appointments.self, from: jsonData)
-let appointments = try? JSONDecoder().decode(Appointments.self, from: jsonData)
