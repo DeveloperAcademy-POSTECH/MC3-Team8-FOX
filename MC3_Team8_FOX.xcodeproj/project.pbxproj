@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15533CE62886218F0030C5CE /* UserMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 15533CE52886218F0030C5CE /* UserMockData.json */; };
+		15533CE9288656200030C5CE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15533CE8288656200030C5CE /* Model.swift */; };
+		15B46AEB2886C09D00AA00F9 /* AppointmentMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */; };
 		15B46AED288781DD00AA00F9 /* MeetScheduleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */; };
 		15B46AEF288781FC00AA00F9 /* MeetScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */; };
 		33B4E09D2887973500D02861 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B4E09C2887973500D02861 /* ScheduleCell.swift */; };
@@ -31,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
+		15533CE52886218F0030C5CE /* UserMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserMockData.json; sourceTree = "<group>"; };
+		15533CE8288656200030C5CE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AppointmentMockData.json; sourceTree = "<group>"; };
 		15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeetScheduleView.storyboard; sourceTree = "<group>"; };
 		15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetScheduleViewController.swift; sourceTree = "<group>"; };
 		33B4E09C2887973500D02861 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleCell.swift; path = MC3_Team8_FOX/Source/ViewControllers/ScheduleCell.swift; sourceTree = SOURCE_ROOT; };
@@ -67,6 +74,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15533CE7288621950030C5CE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				15533CE52886218F0030C5CE /* UserMockData.json */,
+				15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */,
+				15533CE8288656200030C5CE /* Model.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		9889795528800B1100840198 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +141,7 @@
 				9889798928800CBB00840198 /* ViewControllers */,
 				9889799728800E0200840198 /* Component */,
 				9889798828800CB200840198 /* Models */,
+				15533CE7288621950030C5CE /* Data */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -229,12 +247,14 @@
 				9889798628800C2D00840198 /* AcceptRequest.storyboard in Resources */,
 				15B46AED288781DD00AA00F9 /* MeetScheduleView.storyboard in Resources */,
 				9889797128800B1200840198 /* LaunchScreen.storyboard in Resources */,
+				15533CE62886218F0030C5CE /* UserMockData.json in Resources */,
 				9889798728800C2D00840198 /* Connecting.storyboard in Resources */,
 				9889798228800C2D00840198 /* RecentRequest.storyboard in Resources */,
 				9889798328800C2D00840198 /* RejectReason.storyboard in Resources */,
 				9889796E28800B1200840198 /* Assets.xcassets in Resources */,
 				9889798528800C2D00840198 /* WriteRequest.storyboard in Resources */,
 				9889798428800C2D00840198 /* CompleteRequest.storyboard in Resources */,
+				15B46AEB2886C09D00AA00F9 /* AppointmentMockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +270,7 @@
 				9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */,
 				9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */,
 				9889799028800D3900840198 /* RecentRequestViewController.swift in Sources */,
+				15533CE9288656200030C5CE /* Model.swift in Sources */,
 				15B46AEF288781FC00AA00F9 /* MeetScheduleViewController.swift in Sources */,
 				9889796428800B1100840198 /* SceneDelegate.swift in Sources */,
 				9889796C28800B1100840198 /* MC3_Team8_FOX.xcdatamodeld in Sources */,
