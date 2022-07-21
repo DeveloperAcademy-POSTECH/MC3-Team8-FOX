@@ -10,7 +10,6 @@ import UIKit
 class MeetScheduleViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    let appointmentCount = LoadData().appointment.count
     let data = LoadData().appointment
     
     override func viewDidLoad() {
@@ -27,7 +26,7 @@ extension MeetScheduleViewController: UITableViewDelegate {
 
 extension MeetScheduleViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return appointmentCount
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
