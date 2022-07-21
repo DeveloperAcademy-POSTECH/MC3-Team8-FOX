@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Accept Request View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="AcceptRequest" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AcceptRequest" id="Y6W-OH-hqX" customClass="AcceptRequestViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,17 +109,34 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="거절"/>
+                                <connections>
+                                    <action selector="tapRejectingBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gxu-4X-INp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFg-jB-Kmi">
                                 <rect key="frame" x="211" y="765" width="173" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="승인"/>
+                                <connections>
+                                    <action selector="tapAcceptingBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Kvl-nv-j9a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="acceptingBtn" destination="iFg-jB-Kmi" id="OiY-EC-c4a"/>
+                        <outlet property="activity" destination="KZB-rz-7Xi" id="AfZ-pg-xsa"/>
+                        <outlet property="destination" destination="J3G-hB-JH4" id="wpd-Jv-ber"/>
+                        <outlet property="endTime" destination="yAu-Mk-6qD" id="fhl-nG-iAv"/>
+                        <outlet property="meetTitle" destination="zUl-V9-iSj" id="54i-7F-k5D"/>
+                        <outlet property="pickUpLocation" destination="Edh-B4-OFO" id="0tM-26-ZyM"/>
+                        <outlet property="rejectingBtn" destination="H7Q-9v-HKI" id="yVp-dO-RbD"/>
+                        <outlet property="sendingNotice" destination="Csd-WY-cfn" id="vOD-hH-jjC"/>
+                        <outlet property="startTime" destination="lQm-us-W84" id="ZuN-iU-90Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
