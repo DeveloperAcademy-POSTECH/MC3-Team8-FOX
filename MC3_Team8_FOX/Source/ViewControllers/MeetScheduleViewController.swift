@@ -16,7 +16,6 @@ class MeetScheduleViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        print(data)
     }
 }
 
