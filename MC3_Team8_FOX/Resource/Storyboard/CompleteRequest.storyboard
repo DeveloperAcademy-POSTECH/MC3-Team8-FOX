@@ -77,6 +77,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SvO-qj-Odg"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="En8-P5-WOg" id="bYn-zQ-7BH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IS2-vd-ugc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
