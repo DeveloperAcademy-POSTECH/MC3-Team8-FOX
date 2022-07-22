@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15533CE62886218F0030C5CE /* UserMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 15533CE52886218F0030C5CE /* UserMockData.json */; };
+		15533CE9288656200030C5CE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15533CE8288656200030C5CE /* Model.swift */; };
+		15B46AEB2886C09D00AA00F9 /* AppointmentMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */; };
+		15B46AED288781DD00AA00F9 /* MeetScheduleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */; };
+		15B46AEF288781FC00AA00F9 /* MeetScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */; };
+		15E7907C28892EA200FAFFDA /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7907B28892EA200FAFFDA /* LoadData.swift */; };
+		33B4E09D2887973500D02861 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B4E09C2887973500D02861 /* ScheduleCell.swift */; };
 		9889796228800B1100840198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889796128800B1100840198 /* AppDelegate.swift */; };
 		9889796428800B1100840198 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889796328800B1100840198 /* SceneDelegate.swift */; };
 		9889796628800B1100840198 /* AcceptRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889796528800B1100840198 /* AcceptRequestViewController.swift */; };
@@ -28,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15533CE52886218F0030C5CE /* UserMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserMockData.json; sourceTree = "<group>"; };
+		15533CE8288656200030C5CE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AppointmentMockData.json; sourceTree = "<group>"; };
+		15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeetScheduleView.storyboard; sourceTree = "<group>"; };
+		15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetScheduleViewController.swift; sourceTree = "<group>"; };
+		15E7907B28892EA200FAFFDA /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
+		33B4E09C2887973500D02861 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleCell.swift; path = MC3_Team8_FOX/Source/ViewControllers/ScheduleCell.swift; sourceTree = SOURCE_ROOT; };
 		9889795E28800B1100840198 /* MC3_Team8_FOX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3_Team8_FOX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9889796128800B1100840198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9889796328800B1100840198 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15533CE7288621950030C5CE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				15533CE52886218F0030C5CE /* UserMockData.json */,
+				15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */,
+				15533CE8288656200030C5CE /* Model.swift */,
+				15E7907B28892EA200FAFFDA /* LoadData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		9889795528800B1100840198 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				9889796F28800B1200840198 /* LaunchScreen.storyboard */,
+				15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */,
 				9889798028800C2D00840198 /* AcceptRequest.storyboard */,
 				9889797E28800C2D00840198 /* CompleteRequest.storyboard */,
 				9889798128800C2D00840198 /* Connecting.storyboard */,
@@ -117,6 +143,7 @@
 				9889798928800CBB00840198 /* ViewControllers */,
 				9889799728800E0200840198 /* Component */,
 				9889798828800CB200840198 /* Models */,
+				15533CE7288621950030C5CE /* Data */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -138,6 +165,8 @@
 				9889798D28800D2E00840198 /* ConnectingViewController.swift */,
 				9889799128800D4900840198 /* RejectReasonViewController.swift */,
 				9889799328800D5500840198 /* WriteRequestViewController.swift */,
+				15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */,
+				33B4E09C2887973500D02861 /* ScheduleCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,13 +247,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9889798628800C2D00840198 /* AcceptRequest.storyboard in Resources */,
+				15B46AED288781DD00AA00F9 /* MeetScheduleView.storyboard in Resources */,
 				9889797128800B1200840198 /* LaunchScreen.storyboard in Resources */,
+				15533CE62886218F0030C5CE /* UserMockData.json in Resources */,
 				9889798728800C2D00840198 /* Connecting.storyboard in Resources */,
 				9889798228800C2D00840198 /* RecentRequest.storyboard in Resources */,
 				9889798328800C2D00840198 /* RejectReason.storyboard in Resources */,
 				9889796E28800B1200840198 /* Assets.xcassets in Resources */,
 				9889798528800C2D00840198 /* WriteRequest.storyboard in Resources */,
 				9889798428800C2D00840198 /* CompleteRequest.storyboard in Resources */,
+				15B46AEB2886C09D00AA00F9 /* AppointmentMockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +268,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9889796628800B1100840198 /* AcceptRequestViewController.swift in Sources */,
+				15E7907C28892EA200FAFFDA /* LoadData.swift in Sources */,
 				9889796228800B1100840198 /* AppDelegate.swift in Sources */,
 				9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */,
 				9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */,
 				9889799028800D3900840198 /* RecentRequestViewController.swift in Sources */,
+				15533CE9288656200030C5CE /* Model.swift in Sources */,
+				15B46AEF288781FC00AA00F9 /* MeetScheduleViewController.swift in Sources */,
 				9889796428800B1100840198 /* SceneDelegate.swift in Sources */,
 				9889796C28800B1100840198 /* MC3_Team8_FOX.xcdatamodeld in Sources */,
 				9889799928800E2000840198 /* UIButtonComponent.swift in Sources */,
 				9889798C28800D2600840198 /* CompleteRequestViewController.swift in Sources */,
+				33B4E09D2887973500D02861 /* ScheduleCell.swift in Sources */,
 				9889798E28800D2E00840198 /* ConnectingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,7 +424,7 @@
 				INFOPLIST_FILE = MC3_Team8_FOX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MeetScheduleView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -416,7 +452,7 @@
 				INFOPLIST_FILE = MC3_Team8_FOX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MeetScheduleView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
