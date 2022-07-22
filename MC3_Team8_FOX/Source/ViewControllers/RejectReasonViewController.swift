@@ -19,9 +19,11 @@ class RejectReasonViewController: UIViewController {
     
     
     @IBAction func tapCancelBtn(_ sender: UIButton) {
+        dismiss(animated: true)
     }
     
     @IBAction func tapCompleteBtn(_ sender: UIButton) {
+        dismiss(animated: true)
     }
     
 }
