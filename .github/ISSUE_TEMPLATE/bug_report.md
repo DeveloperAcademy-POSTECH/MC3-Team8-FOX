@@ -1,38 +1,19 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+name: "[Bug] 템플릿"
+about: '버그 이슈 관련 템플릿입니다. '
+title: "[Bug] 제목"
+labels: documentation, enhancement, @Keily
+assignees: YeeunKim-archive
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## 버그 설명
+* 이슈와 관련된 요소를 간략하게 설명합니다. 
+* 문제 발생 일시, 발생 위치, 발생 조건 등
+ 
+## 증상
+* 구체적인 증상을 작성합니다. 
+* 스크린샷 (옵션) 
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
-
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+## 기타 
+* 참고한 레퍼런스를 첨부합니다.
