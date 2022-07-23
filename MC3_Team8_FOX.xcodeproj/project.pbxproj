@@ -32,6 +32,10 @@
 		9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889799128800D4900840198 /* RejectReasonViewController.swift */; };
 		9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889799328800D5500840198 /* WriteRequestViewController.swift */; };
 		9889799928800E2000840198 /* UIButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889799828800E2000840198 /* UIButtonComponent.swift */; };
+		9893C692288BF6B200C74A63 /* SendingNoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C691288BF6B200C74A63 /* SendingNoticeCell.swift */; };
+		9893C696288BF6D000C74A63 /* CheckBoxDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C693288BF6D000C74A63 /* CheckBoxDelegate.swift */; };
+		9893C697288BF6D000C74A63 /* CheckBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9893C694288BF6D000C74A63 /* CheckBoxView.xib */; };
+		9893C698288BF6D000C74A63 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C695288BF6D000C74A63 /* CheckBoxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		9889799128800D4900840198 /* RejectReasonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectReasonViewController.swift; sourceTree = "<group>"; };
 		9889799328800D5500840198 /* WriteRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteRequestViewController.swift; sourceTree = "<group>"; };
 		9889799828800E2000840198 /* UIButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonComponent.swift; sourceTree = "<group>"; };
+		9893C691288BF6B200C74A63 /* SendingNoticeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingNoticeCell.swift; sourceTree = "<group>"; };
+		9893C693288BF6D000C74A63 /* CheckBoxDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxDelegate.swift; sourceTree = "<group>"; };
+		9893C694288BF6D000C74A63 /* CheckBoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckBoxView.xib; sourceTree = "<group>"; };
+		9893C695288BF6D000C74A63 /* CheckBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,7 @@
 				9889799328800D5500840198 /* WriteRequestViewController.swift */,
 				15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */,
 				33B4E09C2887973500D02861 /* ScheduleCell.swift */,
+				9893C691288BF6B200C74A63 /* SendingNoticeCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,6 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				9889799828800E2000840198 /* UIButtonComponent.swift */,
+				9893C693288BF6D000C74A63 /* CheckBoxDelegate.swift */,
+				9893C695288BF6D000C74A63 /* CheckBoxView.swift */,
+				9893C694288BF6D000C74A63 /* CheckBoxView.xib */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -257,6 +269,7 @@
 				9889798528800C2D00840198 /* WriteRequest.storyboard in Resources */,
 				9889798428800C2D00840198 /* CompleteRequest.storyboard in Resources */,
 				15B46AEB2886C09D00AA00F9 /* AppointmentMockData.json in Resources */,
+				9893C697288BF6D000C74A63 /* CheckBoxView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +283,8 @@
 				9889796628800B1100840198 /* AcceptRequestViewController.swift in Sources */,
 				15E7907C28892EA200FAFFDA /* LoadData.swift in Sources */,
 				9889796228800B1100840198 /* AppDelegate.swift in Sources */,
+				9893C696288BF6D000C74A63 /* CheckBoxDelegate.swift in Sources */,
+				9893C698288BF6D000C74A63 /* CheckBoxView.swift in Sources */,
 				9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */,
 				9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */,
 				9889799028800D3900840198 /* RecentRequestViewController.swift in Sources */,
@@ -277,6 +292,7 @@
 				15B46AEF288781FC00AA00F9 /* MeetScheduleViewController.swift in Sources */,
 				9889796428800B1100840198 /* SceneDelegate.swift in Sources */,
 				9889796C28800B1100840198 /* MC3_Team8_FOX.xcdatamodeld in Sources */,
+				9893C692288BF6B200C74A63 /* SendingNoticeCell.swift in Sources */,
 				9889799928800E2000840198 /* UIButtonComponent.swift in Sources */,
 				9889798C28800D2600840198 /* CompleteRequestViewController.swift in Sources */,
 				33B4E09D2887973500D02861 /* ScheduleCell.swift in Sources */,
@@ -424,7 +440,7 @@
 				INFOPLIST_FILE = MC3_Team8_FOX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = MeetScheduleView;
+				INFOPLIST_KEY_UIMainStoryboardFile = AcceptRequest;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,7 +468,7 @@
 				INFOPLIST_FILE = MC3_Team8_FOX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = MeetScheduleView;
+				INFOPLIST_KEY_UIMainStoryboardFile = AcceptRequest;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
