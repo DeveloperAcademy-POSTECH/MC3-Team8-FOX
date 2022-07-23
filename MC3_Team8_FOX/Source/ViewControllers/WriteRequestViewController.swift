@@ -26,7 +26,7 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func tapDoneBtn(_ sender: UIButton) {
-
+        var newRequest : NewRequest = NewRequest(meetTitle: meetTitle.text ?? "", destination: destination.text ?? "")
     }
 
     override func viewDidLoad() {
@@ -56,5 +56,6 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
 }
 
 struct NewRequest {
-    var meetTitle : String
+    var meetTitle, destination: String
+    var activity, pickUpLocation: String?
 }
