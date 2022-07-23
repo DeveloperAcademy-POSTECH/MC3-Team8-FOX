@@ -22,11 +22,12 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var notice: UITextField!
         
     @IBAction func tapCancelBtn(_ sender: UIButton) {
-        
+        dismiss(animated: true, completion: nil)
     }
 
     @IBAction func tapDoneBtn(_ sender: UIButton) {
         var newRequest : NewRequest = NewRequest(meetTitle: meetTitle.text ?? "", destination: destination.text ?? "")
+        dismiss(animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
