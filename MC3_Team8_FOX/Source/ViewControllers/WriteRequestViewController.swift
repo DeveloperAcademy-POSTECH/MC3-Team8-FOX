@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class WriteRequestViewController: UIViewController {
+class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var doneBtn: UIButton!
@@ -20,30 +20,39 @@ class WriteRequestViewController: UIViewController {
     @IBOutlet weak var activity: UITextField!
     @IBOutlet weak var pickUpLocation: UITextField!
     @IBOutlet weak var notice: UITextField!
-    
+        
     @IBAction func tapCancelBtn(_ sender: UIButton) {
         
     }
-    
+
     @IBAction func tapDoneBtn(_ sender: UIButton) {
-        /*
-        if
-        var newRequest : NewRequest = NewRequest(meetTitle: meetTitle.text!)
-         */
+
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         doneBtn.isEnabled = false
+        meetTitle.delegate = self
+        destination.delegate = self
+        activity.delegate = self
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if meetTitle.text?.isEmpty == true {
-            self.doneBtn.isEnabled = false
-        } else {
-            self.doneBtn.isEnabled = true
-        }
+        doneBtn.isEnabled = canSubmit()
     }
+    
+    func canSubmit() -> Bool {
+        if meetTitle.text?.isEmpty == true {
+            return false
+        } else if destination.text?.isEmpty == true {
+            return false
+        } else if activity.text?.isEmpty == true {
+            return false
+        } else {
+            return true
+        }
+    } //필수조건이 모두 입력되었는가
+    
 }
 
 struct NewRequest {
