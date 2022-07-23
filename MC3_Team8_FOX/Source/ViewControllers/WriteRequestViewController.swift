@@ -38,6 +38,10 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
         activity.delegate = self
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         doneBtn.isEnabled = canSubmit()
     }
