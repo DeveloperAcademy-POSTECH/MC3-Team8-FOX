@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cfz-t7-I7Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,38 +8,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="iQu-R5-hPG">
-            <objects>
-                <viewController id="I5c-2J-x9n" customClass="ViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4x0-eI-4rT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8c-5z-BM0">
-                                <rect key="frame" x="147" y="433" width="124" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Create Request"/>
-                                <connections>
-                                    <segue destination="Cfz-t7-I7Z" kind="presentation" id="BQd-tq-ZcE"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Qa8-S2-ceY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Lo-x2-44d" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="96.428571428571431"/>
-        </scene>
         <!--Write Request View Controller-->
         <scene sceneID="o6b-Ka-0nQ">
             <objects>
-                <viewController id="Cfz-t7-I7Z" customClass="WriteRequestViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WriteRequest" id="Cfz-t7-I7Z" customClass="WriteRequestViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RVe-LZ-FwR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oXu-kS-uDQ">
@@ -197,6 +171,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="취소">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tapCancelBtn:" destination="Cfz-t7-I7Z" eventType="touchUpInside" id="oaR-fU-duB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7h6-of-inl">
                                 <rect key="frame" x="340.5" y="64" width="53.5" height="34.5"/>
@@ -204,6 +181,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="완료">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tapDoneBtn:" destination="Cfz-t7-I7Z" eventType="touchUpInside" id="o3D-iV-aA2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zgf-8A-XUX"/>
@@ -221,8 +201,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activity" destination="KuO-Kp-c9U" id="fru-ZU-0JW"/>
                         <outlet property="cancelBtn" destination="TIi-KE-gSn" id="jeu-Ev-LaD"/>
+                        <outlet property="destination" destination="YF8-AD-09h" id="hY0-Vq-gSM"/>
                         <outlet property="doneBtn" destination="7h6-of-inl" id="Gd0-9A-JWI"/>
+                        <outlet property="endTime" destination="HzO-YG-9NQ" id="kRa-En-JFD"/>
+                        <outlet property="meetTitle" destination="ibP-Qe-tJO" id="UhQ-Gk-9ff"/>
+                        <outlet property="notice" destination="35F-pa-RbX" id="15e-X8-Z4n"/>
+                        <outlet property="pickUpLocation" destination="hzI-c4-etQ" id="mnx-tM-M2U"/>
+                        <outlet property="startTime" destination="gFc-9f-OZ4" id="Peu-2Y-GNU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrD-hH-DhE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -13,15 +13,39 @@ class WriteRequestViewController: UIViewController {
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var doneBtn: UIButton!
 
-    @IBAction func tapCancelBtn(_sender: UIButton) {
+    @IBOutlet weak var meetTitle: UITextField!
+    @IBOutlet weak var destination: UITextField!
+    @IBOutlet weak var startTime: UIDatePicker!
+    @IBOutlet weak var endTime: UIDatePicker!
+    @IBOutlet weak var activity: UITextField!
+    @IBOutlet weak var pickUpLocation: UITextField!
+    @IBOutlet weak var notice: UITextField!
+    
+    @IBAction func tapCancelBtn(_ sender: UIButton) {
         
     }
     
-    @IBAction func tapDoneBtn(_sender: UIButton) {
-        
+    @IBAction func tapDoneBtn(_ sender: UIButton) {
+        /*
+        if
+        var newRequest : NewRequest = NewRequest(meetTitle: meetTitle.text!)
+         */
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        doneBtn.isEnabled = false
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if meetTitle.text?.isEmpty == true {
+            self.doneBtn.isEnabled = false
+        } else {
+            self.doneBtn.isEnabled = true
+        }
+    }
+}
+
+struct NewRequest {
+    var meetTitle : String
 }
