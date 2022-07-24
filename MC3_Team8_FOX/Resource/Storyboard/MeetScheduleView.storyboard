@@ -41,7 +41,7 @@
                                     <segment title="최근요청"/>
                                 </segments>
                                 <connections>
-                                    <action selector="switchView:" destination="Y6W-OH-hqX" eventType="valueChanged" id="UM5-EM-sEK"/>
+                                    <action selector="switchView:" destination="Y6W-OH-hqX" eventType="valueChanged" id="aMh-kO-1MW"/>
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ply-5t-xr0">
@@ -77,8 +77,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="meetScheduleTableView" destination="TCm-9u-Uce" id="It6-E8-dHc"/>
-                        <outlet property="recentRequestView" destination="ply-5t-xr0" id="VSV-1D-8wl"/>
+                        <outlet property="meetScheduleTableView" destination="TCm-9u-Uce" id="nzF-2j-GjN"/>
+                        <outlet property="recentRequestView" destination="ply-5t-xr0" id="ZPO-gy-SkN"/>
+                        <outlet property="segment" destination="UhQ-C0-zaz" id="HZn-hq-mfG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -98,7 +99,6 @@
         <!--Recent Request View Controller-->
         <scene sceneID="KOa-EG-uHn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Jq-fD-Tdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="WsF-t9-0d3" customClass="RecentRequestViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="br3-Xz-hzr">
                         <rect key="frame" x="0.0" y="0.0" width="374" height="611"/>
@@ -111,6 +111,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="J9J-m2-LwA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rcO-OF-nkt" firstAttribute="centerX" secondItem="br3-Xz-hzr" secondAttribute="centerX" id="aZL-at-wWm"/>
@@ -118,6 +119,7 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Jq-fD-Tdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="386.95652173913044" y="670.64732142857144"/>
         </scene>
@@ -181,6 +183,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="SJf-iT-alt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
