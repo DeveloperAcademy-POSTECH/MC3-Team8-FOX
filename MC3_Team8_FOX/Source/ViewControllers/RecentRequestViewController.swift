@@ -14,8 +14,8 @@ class RecentRequestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        self.tableView?.delegate = self
+        self.tableView?.dataSource = self
     }
 }
 
