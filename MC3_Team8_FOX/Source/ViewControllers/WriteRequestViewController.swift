@@ -1,6 +1,6 @@
 //
 //  WriteRequestViewController.swift
-//  practice
+//  MC3_Team8_FOX
 //
 //  Created by 윤가희 on 2022/07/19.
 //
@@ -26,7 +26,7 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func tapDoneBtn(_ sender: UIButton) {
-        var newRequest : NewRequest = NewRequest(meetTitle: meetTitle.text ?? "", destination: destination.text ?? "")
+        var newRequest: NewRequest = NewRequest(meetTitle: meetTitle.text ?? "", destination: destination.text ?? "")
         dismiss(animated: true, completion: nil)
     }
 
