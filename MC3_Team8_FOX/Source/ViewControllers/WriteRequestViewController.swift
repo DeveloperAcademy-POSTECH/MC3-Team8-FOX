@@ -15,12 +15,73 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var meetTitle: UITextField!
     @IBOutlet weak var destination: UITextField!
-    @IBOutlet weak var startTime: UIDatePicker!
-    @IBOutlet weak var endTime: UIDatePicker!
+    @IBOutlet weak var startTime: UITextField!
+    @IBOutlet weak var endTime: UITextField!
     @IBOutlet weak var activity: UITextField!
     @IBOutlet weak var pickUpLocation: UITextField!
     @IBOutlet weak var notice: UITextField!
         
+    let datePicker = UIDatePicker()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        doneBtn.isEnabled = false
+        meetTitle.delegate = self
+        destination.delegate = self
+        activity.delegate = self
+        
+        createStartDatePicker()
+        createEndDatePicker()
+    }
+    
+    func createStartDatePicker() {
+        self.datePicker.datePickerMode = .dateAndTime
+        self.datePicker.preferredDatePickerStyle = .wheels
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneStartTimeBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneStartTime))
+        toolbar.setItems([doneStartTimeBtn], animated: true)
+        
+        startTime.inputAccessoryView = toolbar
+        
+        startTime.inputView = datePicker
+    }
+    
+    func createEndDatePicker() {
+        self.datePicker.datePickerMode = .dateAndTime
+        self.datePicker.preferredDatePickerStyle = .wheels
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+
+        let doneEndTimeBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneEndTime))
+        toolbar.setItems([doneEndTimeBtn], animated: true)
+
+        endTime.inputAccessoryView = toolbar
+        
+        endTime.inputView = datePicker
+    }
+    
+    @objc func doneStartTime() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M월 dd일(EEEEE) H시 mm분"
+        formatter.locale = Locale(identifier: "ko_KO")
+        
+        self.startTime.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    @objc func doneEndTime() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M월 dd일(EEEEE) H시 mm분"
+        formatter.locale = Locale(identifier: "ko_KO")
+        
+        self.endTime.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
     @IBAction func tapCancelBtn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
@@ -28,14 +89,6 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     @IBAction func tapDoneBtn(_ sender: UIButton) {
         var newRequest: NewRequest = NewRequest(meetTitle: meetTitle.text ?? "", destination: destination.text ?? "")
         dismiss(animated: true, completion: nil)
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        doneBtn.isEnabled = false
-        meetTitle.delegate = self
-        destination.delegate = self
-        activity.delegate = self
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
