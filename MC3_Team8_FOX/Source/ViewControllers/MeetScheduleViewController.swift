@@ -24,9 +24,9 @@ class MeetScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        views = [meetScheduleTableView, recentRequestView]
+//        views = [meetScheduleTableView, recentRequestView]
 
-        segment.selectedSegmentIndex = index
+//        segment.selectedSegmentIndex = index
 
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture(gesture:)))
         swipeLeft.direction = .left
@@ -36,7 +36,7 @@ class MeetScheduleViewController: UIViewController {
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
         
-        self.view.bringSubviewToFront(meetScheduleTableView)
+//        self.view.bringSubviewToFront(meetScheduleTableView)
         
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
@@ -65,15 +65,15 @@ class MeetScheduleViewController: UIViewController {
     }
     
     @IBAction func switchView(_ sender: UISegmentedControl) {
-        self.view.bringSubviewToFront(views[sender.selectedSegmentIndex])
-        index = segment.selectedSegmentIndex
-//        if sender.selectedSegmentIndex == 0 {
-//            self.meetScheduleTableView.alpha = 1.0
-//            self.recentRequestView.alpha = 0.0
-//        } else if sender.selectedSegmentIndex == 1 {
-//            self.meetScheduleTableView.alpha = 0.0
-//            self.recentRequestView.alpha = 1.0
-//        }
+//        self.view.bringSubviewToFront(views[sender.selectedSegmentIndex])
+//        index = segment.selectedSegmentIndex
+        if sender.selectedSegmentIndex == 0 {
+            self.meetScheduleTableView.alpha = 1.0
+            self.recentRequestView.alpha = 0.0
+        } else if sender.selectedSegmentIndex == 1 {
+            self.meetScheduleTableView.alpha = 0.0
+            self.recentRequestView.alpha = 1.0
+        }
     }
     
 }
