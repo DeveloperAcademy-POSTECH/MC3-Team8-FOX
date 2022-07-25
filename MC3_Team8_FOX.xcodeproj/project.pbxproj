@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		15533CE62886218F0030C5CE /* UserMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 15533CE52886218F0030C5CE /* UserMockData.json */; };
 		15533CE9288656200030C5CE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15533CE8288656200030C5CE /* Model.swift */; };
+		1580AD2C288B813700704BCF /* ReceivedRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580AD2B288B813700704BCF /* ReceivedRequestCell.swift */; };
 		15B46AEB2886C09D00AA00F9 /* AppointmentMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */; };
 		15B46AED288781DD00AA00F9 /* MeetScheduleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */; };
 		15B46AEF288781FC00AA00F9 /* MeetScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		15533CE52886218F0030C5CE /* UserMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserMockData.json; sourceTree = "<group>"; };
 		15533CE8288656200030C5CE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1580AD2B288B813700704BCF /* ReceivedRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedRequestCell.swift; sourceTree = "<group>"; };
 		15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AppointmentMockData.json; sourceTree = "<group>"; };
 		15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeetScheduleView.storyboard; sourceTree = "<group>"; };
 		15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetScheduleViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				9889799328800D5500840198 /* WriteRequestViewController.swift */,
 				15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */,
 				33B4E09C2887973500D02861 /* ScheduleCell.swift */,
+				1580AD2B288B813700704BCF /* ReceivedRequestCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				15E7907C28892EA200FAFFDA /* LoadData.swift in Sources */,
 				15DB14A92889957300225388 /* RecentRequestSection.swift in Sources */,
 				9889796228800B1100840198 /* AppDelegate.swift in Sources */,
+				1580AD2C288B813700704BCF /* ReceivedRequestCell.swift in Sources */,
 				9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */,
 				9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */,
 				9889799028800D3900840198 /* RecentRequestViewController.swift in Sources */,
