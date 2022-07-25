@@ -1,16 +1,66 @@
 //
-//  WriteRequest.swift
+//  WriteRequestViewController.swift
 //  MC3_Team8_FOX
 //
-//  Created by 지준용 on 2022/07/14.
+//  Created by 윤가희 on 2022/07/19.
 //
 
+import Foundation
 import UIKit
 
-class WriteRequestViewController: UIViewController {
+class WriteRequestViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var cancelBtn: UIButton!
+    @IBOutlet weak var doneBtn: UIButton!
+
+    @IBOutlet weak var meetTitle: UITextField!
+    @IBOutlet weak var destination: UITextField!
+    @IBOutlet weak var startTime: UIDatePicker!
+    @IBOutlet weak var endTime: UIDatePicker!
+    @IBOutlet weak var activity: UITextField!
+    @IBOutlet weak var pickUpLocation: UITextField!
+    @IBOutlet weak var notice: UITextField!
+        
+    @IBAction func tapCancelBtn(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func tapDoneBtn(_ sender: UIButton) {
+        var newRequest: NewRequest = NewRequest(meetTitle: meetTitle.text ?? "", destination: destination.text ?? "")
+        dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        doneBtn.isEnabled = false
+        meetTitle.delegate = self
+        destination.delegate = self
+        activity.delegate = self
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        doneBtn.isEnabled = canSubmit()
+    }
+    
+    func canSubmit() -> Bool {
+        if meetTitle.text?.isEmpty == true {
+            return false
+        } else if destination.text?.isEmpty == true {
+            return false
+        } else if activity.text?.isEmpty == true {
+            return false
+        } else {
+            return true
+        }
+    } //필수조건이 모두 입력되었는가
+    
 }
 
+struct NewRequest {
+    var meetTitle, destination: String
+    var activity, pickUpLocation: String?
+}

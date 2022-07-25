@@ -11,6 +11,7 @@
         <!--Meet Schedule View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
+
                 <viewController storyboardIdentifier="MeetScheduleViewController" id="Y6W-OH-hqX" customClass="MeetScheduleViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -29,6 +30,9 @@
                                     <constraint firstAttribute="height" constant="40" id="sh1-Pn-pGc"/>
                                 </constraints>
                                 <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <segue destination="zl6-Vi-zTn" kind="presentation" id="CTF-sB-rDQ"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UhQ-C0-zaz">
                                 <rect key="frame" x="125" y="181" width="164" height="31"/>
@@ -183,6 +187,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2l-hA-N6v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1290" y="139"/>
+        </scene>
+        <!--WriteRequest-->
+        <scene sceneID="EFy-Yq-KlH">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="WriteRequest" storyboardName="WriteRequest" referencedIdentifier="WriteRequest" id="zl6-Vi-zTn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mg7-bb-BcK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="70"/>
         </scene>
     </scenes>
     <resources>
