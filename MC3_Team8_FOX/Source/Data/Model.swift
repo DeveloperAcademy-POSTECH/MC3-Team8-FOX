@@ -27,3 +27,10 @@ struct UserID: Codable {
     let partnerID: Int?
     let randomCode: String
 }
+
+
+//let decoder = JSONDecoder()
+
+//let appointments = try? newJSONDecoder().decode(Appointments.self, from: jsonData)
+//let appointments = try? JSONDecoder().decode(Appointments.self, from: jsonData)
+
