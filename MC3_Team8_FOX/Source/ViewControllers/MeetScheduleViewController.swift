@@ -100,5 +100,3 @@ extension MeetScheduleViewController: UITableViewDataSource {
         return cell
     }
 }
-
-//출처: https://www.youtube.com/watch?v=SbeYBZHGvxw
