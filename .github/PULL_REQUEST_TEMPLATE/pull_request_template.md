@@ -2,8 +2,8 @@
 name: "[작업태그] PR 작업 템플릿"
 about: 'PR템플릿입니다. '
 title: "[Feature] 제목"
-labels: documentation, enhancement, @Keily
-assignees: YeeunKim-archive
+labels: documentation, enhancement
+assignees:
 
 ---
 
