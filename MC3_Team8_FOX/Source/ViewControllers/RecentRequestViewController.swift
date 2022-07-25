@@ -39,6 +39,7 @@ extension RecentRequestViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // MARK: 타입캐스팅 옵셔널로 바꿔야할까?
+        // 최근 요청이 nil인 경우를 고려해서 정하기
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
         cell.meetDate.text = String(data[indexPath.row].startTime.dropLast(14).dropFirst(5))
         cell.meetTime.text = String(data[indexPath.row].startTime.dropLast(8).dropFirst(11))
