@@ -106,6 +106,10 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
             return false
         } else if activity.text?.isEmpty == true {
             return false
+        } else if startTime.text?.isEmpty == true {
+            return false
+        } else if endTime.text?.isEmpty == true {
+            return false
         } else {
             return true
         }
