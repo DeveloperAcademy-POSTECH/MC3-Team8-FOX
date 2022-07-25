@@ -21,6 +21,9 @@ class MeetScheduleViewController: UIViewController {
     let middleTimes: [String] = ["13:00", "14:00", "13:30", "16:00"]
     let meetTitle: [String] = ["할머니 생신", "생일파티", "뽁스 생일", "놀이동산"]
 
+    
+    let data = LoadData().appointment
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -84,15 +87,15 @@ extension MeetScheduleViewController: UITableViewDelegate {
 
 extension MeetScheduleViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
         if let scheduleCell = cell as? ScheduleCell {
-            scheduleCell.leftTime.text = leftTimes[indexPath.row]
-            scheduleCell.middleTime.text = middleTimes[indexPath.row]
-            scheduleCell.meetTitle.text = meetTitle[indexPath.row]
+            scheduleCell.leftTime.text = String(data[indexPath.row].startTime.dropLast(14).dropFirst(5))
+            scheduleCell.middleTime.text = String(data[indexPath.row].startTime.dropLast(8).dropFirst(11))
+            scheduleCell.meetTitle.text = data[indexPath.row].title
         }
         return cell
     }

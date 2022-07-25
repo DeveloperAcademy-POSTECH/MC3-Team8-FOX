@@ -13,23 +13,24 @@ struct Appointments: Codable {
     let appointmentID: Int
     let title, destination, startTime, endTime: String
     let activity, pickUpLocation, rejectReason: String?
-    let display, naverRead: Bool
-    let approval: String
-//    enum approval: String {
-//        case waiting
-//        case rejected
-//        case approved
-//    }
+    let isUnreading: Bool
+    enum approval: String {
+        case waiting
+        case rejected
+        case approved
+    }
 }
 
 // MARK: - UserID
 struct UserID: Codable {
-    let userID, partnerID: Int
+    let userID: Int
+    let partnerID: Int?
     let randomCode: String
-    let checkRequest: Bool
 }
+
 
 //let decoder = JSONDecoder()
 
 //let appointments = try? newJSONDecoder().decode(Appointments.self, from: jsonData)
 //let appointments = try? JSONDecoder().decode(Appointments.self, from: jsonData)
+

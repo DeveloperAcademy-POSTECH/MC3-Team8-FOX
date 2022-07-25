@@ -12,6 +12,7 @@
 		15B46AEB2886C09D00AA00F9 /* AppointmentMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */; };
 		15B46AED288781DD00AA00F9 /* MeetScheduleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */; };
 		15B46AEF288781FC00AA00F9 /* MeetScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */; };
+		15E7907C28892EA200FAFFDA /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7907B28892EA200FAFFDA /* LoadData.swift */; };
 		33B4E09D2887973500D02861 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B4E09C2887973500D02861 /* ScheduleCell.swift */; };
 		9889796228800B1100840198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889796128800B1100840198 /* AppDelegate.swift */; };
 		9889796428800B1100840198 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889796328800B1100840198 /* SceneDelegate.swift */; };
@@ -34,12 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
 		15533CE52886218F0030C5CE /* UserMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserMockData.json; sourceTree = "<group>"; };
 		15533CE8288656200030C5CE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AppointmentMockData.json; sourceTree = "<group>"; };
 		15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeetScheduleView.storyboard; sourceTree = "<group>"; };
 		15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetScheduleViewController.swift; sourceTree = "<group>"; };
+		15E7907B28892EA200FAFFDA /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
 		33B4E09C2887973500D02861 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleCell.swift; path = MC3_Team8_FOX/Source/ViewControllers/ScheduleCell.swift; sourceTree = SOURCE_ROOT; };
 		9889795E28800B1100840198 /* MC3_Team8_FOX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3_Team8_FOX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9889796128800B1100840198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 				15533CE52886218F0030C5CE /* UserMockData.json */,
 				15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */,
 				15533CE8288656200030C5CE /* Model.swift */,
+				15E7907B28892EA200FAFFDA /* LoadData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -266,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9889796628800B1100840198 /* AcceptRequestViewController.swift in Sources */,
+				15E7907C28892EA200FAFFDA /* LoadData.swift in Sources */,
 				9889796228800B1100840198 /* AppDelegate.swift in Sources */,
 				9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */,
 				9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */,
