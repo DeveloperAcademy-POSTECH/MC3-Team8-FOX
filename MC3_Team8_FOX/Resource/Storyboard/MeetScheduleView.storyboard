@@ -129,10 +129,8 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scheduleCell" id="MvD-JJ-6Tb" customClass="ScheduleCell" customModule="MC3_Team8_FOX" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MvD-JJ-6Tb" id="quY-dT-NGA">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
-
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc3-AJ-Vdi">
@@ -167,9 +165,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.5450980392" green="0.19215686269999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <outlet property="leftTime" destination="uc3-AJ-Vdi" id="TCR-9h-8Mo"/>
+                                            <outlet property="meetDate" destination="uc3-AJ-Vdi" id="tRY-Qa-SbC"/>
+                                            <outlet property="meetTime" destination="mdQ-oS-Vav" id="cdU-Sy-i42"/>
                                             <outlet property="meetTitle" destination="444-sF-KVC" id="Y12-Hx-ysM"/>
-                                            <outlet property="middleTime" destination="mdQ-oS-Vav" id="tzV-cM-tHj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
