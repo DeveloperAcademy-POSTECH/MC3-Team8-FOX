@@ -31,8 +31,8 @@ extension MeetScheduleViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
         if let scheduleCell = cell as? ScheduleCell {
-            scheduleCell.leftTime.text = String(data[indexPath.row].startTime.dropLast(14).dropFirst(5))
-            scheduleCell.middleTime.text = String(data[indexPath.row].startTime.dropLast(8).dropFirst(11))
+            scheduleCell.meetDate.text = String(data[indexPath.row].startTime.dropLast(14).dropFirst(5))
+            scheduleCell.meetTime.text = String(data[indexPath.row].startTime.dropLast(8).dropFirst(11))
             scheduleCell.meetTitle.text = data[indexPath.row].title
         }
         return cell
