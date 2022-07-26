@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -175,7 +173,6 @@
         <!--Navigation Controller-->
         <scene sceneID="FVf-aZ-ugC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="36J-JE-PcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="iLc-QT-LQI" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ydt-K9-wm4">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -185,13 +182,13 @@
                         <segue destination="PXr-hU-8AL" kind="relationship" relationship="rootViewController" id="EXO-Th-qX9"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36J-JE-PcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-617" y="107"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZeD-eD-ycs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Vg-rF-vt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="PXr-hU-8AL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fdL-AB-ceo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -219,9 +216,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="BCc-3t-oT9"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Vg-rF-vt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="171" y="108"/>
-
         </scene>
     </scenes>
     <resources>

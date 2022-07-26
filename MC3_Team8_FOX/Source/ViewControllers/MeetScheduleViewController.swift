@@ -17,9 +17,7 @@ class MeetScheduleViewController: UIViewController {
     var views: [UIView] = []
     var index = 0
 
-    let leftTimes: [String] = ["07.10", "07.12", "07.15", "07.19"]
-    let middleTimes: [String] = ["13:00", "14:00", "13:30", "16:00"]
-    let meetTitle: [String] = ["할머니 생신", "생일파티", "뽁스 생일", "놀이동산"]
+
 
     
     let data = LoadData().appointment
