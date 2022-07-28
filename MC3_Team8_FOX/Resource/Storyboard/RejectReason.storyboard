@@ -17,97 +17,180 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="presentation" id="cRl-cF-Qu3"/>
+                        <segue destination="VsV-c3-Kif" kind="relationship" relationship="rootViewController" id="h2G-0O-aQW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iuw-0n-p6N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1275" y="165"/>
+            <point key="canvasLocation" x="-1939" y="156"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yo5-Gg-Qmg">
+            <objects>
+                <viewController id="VsV-c3-Kif" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OYn-Ap-j66">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg4-Ry-t7x">
+                                <rect key="frame" x="181" y="448" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="Y6W-OH-hqX" kind="show" id="9Xn-8t-kdh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xfv-Ry-lc8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V7E-rS-Djn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGk-Qf-O9f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1211" y="156"/>
         </scene>
         <!--Reject Reason View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="RejectReasonViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="거절 사유를 입력하세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxv-Df-NNo">
-                                <rect key="frame" x="20" y="108" width="188" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요청을 거절하는 이유가 무엇인가요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxv-Df-NNo">
+                                <rect key="frame" x="20" y="130" width="221" height="57.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEw-9m-a6Z">
-                                <rect key="frame" x="349" y="20" width="59" height="38"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="완료">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="tapCompleteBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ofJ-Kf-Wmn"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mfN-y8-eQZ">
-                                <rect key="frame" x="20" y="156" width="388" height="140"/>
-                                <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="EaK-2G-Vf3"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqY-O5-nXw">
-                                <rect key="frame" x="20" y="20" width="59" height="38"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="취소">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="tapCancelBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fNv-Xr-s5G"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이가 요청을 거절하는 이유를 알려주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvw-Rz-2qT">
+                                <rect key="frame" x="20" y="197.33333333333334" width="388" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mlv-S3-tKn">
+                                <rect key="frame" x="20" y="264.33333333333331" width="388" height="30.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="251" text="먼저 약속된 일정이 있어요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5B-V2-TxG">
+                                        <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="30.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOQ-M9-6Pc">
+                                        <rect key="frame" x="342.66666666666669" y="0.0" width="45.333333333333314" height="30.666666666666668"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KGP-qe-Oql">
+                                <rect key="frame" x="20" y="327" width="388" height="30.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="251" text="컨디션이 안 좋아요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv9-Yi-6yy">
+                                        <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="30.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpR-2n-Cbn">
+                                        <rect key="frame" x="342.66666666666669" y="0.0" width="45.333333333333314" height="30.666666666666668"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c1M-Ab-u9L">
+                                <rect key="frame" x="20" y="515" width="388" height="30.666666666666629"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="251" text="기타" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1A-0Z-Cs9">
+                                        <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="30.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuY-jS-vna">
+                                        <rect key="frame" x="342.66666666666669" y="0.0" width="45.333333333333314" height="30.666666666666668"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GGB-fo-wqK">
+                                <rect key="frame" x="20" y="452.33333333333331" width="388" height="30.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="251" text="시간이 너무 늦어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIo-Wn-rAr">
+                                        <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="30.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g24-n1-1Wb">
+                                        <rect key="frame" x="342.66666666666669" y="0.0" width="45.333333333333314" height="30.666666666666668"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PFI-t2-1Jw">
+                                <rect key="frame" x="20" y="389.66666666666669" width="388" height="30.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="251" text="다른 할 일이 많아요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMS-JK-HUE">
+                                        <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="30.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEz-bp-FOg">
+                                        <rect key="frame" x="342.66666666666669" y="0.0" width="45.333333333333314" height="30.666666666666668"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system" title=""/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mfN-y8-eQZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="179-Qg-bl7"/>
-                            <constraint firstItem="eqY-O5-nXw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="BmP-f8-UJ4"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mfN-y8-eQZ" secondAttribute="trailing" constant="20" id="Dal-sE-kak"/>
-                            <constraint firstItem="yxv-Df-NNo" firstAttribute="top" secondItem="eqY-O5-nXw" secondAttribute="bottom" constant="50" id="QEO-NS-NUa"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OEw-9m-a6Z" secondAttribute="trailing" constant="20" id="QTJ-lc-M49"/>
-                            <constraint firstItem="eqY-O5-nXw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="TlK-29-gS0"/>
-                            <constraint firstItem="yxv-Df-NNo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="b91-Vm-ESF"/>
-                            <constraint firstItem="mfN-y8-eQZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="jJe-3w-HOo"/>
-                            <constraint firstItem="mfN-y8-eQZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="jpw-lP-gvf"/>
-                            <constraint firstItem="mfN-y8-eQZ" firstAttribute="top" secondItem="yxv-Df-NNo" secondAttribute="bottom" constant="24" id="sEe-vh-inV"/>
-                            <constraint firstItem="OEw-9m-a6Z" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="svq-tm-MGm"/>
+                            <constraint firstItem="yxv-Df-NNo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="4z4-Wq-uo4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c1M-Ab-u9L" secondAttribute="trailing" constant="20" id="66z-nT-1aa"/>
+                            <constraint firstItem="Mlv-S3-tKn" firstAttribute="top" secondItem="Lvw-Rz-2qT" secondAttribute="bottom" constant="49" id="6ja-dk-NqP"/>
+                            <constraint firstItem="PFI-t2-1Jw" firstAttribute="top" secondItem="KGP-qe-Oql" secondAttribute="bottom" constant="32" id="As7-vS-gzv"/>
+                            <constraint firstItem="PFI-t2-1Jw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="CbH-SA-QsX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yxv-Df-NNo" secondAttribute="trailing" constant="187" id="Jng-5B-5wR"/>
+                            <constraint firstItem="KGP-qe-Oql" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Klf-bA-i2i"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Lvw-Rz-2qT" secondAttribute="trailing" constant="20" id="MH7-sU-QhA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KGP-qe-Oql" secondAttribute="trailing" constant="20" id="Ovz-9V-5Gd"/>
+                            <constraint firstItem="Mlv-S3-tKn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="PjD-nX-TEh"/>
+                            <constraint firstItem="GGB-fo-wqK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="UJl-9q-Jzq"/>
+                            <constraint firstItem="c1M-Ab-u9L" firstAttribute="top" secondItem="GGB-fo-wqK" secondAttribute="bottom" constant="32" id="VQz-Kb-3II"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Mlv-S3-tKn" secondAttribute="trailing" constant="20" id="cmc-N0-vea"/>
+                            <constraint firstItem="KGP-qe-Oql" firstAttribute="top" secondItem="Mlv-S3-tKn" secondAttribute="bottom" constant="32" id="l7J-xn-KWS"/>
+                            <constraint firstItem="GGB-fo-wqK" firstAttribute="top" secondItem="PFI-t2-1Jw" secondAttribute="bottom" constant="32" id="n1Q-m4-tpQ"/>
+                            <constraint firstItem="Lvw-Rz-2qT" firstAttribute="top" secondItem="yxv-Df-NNo" secondAttribute="bottom" constant="10" id="p2i-2U-OPy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GGB-fo-wqK" secondAttribute="trailing" constant="20" id="pgb-sA-k5O"/>
+                            <constraint firstItem="yxv-Df-NNo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="42" id="qhd-J8-4lr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PFI-t2-1Jw" secondAttribute="trailing" constant="20" id="s1K-j8-5d1"/>
+                            <constraint firstItem="c1M-Ab-u9L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="tLe-ir-USU"/>
+                            <constraint firstItem="Lvw-Rz-2qT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="yVR-f5-VVk"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="NZi-V8-pU8"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="cancelBtn" destination="eqY-O5-nXw" id="70k-36-NO1"/>
-                        <outlet property="completeBtn" destination="OEw-9m-a6Z" id="AKV-R2-bzZ"/>
-                        <outlet property="rejectTextView" destination="mfN-y8-eQZ" id="HAk-w8-HEa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-484" y="156"/>
+            <point key="canvasLocation" x="-485.04672897196258" y="155.50755939524839"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
