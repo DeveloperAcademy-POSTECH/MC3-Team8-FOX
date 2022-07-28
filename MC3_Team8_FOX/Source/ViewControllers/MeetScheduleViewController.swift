@@ -17,9 +17,6 @@ class MeetScheduleViewController: UIViewController {
     var views: [UIView] = []
     var index = 0
 
-
-
-    
     let data = LoadData().appointment
     
     override func viewDidLoad() {
@@ -76,7 +73,6 @@ class MeetScheduleViewController: UIViewController {
             self.recentRequestView.alpha = 1.0
         }
     }
-    
 }
 
 extension MeetScheduleViewController: UITableViewDelegate {

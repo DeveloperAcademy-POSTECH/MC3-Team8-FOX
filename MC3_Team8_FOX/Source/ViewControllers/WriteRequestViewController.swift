@@ -8,7 +8,10 @@
 import Foundation
 import UIKit
 
+let WriteRequestModalDone: Notification.Name = Notification.Name("WriteRequestModalDone")
+
 class WriteRequestViewController: UIViewController, UITextFieldDelegate {
+
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var doneBtn: UIButton!
 
@@ -18,13 +21,15 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var endTime: UITextField!
     @IBOutlet weak var activity: UITextField!
     @IBOutlet weak var pickUpLocation: UITextField!
-
     @IBOutlet weak var sendingNoticeTableView: UITableView!
     
+
     let datePicker = UIDatePicker()
-    
+    var tableView: UITableView?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         doneBtn.isEnabled = false
         meetTitle.delegate = self
         destination.delegate = self
@@ -32,6 +37,7 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
 
         createStartDatePicker()
         createEndDatePicker()
+
     }
     
     func createStartDatePicker() {
@@ -85,11 +91,17 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func tapDoneBtn(_ sender: UIButton) {
-        var newRequest: NewRequest = NewRequest(
+        let newRequest: NewRequest = NewRequest(
             meetTitle: meetTitle.text ?? "",
             destination: destination.text ?? ""
         )
-        dismiss(animated: true, completion: nil)
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.newRequestArray.append(newRequest)
+        
+        print("DISMISS")
+        NotificationCenter.default.post(name: WriteRequestModalDone, object: nil, userInfo: nil) //2nd
+        dismiss(animated: true)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
