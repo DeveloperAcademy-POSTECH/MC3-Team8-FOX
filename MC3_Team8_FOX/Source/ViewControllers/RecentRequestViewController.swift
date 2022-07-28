@@ -9,7 +9,8 @@ import UIKit
 
 class RecentRequestViewController: UIViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var data: [NewRequest] = []
+    var data : [NewRequest] = []
+    var mockRequestArray: [NewRequest] = []
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -41,21 +42,54 @@ extension RecentRequestViewController: UITableViewDelegate {
 extension RecentRequestViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data = appDelegate.newRequestArray
-        return data.count
+        if section == 1 {
+            data = appDelegate.newRequestArray
+            return data.count
+        }
+        return mockRequestArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
-        data = appDelegate.newRequestArray
+        
+        if(indexPath.section == 0) {
+            mockRequestArray.append(
+                NewRequest(
+                    meetTitle: "저녁 식사",
+                    startTime: "8.11.(목) 오후 4:00",
+                    endTime: "8.11.(목) 오후 9:00",
+                    destination: "영일대",
+                    activity: "저녁 식사, 산책",
+                    pickUpLocation: "효자 교회 정문"
+                )
+            )
+            mockRequestArray.append(
+                NewRequest(
+                    meetTitle: "여름 휴가",
+                    startTime: "8.25.(목) 오후 1:00",
+                    endTime: "8.26.(금) 오후 9:00",
+                    destination: "해운대",
+                    activity: "바다 수영",
+                    pickUpLocation: "포항역"
+                )
+            )
 
-        if data.isEmpty == false {
-            cell.meetDate.text = data[indexPath.row].startTime
-            cell.meetTime.text = data[indexPath.row].startTime
-            cell.meetTitle.text = data[indexPath.row].meetTitle
+            cell.meetDate.text = mockRequestArray[indexPath.row].startTime
+            cell.meetTime.text = mockRequestArray[indexPath.row].startTime
+            cell.meetTitle.text = mockRequestArray[indexPath.row].meetTitle
         } else {
-            print("NO DATA")
+            data = appDelegate.newRequestArray
+
+            if data.isEmpty == false {
+                cell.meetDate.text = data[indexPath.row].startTime
+                print(data[indexPath.row].startTime)
+                cell.meetTime.text = data[indexPath.row].startTime
+                cell.meetTitle.text = data[indexPath.row].meetTitle
+            } else {
+                print("NO DATA")
+            }
         }
+        
         return cell
     }
     
