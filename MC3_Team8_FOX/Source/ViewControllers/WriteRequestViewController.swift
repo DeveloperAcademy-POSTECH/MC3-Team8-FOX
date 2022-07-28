@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 class WriteRequestViewController: UIViewController, UITextFieldDelegate {
-    
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var doneBtn: UIButton!
 
@@ -19,8 +18,9 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var endTime: UITextField!
     @IBOutlet weak var activity: UITextField!
     @IBOutlet weak var pickUpLocation: UITextField!
-    @IBOutlet weak var notice: UITextField!
-        
+
+    @IBOutlet weak var sendingNoticeTableView: UITableView!
+    
     let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
         meetTitle.delegate = self
         destination.delegate = self
         activity.delegate = self
-        
+
         createStartDatePicker()
         createEndDatePicker()
     }
@@ -37,22 +37,21 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     func createStartDatePicker() {
         self.datePicker.datePickerMode = .dateAndTime
         self.datePicker.preferredDatePickerStyle = .wheels
-        
+
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
-        
+
         let doneStartTimeBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneStartTime))
         toolbar.setItems([doneStartTimeBtn], animated: true)
-        
+
         startTime.inputAccessoryView = toolbar
-        
         startTime.inputView = datePicker
     }
     
     func createEndDatePicker() {
         self.datePicker.datePickerMode = .dateAndTime
         self.datePicker.preferredDatePickerStyle = .wheels
-        
+
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
 
@@ -60,45 +59,47 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
         toolbar.setItems([doneEndTimeBtn], animated: true)
 
         endTime.inputAccessoryView = toolbar
-        
         endTime.inputView = datePicker
     }
     
     @objc func doneStartTime() {
         let formatter = DateFormatter()
-        formatter.dateFormat = "M월 dd일(EEEEE) H시 mm분"
+        formatter.dateFormat = "M.dd.(EEEEE) a h:mm"
         formatter.locale = Locale(identifier: "ko_KO")
-        
+
         self.startTime.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
     
     @objc func doneEndTime() {
         let formatter = DateFormatter()
-        formatter.dateFormat = "M월 dd일(EEEEE) H시 mm분"
+        formatter.dateFormat = "M.dd.(EEEEE) a h:mm"
         formatter.locale = Locale(identifier: "ko_KO")
-        
+
         self.endTime.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
-    
+
     @IBAction func tapCancelBtn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
 
     @IBAction func tapDoneBtn(_ sender: UIButton) {
-        var newRequest: NewRequest = NewRequest(meetTitle: meetTitle.text ?? "", destination: destination.text ?? "")
+        var newRequest: NewRequest = NewRequest(
+            meetTitle: meetTitle.text ?? "",
+            destination: destination.text ?? ""
+        )
         dismiss(animated: true, completion: nil)
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         doneBtn.isEnabled = canSubmit()
     }
-    
+
     func canSubmit() -> Bool {
         if meetTitle.text?.isEmpty == true {
             return false
@@ -114,7 +115,6 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
             return true
         }
     } //필수조건이 모두 입력되었는가
-    
 }
 
 struct NewRequest {
