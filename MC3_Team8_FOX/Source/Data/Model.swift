@@ -14,11 +14,14 @@ struct Appointments: Codable {
     let title, destination, startTime, endTime: String
     let activity, pickUpLocation, rejectReason: String?
     let isUnreading: Bool
-    enum approval: String {
-        case waiting
-        case rejected
-        case approved
-    }
+    let approval: approvalStatus
+    
+}
+
+enum approvalStatus: String, Codable {
+        case waiting = "waiting"
+        case rejected = "rejected"
+        case approved = "approved"
 }
 
 // MARK: - UserID
@@ -27,10 +30,3 @@ struct UserID: Codable {
     let partnerID: Int?
     let randomCode: String
 }
-
-
-//let decoder = JSONDecoder()
-
-//let appointments = try? newJSONDecoder().decode(Appointments.self, from: jsonData)
-//let appointments = try? JSONDecoder().decode(Appointments.self, from: jsonData)
-
