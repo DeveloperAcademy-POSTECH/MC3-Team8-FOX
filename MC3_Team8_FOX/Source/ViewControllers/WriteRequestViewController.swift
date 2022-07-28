@@ -103,7 +103,6 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.newRequestArray.append(newRequest)
         
-        print("DISMISS")
         NotificationCenter.default.post(name: WriteRequestModalDone, object: nil, userInfo: nil)
         dismiss(animated: true)
     }
