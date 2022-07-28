@@ -7,24 +7,18 @@
 
 import UIKit
 
+extension UIColor {
+    static let btnColor = UIColor(red: 16/255, green: 47/255, blue: 84/255, alpha: 1)
+}
+
 class RejectReasonViewController: UIViewController {
 
-    @IBOutlet weak var cancelBtn: UIButton!
-    @IBOutlet weak var completeBtn: UIButton!
-    @IBOutlet weak var rejectTextView: UITextView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
-    @IBAction func tapCancelBtn(_ sender: UIButton) {
-        dismiss(animated: true)
+
+    @IBAction func tapCheckBox(_ sender: UIButton) {
+        sender.tintColor = sender.tintColor == UIColor.btnColor ? UIColor.gray : UIColor.btnColor
     }
-    
-    @IBAction func tapCompleteBtn(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
-    
 }
 
