@@ -38,7 +38,6 @@
 		9893C696288BF6D000C74A63 /* CheckBoxDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C693288BF6D000C74A63 /* CheckBoxDelegate.swift */; };
 		9893C697288BF6D000C74A63 /* CheckBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9893C694288BF6D000C74A63 /* CheckBoxView.xib */; };
 		9893C698288BF6D000C74A63 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C695288BF6D000C74A63 /* CheckBoxView.swift */; };
-		E6D207CB2890D47200135C62 /* LoadNewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D207CA2890D47200135C62 /* LoadNewRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +74,6 @@
 		9893C693288BF6D000C74A63 /* CheckBoxDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxDelegate.swift; sourceTree = "<group>"; };
 		9893C694288BF6D000C74A63 /* CheckBoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckBoxView.xib; sourceTree = "<group>"; };
 		9893C695288BF6D000C74A63 /* CheckBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
-		E6D207CA2890D47200135C62 /* LoadNewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadNewRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +94,6 @@
 				15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */,
 				15533CE8288656200030C5CE /* Model.swift */,
 				15E7907B28892EA200FAFFDA /* LoadData.swift */,
-				E6D207CA2890D47200135C62 /* LoadNewRequest.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -303,7 +300,6 @@
 				9889796228800B1100840198 /* AppDelegate.swift in Sources */,
 				9893C696288BF6D000C74A63 /* CheckBoxDelegate.swift in Sources */,
 				9893C698288BF6D000C74A63 /* CheckBoxView.swift in Sources */,
-				E6D207CB2890D47200135C62 /* LoadNewRequest.swift in Sources */,
 				1580AD2C288B813700704BCF /* ReceivedRequestCell.swift in Sources */,
 				9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */,
 				9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */,

@@ -8,7 +8,7 @@
 import UIKit
 
 class RecentRequestViewController: UIViewController {
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var data: [NewRequest] = []
 
     @IBOutlet weak var tableView: UITableView!
@@ -22,7 +22,6 @@ class RecentRequestViewController: UIViewController {
     }
     
     @objc func writeRequestModalDone(_ noti: Notification) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         data = appDelegate.newRequestArray
 
         OperationQueue.main.addOperation {
@@ -42,24 +41,21 @@ extension RecentRequestViewController: UITableViewDelegate {
 extension RecentRequestViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         data = appDelegate.newRequestArray
-        print(data.count)
         return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
-
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         data = appDelegate.newRequestArray
 
         if data.isEmpty == false {
+            cell.meetDate.text = data[indexPath.row].startTime
+            cell.meetTime.text = data[indexPath.row].startTime
             cell.meetTitle.text = data[indexPath.row].meetTitle
         } else {
+            print("NO DATA")
         }
-        
         return cell
     }
     

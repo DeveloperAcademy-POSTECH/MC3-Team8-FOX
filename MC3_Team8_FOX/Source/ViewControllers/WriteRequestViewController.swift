@@ -93,14 +93,18 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     @IBAction func tapDoneBtn(_ sender: UIButton) {
         let newRequest: NewRequest = NewRequest(
             meetTitle: meetTitle.text ?? "",
-            destination: destination.text ?? ""
+            startTime: startTime.text ?? "",
+            endTime: endTime.text ?? "",
+            destination: destination.text ?? "",
+            activity: activity.text ?? "",
+            pickUpLocation: pickUpLocation.text ?? ""
         )
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.newRequestArray.append(newRequest)
         
         print("DISMISS")
-        NotificationCenter.default.post(name: WriteRequestModalDone, object: nil, userInfo: nil) //2nd
+        NotificationCenter.default.post(name: WriteRequestModalDone, object: nil, userInfo: nil)
         dismiss(animated: true)
     }
 
@@ -130,6 +134,6 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
 }
 
 struct NewRequest {
-    var meetTitle, destination: String
-    var activity, pickUpLocation: String?
+    var meetTitle, startTime, endTime, destination, activity: String
+    var pickUpLocation: String?
 }
