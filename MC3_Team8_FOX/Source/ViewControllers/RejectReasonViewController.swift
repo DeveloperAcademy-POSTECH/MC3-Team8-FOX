@@ -20,5 +20,11 @@ class RejectReasonViewController: UIViewController {
     @IBAction func tapCheckBox(_ sender: UIButton) {
         sender.tintColor = sender.tintColor == UIColor.btnColor ? UIColor.gray : UIColor.btnColor
     }
+    
+    @IBAction func tapMainBtn(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+
+    }
+    
 }
 
