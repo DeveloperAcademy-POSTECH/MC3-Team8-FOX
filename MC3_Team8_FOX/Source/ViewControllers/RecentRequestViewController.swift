@@ -16,34 +16,38 @@ class RecentRequestViewController: UIViewController {
         super.viewDidLoad()
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
+        self.tableView.frame = self.tableView.frame.inset(by: UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0))
     }
 }
 
+
+
 extension RecentRequestViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 84
+    }
 }
 
 extension RecentRequestViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        switch section {
+        case 0:
+            // 받은 요청 갯수
             return 2
-        }
-        else if section == 1 {
+        case 1:
+            // 보낸 요청 갯수
             return 3
-        }
-        else {
+        default:
             return 0
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // MARK: 타입캐스팅 옵셔널로 바꿔야할까?
-        // 최근 요청이 nil인 경우를 고려해서 정하기
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
         cell.meetDate.text = String(data[indexPath.row].startTime.dropLast(14).dropFirst(5))
         cell.meetTime.text = String(data[indexPath.row].startTime.dropLast(8).dropFirst(11))
-        cell.meetTitle.text = data[indexPath.row].title
+        cell.meetTheme.text = data[indexPath.row].title
         
         return cell
     }
@@ -53,15 +57,13 @@ extension RecentRequestViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
+        switch section {
+        case 0:
             return "받은 요청"
-        }
-        else if section == 1 {
+        case 1:
             return "보낸 요청"
-        }
-        else {
-            return ""
+        default:
+            return nil
         }
     }
-    
 }
