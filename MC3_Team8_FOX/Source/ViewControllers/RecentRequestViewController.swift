@@ -10,8 +10,25 @@ import UIKit
 class RecentRequestViewController: UIViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var data : [NewRequest] = []
-    var mockRequestArray: [NewRequest] = []
-
+    var mockRequestArray: [NewRequest] = [
+        NewRequest(
+            meetTitle: "저녁 식사",
+            startTime: "8.11.(목) 오후 4:00",
+            endTime: "8.11.(목) 오후 9:00",
+            destination: "영일대",
+            activity: "저녁 식사, 산책",
+            pickUpLocation: "효자 교회 정문"
+        ),
+        NewRequest(
+            meetTitle: "여름 휴가",
+            startTime: "8.25.(목) 오후 1:00",
+            endTime: "8.26.(금) 오후 9:00",
+            destination: "해운대",
+            activity: "바다 수영",
+            pickUpLocation: "포항역"
+        )
+    ]
+    
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -53,27 +70,6 @@ extension RecentRequestViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
         
         if(indexPath.section == 0) {
-            mockRequestArray.append(
-                NewRequest(
-                    meetTitle: "저녁 식사",
-                    startTime: "8.11.(목) 오후 4:00",
-                    endTime: "8.11.(목) 오후 9:00",
-                    destination: "영일대",
-                    activity: "저녁 식사, 산책",
-                    pickUpLocation: "효자 교회 정문"
-                )
-            )
-            mockRequestArray.append(
-                NewRequest(
-                    meetTitle: "여름 휴가",
-                    startTime: "8.25.(목) 오후 1:00",
-                    endTime: "8.26.(금) 오후 9:00",
-                    destination: "해운대",
-                    activity: "바다 수영",
-                    pickUpLocation: "포항역"
-                )
-            )
-
             cell.meetDate.text = mockRequestArray[indexPath.row].startTime
             cell.meetTime.text = mockRequestArray[indexPath.row].startTime
             cell.meetTitle.text = mockRequestArray[indexPath.row].meetTitle
