@@ -13,6 +13,7 @@
 		15B46AEB2886C09D00AA00F9 /* AppointmentMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */; };
 		15B46AED288781DD00AA00F9 /* MeetScheduleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */; };
 		15B46AEF288781FC00AA00F9 /* MeetScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */; };
+		15C4AD7E289218AF000F55FB /* recentRequestArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C4AD7D289218AF000F55FB /* recentRequestArray.swift */; };
 		15DB14A92889957300225388 /* RecentRequestSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DB14A82889957300225388 /* RecentRequestSection.swift */; };
 		15E7907C28892EA200FAFFDA /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7907B28892EA200FAFFDA /* LoadData.swift */; };
 		33B4E09D2887973500D02861 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B4E09C2887973500D02861 /* ScheduleCell.swift */; };
@@ -47,6 +48,7 @@
 		15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AppointmentMockData.json; sourceTree = "<group>"; };
 		15B46AEC288781DD00AA00F9 /* MeetScheduleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeetScheduleView.storyboard; sourceTree = "<group>"; };
 		15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetScheduleViewController.swift; sourceTree = "<group>"; };
+		15C4AD7D289218AF000F55FB /* recentRequestArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recentRequestArray.swift; sourceTree = "<group>"; };
 		15DB14A82889957300225388 /* RecentRequestSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentRequestSection.swift; sourceTree = "<group>"; };
 		15E7907B28892EA200FAFFDA /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
 		33B4E09C2887973500D02861 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleCell.swift; path = MC3_Team8_FOX/Source/ViewControllers/ScheduleCell.swift; sourceTree = SOURCE_ROOT; };
@@ -94,6 +96,7 @@
 				15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */,
 				15533CE8288656200030C5CE /* Model.swift */,
 				15E7907B28892EA200FAFFDA /* LoadData.swift */,
+				15C4AD7D289218AF000F55FB /* recentRequestArray.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -188,7 +191,6 @@
 				9889799328800D5500840198 /* WriteRequestViewController.swift */,
 				15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */,
 				33B4E09C2887973500D02861 /* ScheduleCell.swift */,
-
 				9893C691288BF6B200C74A63 /* SendingNoticeCell.swift */,
 				1580AD2B288B813700704BCF /* ReceivedRequestCell.swift */,
 			);
@@ -299,13 +301,11 @@
 				15E7907C28892EA200FAFFDA /* LoadData.swift in Sources */,
 				15DB14A92889957300225388 /* RecentRequestSection.swift in Sources */,
 				9889796228800B1100840198 /* AppDelegate.swift in Sources */,
-
 				9893C696288BF6D000C74A63 /* CheckBoxDelegate.swift in Sources */,
 				9893C698288BF6D000C74A63 /* CheckBoxView.swift in Sources */,
-
 				1580AD2C288B813700704BCF /* ReceivedRequestCell.swift in Sources */,
-
 				9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */,
+				15C4AD7E289218AF000F55FB /* recentRequestArray.swift in Sources */,
 				9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */,
 				9889799028800D3900840198 /* RecentRequestViewController.swift in Sources */,
 				15533CE9288656200030C5CE /* Model.swift in Sources */,
@@ -460,7 +460,7 @@
 				INFOPLIST_FILE = MC3_Team8_FOX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = AcceptRequest;
+				INFOPLIST_KEY_UIMainStoryboardFile = MeetScheduleView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -488,7 +488,7 @@
 				INFOPLIST_FILE = MC3_Team8_FOX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = AcceptRequest;
+				INFOPLIST_KEY_UIMainStoryboardFile = MeetScheduleView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
