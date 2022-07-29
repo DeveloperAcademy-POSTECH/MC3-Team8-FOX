@@ -12,6 +12,7 @@ let WriteRequestModalDone: Notification.Name = Notification.Name("WriteRequestMo
 
 class WriteRequestViewController: UIViewController, UITextFieldDelegate {
 
+    var sending = TextFieldOfTableViewCell()
     var num = 0
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var doneBtn: UIButton!
@@ -22,7 +23,7 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var endTime: UITextField!
     @IBOutlet weak var activity: UITextField!
     @IBOutlet weak var pickUpLocation: UITextField!
-    
+
     @IBOutlet weak var sendingNoticeTableView: UITableView!
     
     let datePicker = UIDatePicker()
@@ -99,7 +100,8 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
             endTime: endTime.text ?? "",
             destination: destination.text ?? "",
             activity: activity.text ?? "",
-            pickUpLocation: pickUpLocation.text ?? ""
+            pickUpLocation: pickUpLocation.text ?? "",
+            sendingNotice: sending.sendingNotice?.text ?? ""
         )
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -144,7 +146,7 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
 
 struct NewRequest {
     var meetTitle, startTime, endTime, destination, activity: String
-    var pickUpLocation: String?
+    var pickUpLocation, sendingNotice: String?
 }
 
 extension WriteRequestViewController: UITableViewDataSource, UITableViewDelegate {

@@ -223,6 +223,9 @@
                                                 <constraint firstItem="xwL-Bh-Tki" firstAttribute="leading" secondItem="S5h-X3-PbT" secondAttribute="leading" id="tCR-fi-UfZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="sendingNotice" destination="xwL-Bh-Tki" id="4Ie-BV-KGF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
