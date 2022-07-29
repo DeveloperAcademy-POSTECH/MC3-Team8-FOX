@@ -134,10 +134,9 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
             return true
         }
     } //필수조건이 모두 입력되었는가
-    
+
     @IBAction func tapPlusBtn(_ sender: UIButton) {
         num = num + 1
-        print(num)
         OperationQueue.main.addOperation {
             self.sendingNoticeTableView.reloadData()
         }
