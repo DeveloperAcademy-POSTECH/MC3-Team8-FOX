@@ -17,7 +17,6 @@ class AcceptRequestViewController: UIViewController {
     @IBOutlet weak var activity: UILabel!
     @IBOutlet weak var pickUpLocation: UITextField!
     @IBOutlet weak var sendingNotice: UITableView!
-
     @IBOutlet weak var acceptingBtn: UIButton!
     @IBOutlet weak var rejectingBtn: UIButton!
     
@@ -29,7 +28,7 @@ class AcceptRequestViewController: UIViewController {
         self.sendingNotice.dataSource = self
         self.checkBoxView?.delegate = self
         pickUpLocation.addLeftPadding()
-        pickUpLocation.addLeftString(inputText: "  Hi")
+        pickUpLocation.text = "Test"
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.navigationBar.tintColor = .black
     }
@@ -41,6 +40,10 @@ class AcceptRequestViewController: UIViewController {
     @IBAction func tapRejectingBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
 extension UITextField {
@@ -49,17 +52,9 @@ extension UITextField {
         self.leftView = paddingView
         self.leftViewMode = ViewMode.always
     }
-    func addLeftString(inputText: String) {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: self.frame.height))
-        label.text = inputText
-        label.font = .systemFont(ofSize: 17, weight: .regular)
-        self.leftView = label
-        self.leftViewMode = .always
-    }
 }
 
 extension AcceptRequestViewController: UITableViewDelegate {
-    
 }
 
 extension AcceptRequestViewController: UITableViewDataSource {
@@ -90,6 +85,5 @@ extension AcceptRequestViewController: CheckBoxDelegate {
         } else {
             checkBox.checkLabel.isHidden = false
         }
-        
     }
 }
