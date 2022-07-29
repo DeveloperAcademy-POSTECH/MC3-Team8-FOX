@@ -20,7 +20,7 @@ class AcceptRequestViewController: UIViewController {
 
     @IBOutlet weak var acceptingBtn: UIButton!
     @IBOutlet weak var rejectingBtn: UIButton!
-
+    
     let data = LoadData().appointment
 
     override func viewDidLoad() {
@@ -28,17 +28,34 @@ class AcceptRequestViewController: UIViewController {
         self.sendingNotice.delegate = self
         self.sendingNotice.dataSource = self
         self.checkBoxView?.delegate = self
-
+        pickUpLocation.addLeftPadding()
+        pickUpLocation.addLeftString(inputText: "  Hi")
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.tintColor = .black
     }
-
+    
     @IBAction func tapAcceptingBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
-
+    
     @IBAction func tapRejectingBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+}
 
+extension UITextField {
+    func addLeftPadding() {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.frame.height))
+        self.leftView = paddingView
+        self.leftViewMode = ViewMode.always
+    }
+    func addLeftString(inputText: String) {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: self.frame.height))
+        label.text = inputText
+        label.font = .systemFont(ofSize: 17, weight: .regular)
+        self.leftView = label
+        self.leftViewMode = .always
+    }
 }
 
 extension AcceptRequestViewController: UITableViewDelegate {
