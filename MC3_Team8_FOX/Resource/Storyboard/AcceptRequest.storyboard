@@ -206,11 +206,6 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="382" height="46"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ENm-E6-7jf" customClass="CheckBoxView" customModule="MC3_Team8_FOX" customModuleProvider="target">
-                                                                    <rect key="frame" x="30" y="7" width="63" height="32"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iiq-Uk-CUf">
                                                                     <rect key="frame" x="107" y="12" width="222" height="21"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -264,6 +259,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="tapRejectingBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hCk-iE-24g"/>
+                                            <segue destination="nSY-5x-7yX" kind="presentation" id="RuA-dl-0x7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZs-ij-9kf">
@@ -284,6 +280,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="tapAcceptingBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fqV-zA-FMI"/>
+                                            <segue destination="gKZ-Iu-Gal" kind="presentation" id="HAu-xB-DYb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -328,6 +325,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="106.47321428571428"/>
+        </scene>
+        <!--CompleteRequest-->
+        <scene sceneID="7Wf-N8-eGY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CompleteRequest" id="gKZ-Iu-Gal" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Vuf-AF-T7p"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IxV-Y3-bQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1735" y="140"/>
+        </scene>
+        <!--RejectReason-->
+        <scene sceneID="ij0-YU-EKh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RejectReason" id="nSY-5x-7yX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0o2-OO-Hwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1736" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FVf-aZ-ugC">
