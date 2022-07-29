@@ -38,7 +38,6 @@
 		9893C696288BF6D000C74A63 /* CheckBoxDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C693288BF6D000C74A63 /* CheckBoxDelegate.swift */; };
 		9893C697288BF6D000C74A63 /* CheckBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9893C694288BF6D000C74A63 /* CheckBoxView.xib */; };
 		9893C698288BF6D000C74A63 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C695288BF6D000C74A63 /* CheckBoxView.swift */; };
-		E6E6168A28944597003CC27C /* TextFieldOfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E6168928944597003CC27C /* TextFieldOfTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +74,6 @@
 		9893C693288BF6D000C74A63 /* CheckBoxDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxDelegate.swift; sourceTree = "<group>"; };
 		9893C694288BF6D000C74A63 /* CheckBoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckBoxView.xib; sourceTree = "<group>"; };
 		9893C695288BF6D000C74A63 /* CheckBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
-		E6E6168928944597003CC27C /* TextFieldOfTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldOfTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +190,6 @@
 				33B4E09C2887973500D02861 /* ScheduleCell.swift */,
 				9893C691288BF6B200C74A63 /* SendingNoticeCell.swift */,
 				1580AD2B288B813700704BCF /* ReceivedRequestCell.swift */,
-				E6E6168928944597003CC27C /* TextFieldOfTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -303,7 +300,6 @@
 				9889796228800B1100840198 /* AppDelegate.swift in Sources */,
 				9893C696288BF6D000C74A63 /* CheckBoxDelegate.swift in Sources */,
 				9893C698288BF6D000C74A63 /* CheckBoxView.swift in Sources */,
-				E6E6168A28944597003CC27C /* TextFieldOfTableViewCell.swift in Sources */,
 				1580AD2C288B813700704BCF /* ReceivedRequestCell.swift in Sources */,
 				9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */,
 				9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */,
