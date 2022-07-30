@@ -8,7 +8,6 @@
 import UIKit
 
 class AcceptRequestViewController: UIViewController {
-    var checkBoxView: CheckBoxView!
 
     @IBOutlet weak var meetTitle: UILabel!
     @IBOutlet weak var startTime: UILabel!
@@ -26,7 +25,6 @@ class AcceptRequestViewController: UIViewController {
         super.viewDidLoad()
         self.sendingNotice.delegate = self
         self.sendingNotice.dataSource = self
-        self.checkBoxView?.delegate = self
         pickUpLocation.addLeftPadding()
         pickUpLocation.text = "Test"
         self.navigationController?.navigationBar.topItem?.title = ""
@@ -65,25 +63,10 @@ extension AcceptRequestViewController: UITableViewDataSource {
 // TODO: 공지사항에 대한 JSON 목데이터 필요.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SendingNoticeCell", for: indexPath)
-        if let sendingNoticeCell = cell as? SendingNoticeCell {
-            sendingNoticeCell.content.text = String(data[indexPath.row].startTime.dropLast(14).dropFirst(5))
-        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 30
-    }
-}
-
-
-extension AcceptRequestViewController: CheckBoxDelegate {
-    func checkBoxHighlight(checkBox: CheckBoxView) {
-        print("checkbox 클릭")
-        if checkBox.checkLabel.isHidden == false {
-            checkBox.checkLabel.isHidden = true
-        } else {
-            checkBox.checkLabel.isHidden = false
-        }
     }
 }

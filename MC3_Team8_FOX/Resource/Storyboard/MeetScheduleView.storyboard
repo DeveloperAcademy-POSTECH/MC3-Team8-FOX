@@ -152,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="1289.8550724637682" y="704.79910714285711"/>
         </scene>
-        <!--Meet Schedule View Controller-->
+        <!--Meet Schedule Table View Controller-->
         <scene sceneID="ezH-k9-FFY">
             <objects>
-                <viewController id="j3e-Tx-ve1" customClass="MeetScheduleViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="j3e-Tx-ve1" customClass="MeetScheduleTableViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Ac-1I-b1P">
                         <rect key="frame" x="0.0" y="0.0" width="374" height="611"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,26 +166,26 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scheduleCell" id="MvD-JJ-6Tb" customClass="ScheduleCell" customModule="MC3_Team8_FOX" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MvD-JJ-6Tb" id="quY-dT-NGA">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc3-AJ-Vdi">
-                                                    <rect key="frame" x="20" y="11" width="32.5" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="32.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdQ-oS-Vav">
-                                                    <rect key="frame" x="112.5" y="11" width="32.5" height="21"/>
+                                                    <rect key="frame" x="112.5" y="11.5" width="32.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="444-sF-KVC" userLabel="meetTitle">
-                                                    <rect key="frame" x="205" y="11.5" width="33" height="20"/>
+                                                    <rect key="frame" x="205" y="12" width="33" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -216,7 +216,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="2XB-47-I8g" id="mk1-Lz-13m"/>
+                        <outlet property="tableView" destination="2XB-47-I8g" id="JGL-w0-xst"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2l-hA-N6v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

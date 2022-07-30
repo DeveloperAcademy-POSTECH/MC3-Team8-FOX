@@ -11,10 +11,9 @@ class MeetScheduleViewController: UIViewController {
 
     @IBOutlet weak var meetScheduleTableView: UIView!
     @IBOutlet weak var recentRequestView: UIView!
-    @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var segment: UISegmentedControl!
-    var views: [UIView] = []
+    var views: [UIView?] = []
     var index = 0
 
     let data = LoadData().appointment
@@ -22,9 +21,9 @@ class MeetScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        views = [meetScheduleTableView, recentRequestView]
+        views = [meetScheduleTableView, recentRequestView]
 
-//        segment.selectedSegmentIndex = index
+        segment?.selectedSegmentIndex = index
 
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture(gesture:)))
         swipeLeft.direction = .left
@@ -34,11 +33,7 @@ class MeetScheduleViewController: UIViewController {
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
         
-//        self.view.bringSubviewToFront(meetScheduleTableView)
-        
-        self.tableView?.delegate = self
-        self.tableView?.dataSource = self
-        
+        self.view.bringSubviewToFront(meetScheduleTableView)
     }
 
 
@@ -47,7 +42,7 @@ class MeetScheduleViewController: UIViewController {
             if gesture.direction == UISwipeGestureRecognizer.Direction.right {
                 if index != 0 {
                     index -= 1
-                    self.view.bringSubviewToFront(views[index])
+                    self.view.bringSubviewToFront(views[index]!)
                     segment.selectedSegmentIndex = index
                 }
             }
@@ -56,27 +51,19 @@ class MeetScheduleViewController: UIViewController {
                 if index != views.count - 1 {
                     index += 1
                     segment.selectedSegmentIndex = index
-                    self.view.bringSubviewToFront(views[index])
+                    self.view.bringSubviewToFront(views[index]!)
                 }
             }
         }
     }
     
     @IBAction func switchView(_ sender: UISegmentedControl) {
-//        self.view.bringSubviewToFront(views[sender.selectedSegmentIndex])
-//        index = segment.selectedSegmentIndex
-        if sender.selectedSegmentIndex == 0 {
-            self.meetScheduleTableView.alpha = 1.0
-            self.recentRequestView.alpha = 0.0
-        } else if sender.selectedSegmentIndex == 1 {
-            self.meetScheduleTableView.alpha = 0.0
-            self.recentRequestView.alpha = 1.0
-        }
+        self.view.bringSubviewToFront(views[sender.selectedSegmentIndex]!)
+        index = segment.selectedSegmentIndex
     }
 }
 
 extension MeetScheduleViewController: UITableViewDelegate {
-    
 }
 
 extension MeetScheduleViewController: UITableViewDataSource {
