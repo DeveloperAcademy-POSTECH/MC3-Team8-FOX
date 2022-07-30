@@ -12,26 +12,22 @@ class RecentRequestViewController: UIViewController {
     var data : [NewRequest] = []
     let mockData = LoadReceivedData().appointment
     
-    @IBOutlet weak var tableView: UITableView!
-        
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView?.delegate = self
-        self.tableView?.dataSource = self
-        self.tableView.backgroundColor = UIColor.systemGray5
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .systemGray5
+        
         self.view.backgroundColor = UIColor.systemGray5
     }
 }
 
-extension RecentRequestViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
-    }
-}
-
-extension RecentRequestViewController: UITableViewDataSource {
+extension RecentRequestViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
             data = appDelegate.newRequestArray
             return data.count
@@ -39,8 +35,8 @@ extension RecentRequestViewController: UITableViewDataSource {
         return mockData.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
         // boundary area
         cell.backgroundColor = UIColor.white
         cell.layer.cornerRadius = 15
@@ -53,22 +49,5 @@ extension RecentRequestViewController: UITableViewDataSource {
         return cell
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "받은 요청"
-        case 1:
-            return "보낸 요청"
-        default:
-            return nil
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 30
-    }
 }
