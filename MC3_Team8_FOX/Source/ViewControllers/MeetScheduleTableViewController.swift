@@ -13,18 +13,15 @@ import UIKit
      @IBOutlet weak var tableView: UITableView!
      let data = LoadData().appointment
 
-
      override func viewDidLoad() {
          super.viewDidLoad()
 
          self.tableView?.delegate = self
          self.tableView?.dataSource = self
-
      }
  }
 
  extension MeetScheduleTableViewController: UITableViewDelegate {
-
  }
 
  extension MeetScheduleTableViewController: UITableViewDataSource {
@@ -34,6 +31,11 @@ import UIKit
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
+         if let scheduleCell = cell as? ScheduleCell {
+             scheduleCell.meetDate.text = String(data[indexPath.row].startTime.dropLast(14).dropFirst(5))
+             scheduleCell.meetTime.text = String(data[indexPath.row].startTime.dropLast(8).dropFirst(11))
+             scheduleCell.meetTitle.text = data[indexPath.row].title
+         }
          return cell
      }
  }

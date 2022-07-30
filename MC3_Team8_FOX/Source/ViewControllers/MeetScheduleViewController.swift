@@ -15,8 +15,6 @@ class MeetScheduleViewController: UIViewController {
     @IBOutlet weak var segment: UISegmentedControl!
     var views: [UIView?] = []
     var index = 0
-
-    let data = LoadData().appointment
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,24 +58,5 @@ class MeetScheduleViewController: UIViewController {
     @IBAction func switchView(_ sender: UISegmentedControl) {
         self.view.bringSubviewToFront(views[sender.selectedSegmentIndex]!)
         index = segment.selectedSegmentIndex
-    }
-}
-
-extension MeetScheduleViewController: UITableViewDelegate {
-}
-
-extension MeetScheduleViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
-        if let scheduleCell = cell as? ScheduleCell {
-            scheduleCell.meetDate.text = String(data[indexPath.row].startTime.dropLast(14).dropFirst(5))
-            scheduleCell.meetTime.text = String(data[indexPath.row].startTime.dropLast(8).dropFirst(11))
-            scheduleCell.meetTitle.text = data[indexPath.row].title
-        }
-        return cell
     }
 }
