@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecentRequestViewController: UIViewController {
+class RecentRequestViewController: UIViewController, UITableViewDelegate {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var data: [NewRequest] = []
     var receiveRequests: [NewRequest] = []
@@ -28,13 +28,9 @@ class RecentRequestViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
     }
-}
-
-extension RecentRequestViewController: UITableViewDelegate {
 }
 
 extension RecentRequestViewController: UITableViewDataSource {
@@ -69,7 +65,6 @@ extension RecentRequestViewController: UITableViewDataSource {
         }
         return cell
     }
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2

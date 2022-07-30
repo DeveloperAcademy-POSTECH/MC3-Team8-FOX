@@ -12,6 +12,8 @@ let WriteRequestModalDone: Notification.Name = Notification.Name("WriteRequestMo
 
 class WriteRequestViewController: UIViewController, UITextFieldDelegate {
 
+    var sending = TextFieldOfTableViewCell()
+    var num = 0
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var doneBtn: UIButton!
 
@@ -21,11 +23,10 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var endTime: UITextField!
     @IBOutlet weak var activity: UITextField!
     @IBOutlet weak var pickUpLocation: UITextField!
+
     @IBOutlet weak var sendingNoticeTableView: UITableView!
     
-
     let datePicker = UIDatePicker()
-    var tableView: UITableView?
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,9 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
 
         createStartDatePicker()
         createEndDatePicker()
-
+        
+        sendingNoticeTableView.delegate = self
+        sendingNoticeTableView.dataSource = self
     }
     
     func createStartDatePicker() {
@@ -97,7 +100,8 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
             endTime: endTime.text ?? "",
             destination: destination.text ?? "",
             activity: activity.text ?? "",
-            pickUpLocation: pickUpLocation.text ?? ""
+            pickUpLocation: pickUpLocation.text ?? "",
+            sendingNotice: sending.sendingNotice?.text ?? ""
         )
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -130,9 +134,27 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
             return true
         }
     } //필수조건이 모두 입력되었는가
+
+    @IBAction func tapPlusBtn(_ sender: UIButton) {
+        num = num + 1
+        OperationQueue.main.addOperation {
+            self.sendingNoticeTableView.reloadData()
+        }
+    }
 }
 
 struct NewRequest {
     var meetTitle, startTime, endTime, destination, activity: String
-    var pickUpLocation: String?
+    var pickUpLocation, sendingNotice: String?
+}
+
+extension WriteRequestViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return num
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TextFieldOfTableViewCell", for: indexPath)
+        return cell
+    }
 }
