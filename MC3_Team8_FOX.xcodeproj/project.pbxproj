@@ -188,7 +188,6 @@
 				9889799328800D5500840198 /* WriteRequestViewController.swift */,
 				15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */,
 				33B4E09C2887973500D02861 /* ScheduleCell.swift */,
-
 				9893C691288BF6B200C74A63 /* SendingNoticeCell.swift */,
 				1580AD2B288B813700704BCF /* ReceivedRequestCell.swift */,
 			);
@@ -299,12 +298,9 @@
 				15E7907C28892EA200FAFFDA /* LoadData.swift in Sources */,
 				15DB14A92889957300225388 /* RecentRequestSection.swift in Sources */,
 				9889796228800B1100840198 /* AppDelegate.swift in Sources */,
-
 				9893C696288BF6D000C74A63 /* CheckBoxDelegate.swift in Sources */,
 				9893C698288BF6D000C74A63 /* CheckBoxView.swift in Sources */,
-
 				1580AD2C288B813700704BCF /* ReceivedRequestCell.swift in Sources */,
-
 				9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */,
 				9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */,
 				9889799028800D3900840198 /* RecentRequestViewController.swift in Sources */,
@@ -460,7 +456,7 @@
 				INFOPLIST_FILE = MC3_Team8_FOX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = AcceptRequest;
+				INFOPLIST_KEY_UIMainStoryboardFile = MeetScheduleView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -488,7 +484,7 @@
 				INFOPLIST_FILE = MC3_Team8_FOX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = AcceptRequest;
+				INFOPLIST_KEY_UIMainStoryboardFile = MeetScheduleView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
