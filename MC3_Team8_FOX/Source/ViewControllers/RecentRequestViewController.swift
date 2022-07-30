@@ -18,7 +18,6 @@ class RecentRequestViewController: UIViewController {
         super.viewDidLoad()
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
-        self.tableView.frame = self.tableView.frame.inset(by: UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0))
         self.tableView.backgroundColor = UIColor.systemGray5
         self.view.backgroundColor = UIColor.systemGray5
     }
@@ -26,7 +25,7 @@ class RecentRequestViewController: UIViewController {
 
 extension RecentRequestViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 84
+        return 90
     }
 }
 
@@ -44,7 +43,7 @@ extension RecentRequestViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
         // boundary area
         cell.backgroundColor = UIColor.white
-        cell.layer.cornerRadius = 10
+        cell.layer.cornerRadius = 15
         
         cell.meetDate.text = String(mockData[indexPath.row].startTime.dropLast(11).dropFirst(6))
         cell.meetDay.text = String(mockData[indexPath.row].startTime.dropFirst(12).dropLast(9)) + "요일"
