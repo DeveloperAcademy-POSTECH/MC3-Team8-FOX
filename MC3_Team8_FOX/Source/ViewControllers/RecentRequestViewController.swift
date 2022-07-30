@@ -8,19 +8,21 @@
 import UIKit
 
 class RecentRequestViewController: UIViewController {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var data : [NewRequest] = []
+    let mockData = LoadReceivedData().appointment
+    
     @IBOutlet weak var tableView: UITableView!
-    
-    let data = LoadData().appointment
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
         self.tableView.frame = self.tableView.frame.inset(by: UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0))
+        self.tableView.backgroundColor = UIColor.systemGray5
+        self.view.backgroundColor = UIColor.systemGray5
     }
 }
-
-
 
 extension RecentRequestViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -31,23 +33,23 @@ extension RecentRequestViewController: UITableViewDelegate {
 extension RecentRequestViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            // 받은 요청 갯수
-            return 2
-        case 1:
-            // 보낸 요청 갯수
-            return 3
-        default:
-            return 0
+        if section == 1 {
+            data = appDelegate.newRequestArray
+            return data.count
         }
+        return mockData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
-        cell.meetDate.text = String(data[indexPath.row].startTime.dropLast(14).dropFirst(5))
-        cell.meetTime.text = String(data[indexPath.row].startTime.dropLast(8).dropFirst(11))
-        cell.meetTheme.text = data[indexPath.row].title
+        // boundary area
+        cell.backgroundColor = UIColor.white
+        cell.layer.cornerRadius = 10
+        
+        cell.meetDate.text = String(mockData[indexPath.row].startTime.dropLast(11).dropFirst(6))
+        cell.meetDay.text = String(mockData[indexPath.row].startTime.dropFirst(12).dropLast(9)) + "요일"
+        cell.meetTime.text = String(mockData[indexPath.row].startTime.dropFirst(15)) + " - " + String(mockData[indexPath.row].endTime.dropFirst(15))
+        cell.meetTheme.text = mockData[indexPath.row].title
         
         return cell
     }
@@ -65,5 +67,9 @@ extension RecentRequestViewController: UITableViewDataSource {
         default:
             return nil
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 30
     }
 }

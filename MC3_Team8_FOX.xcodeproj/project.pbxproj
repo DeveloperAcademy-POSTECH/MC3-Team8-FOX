@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15533CE62886218F0030C5CE /* UserMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 15533CE52886218F0030C5CE /* UserMockData.json */; };
+		15533CE62886218F0030C5CE /* ReceivedAppointment.json in Resources */ = {isa = PBXBuildFile; fileRef = 15533CE52886218F0030C5CE /* ReceivedAppointment.json */; };
 		15533CE9288656200030C5CE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15533CE8288656200030C5CE /* Model.swift */; };
 		1580AD2C288B813700704BCF /* ReceivedRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580AD2B288B813700704BCF /* ReceivedRequestCell.swift */; };
 		15B46AEB2886C09D00AA00F9 /* AppointmentMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */; };
@@ -42,7 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		15533CE52886218F0030C5CE /* UserMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserMockData.json; sourceTree = "<group>"; };
+		15533CE52886218F0030C5CE /* ReceivedAppointment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ReceivedAppointment.json; sourceTree = "<group>"; };
 		15533CE8288656200030C5CE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1580AD2B288B813700704BCF /* ReceivedRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedRequestCell.swift; sourceTree = "<group>"; };
 		15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AppointmentMockData.json; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		15533CE7288621950030C5CE /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				15533CE52886218F0030C5CE /* UserMockData.json */,
+				15533CE52886218F0030C5CE /* ReceivedAppointment.json */,
 				15B46AEA2886C09D00AA00F9 /* AppointmentMockData.json */,
 				15533CE8288656200030C5CE /* Model.swift */,
 				15E7907B28892EA200FAFFDA /* LoadData.swift */,
@@ -278,7 +278,7 @@
 				9889798628800C2D00840198 /* AcceptRequest.storyboard in Resources */,
 				15B46AED288781DD00AA00F9 /* MeetScheduleView.storyboard in Resources */,
 				9889797128800B1200840198 /* LaunchScreen.storyboard in Resources */,
-				15533CE62886218F0030C5CE /* UserMockData.json in Resources */,
+				15533CE62886218F0030C5CE /* ReceivedAppointment.json in Resources */,
 				9889798728800C2D00840198 /* Connecting.storyboard in Resources */,
 				9889798228800C2D00840198 /* RecentRequest.storyboard in Resources */,
 				9889798328800C2D00840198 /* RejectReason.storyboard in Resources */,
