@@ -88,6 +88,7 @@
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="HzO-YG-9NQ">
                                                 <rect key="frame" x="74" y="0.0" width="300" height="50"/>
+                                                <locale key="locale" localeIdentifier="ko_KR"/>
                                             </datePicker>
                                         </subviews>
                                     </stackView>
