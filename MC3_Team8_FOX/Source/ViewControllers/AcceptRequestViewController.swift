@@ -9,6 +9,10 @@ import UIKit
 
 class AcceptRequestViewController: UIViewController {
 
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+    let sending = AcceptRequestTableViewCell()
+
     @IBOutlet weak var meetTitle: UILabel!
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var endTime: UILabel!
@@ -33,6 +37,17 @@ class AcceptRequestViewController: UIViewController {
     
     @IBAction func tapAcceptingBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+        let newRequest: NewRequest = NewRequest (
+        meetTitle: meetTitle.text ?? "",
+        startTime: startTime.text ?? "",
+        endTime: endTime.text ?? "",
+        destination: destination.text ?? "",
+        activity: activity.text ?? "",
+        pickUpLocation: pickUpLocation.text ?? "",
+        sendingNotice: sending.textField?.text ?? ""
+        )
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.acceptRequestArray.append(newRequest)
     }
     
     @IBAction func tapRejectingBtn(_ sender: UIButton) {
