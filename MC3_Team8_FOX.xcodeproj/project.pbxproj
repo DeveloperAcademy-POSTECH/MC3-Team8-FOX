@@ -40,6 +40,7 @@
 		9893C696288BF6D000C74A63 /* CheckBoxDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C693288BF6D000C74A63 /* CheckBoxDelegate.swift */; };
 		9893C697288BF6D000C74A63 /* CheckBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9893C694288BF6D000C74A63 /* CheckBoxView.xib */; };
 		9893C698288BF6D000C74A63 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C695288BF6D000C74A63 /* CheckBoxView.swift */; };
+		98D4F5EB288F764E005417CE /* MeetScheduleViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D4F5EA288F764E005417CE /* MeetScheduleViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		9893C693288BF6D000C74A63 /* CheckBoxDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxDelegate.swift; sourceTree = "<group>"; };
 		9893C694288BF6D000C74A63 /* CheckBoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckBoxView.xib; sourceTree = "<group>"; };
 		9893C695288BF6D000C74A63 /* CheckBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
+		98D4F5EA288F764E005417CE /* MeetScheduleViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetScheduleViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				986E71A52892B267005347EB /* TextFieldOfTableViewCell.swift */,
 
 				15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */,
+				98D4F5EA288F764E005417CE /* MeetScheduleViewController2.swift */,
 				33B4E09C2887973500D02861 /* ScheduleCell.swift */,
 				9893C691288BF6B200C74A63 /* SendingNoticeCell.swift */,
 				1580AD2B288B813700704BCF /* ReceivedRequestCell.swift */,
@@ -303,6 +306,7 @@
 				9889796628800B1100840198 /* AcceptRequestViewController.swift in Sources */,
 				15E7907C28892EA200FAFFDA /* LoadData.swift in Sources */,
 				15DB14A92889957300225388 /* RecentRequestSection.swift in Sources */,
+				98D4F5EB288F764E005417CE /* MeetScheduleViewController2.swift in Sources */,
 				9889796228800B1100840198 /* AppDelegate.swift in Sources */,
 				9893C696288BF6D000C74A63 /* CheckBoxDelegate.swift in Sources */,
 				9893C698288BF6D000C74A63 /* CheckBoxView.swift in Sources */,
@@ -465,7 +469,7 @@
 				INFOPLIST_FILE = MC3_Team8_FOX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = AcceptRequest;
+				INFOPLIST_KEY_UIMainStoryboardFile = MeetScheduleView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -493,7 +497,7 @@
 				INFOPLIST_FILE = MC3_Team8_FOX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = AcceptRequest;
+				INFOPLIST_KEY_UIMainStoryboardFile = MeetScheduleView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
