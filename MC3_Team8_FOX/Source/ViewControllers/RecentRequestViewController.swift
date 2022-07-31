@@ -14,7 +14,11 @@ class RecentRequestViewController: UIViewController {
     let mockData = LoadReceivedData().appointment
     
     @IBOutlet weak var collectionView: UICollectionView!
+
+   // var receiveRequests: [NewRequest] = []
     
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +26,20 @@ class RecentRequestViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.backgroundColor = .systemGray5
         self.view.backgroundColor = UIColor.systemGray5
+        
+        // NotificationCenter.default.addObserver(self, selector: #selector(self.writeRequestModalDone(_:)), name: WriteRequestModalDone, object: nil)
     }
+    /*
+    @objc func writeRequestModalDone(_ noti: Notification) {
+        data = appDelegate.newRequestArray
+        OperationQueue.main.addOperation {
+            self.tableView.reloadData()
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
+    */
 }
 
 extension RecentRequestViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -35,6 +52,9 @@ extension RecentRequestViewController: UICollectionViewDelegate, UICollectionVie
         }
         // 받은요청
         return mockData.count
+        // array 방식으로 받아 올 경우 
+        // receiveRequests = appDelegate.mockRequestArray
+        // return receiveRequests.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -49,6 +69,22 @@ extension RecentRequestViewController: UICollectionViewDelegate, UICollectionVie
         cell.meetTime.text = String(mockData[indexPath.row].startTime.dropFirst(15)) + " - " + String(mockData[indexPath.row].endTime.dropFirst(15))
         cell.meetTheme.text = mockData[indexPath.row].title
         
+        if(indexPath.section == 0) {
+            cell.meetDate.text = receiveRequests[indexPath.row].startTime
+            cell.meetTime.text = receiveRequests[indexPath.row].startTime
+            cell.meetTitle.text = receiveRequests[indexPath.row].meetTitle
+        } else {
+            data = appDelegate.newRequestArray
+
+            if data.isEmpty == false {
+                cell.meetDate.text = data[indexPath.row].startTime
+                print(data[indexPath.row].startTime)
+                cell.meetTime.text = data[indexPath.row].startTime
+                cell.meetTitle.text = data[indexPath.row].meetTitle
+            } else {
+                print("NO DATA")
+            }
+        }
         return cell
     }
     
