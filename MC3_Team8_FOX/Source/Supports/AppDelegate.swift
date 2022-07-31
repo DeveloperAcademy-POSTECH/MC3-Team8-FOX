@@ -11,6 +11,7 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var newRequestArray: [NewRequest] = []
+    var acceptRequestArray: [NewRequest] = []
     var mockRequestArray: [NewRequest] = [
         NewRequest(
             meetTitle: "저녁 식사",
@@ -29,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             pickUpLocation: "포항역"
         )
     ]
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
