@@ -8,17 +8,17 @@
 import UIKit
 
 class MeetScheduleViewController: UIViewController {
-
+    
     @IBOutlet weak var meetScheduleTableView: UIView!
     @IBOutlet weak var recentRequestView: UIView!
 
     @IBOutlet weak var segment: UISegmentedControl!
     var views: [UIView?] = []
     var index = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         views = [meetScheduleTableView, recentRequestView]
 
         segment?.selectedSegmentIndex = index
@@ -30,10 +30,9 @@ class MeetScheduleViewController: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture(gesture:)))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
-        
+
         self.view.bringSubviewToFront(meetScheduleTableView)
     }
-
 
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) {
         if index >= 0 && index < views.count {
@@ -54,7 +53,7 @@ class MeetScheduleViewController: UIViewController {
             }
         }
     }
-    
+
     @IBAction func switchView(_ sender: UISegmentedControl) {
         self.view.bringSubviewToFront(views[sender.selectedSegmentIndex]!)
         index = segment.selectedSegmentIndex
