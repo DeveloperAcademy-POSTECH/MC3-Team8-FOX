@@ -8,9 +8,22 @@
 import UIKit
 
 class CollectionHeader: UICollectionReusableView {
-    @IBOutlet weak var sectionTitle: UILabel!
-
+    @IBOutlet weak var sectionTitleLabel: UILabel!
+    
+    // TODO: init, awakeFromNib, draw, viewDidLoad
+    var text: String = "" {
+        didSet {
+            setSectionTitleLabel()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        sectionTitleLabel.textColor = .systemGray
     }
+    
+    func setSectionTitleLabel() {
+        self.sectionTitleLabel.text = text
+    }
+    
 }

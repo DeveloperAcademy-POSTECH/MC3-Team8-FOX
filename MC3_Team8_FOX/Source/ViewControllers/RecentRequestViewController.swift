@@ -13,9 +13,6 @@ class RecentRequestViewController: UIViewController {
     var data : [NewRequest] = []
     let mockData = LoadReceivedData().appointment
     
-   
-    
-    @IBOutlet weak var collectionHeaderView: CollectionHeader!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -25,24 +22,24 @@ class RecentRequestViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.backgroundColor = .systemGray5
         self.view.backgroundColor = UIColor.systemGray5
-        
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
     }
 }
 
 extension RecentRequestViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // added data 화면 테스트 위해, 잠시 주석처리
-//        if section == 1 {
-//            data = appDelegate.newRequestArray
-//            return data.count
-//        }
+        // 보낸요청
+        if section == 1 {
+            data = appDelegate.newRequestArray
+            return data.count
+        }
+        // 받은요청
         return mockData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
+        
         // boundary area
         cell.backgroundColor = UIColor.white
         cell.layer.cornerRadius = 12
@@ -64,23 +61,25 @@ extension RecentRequestViewController: UICollectionViewDelegate, UICollectionVie
 extension RecentRequestViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
         
-        // headerView check
-        headerView.backgroundColor = .red
+        if kind != UICollectionView.elementKindSectionHeader {
+            return UICollectionReusableView()
+        }
         
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionHeader", for: indexPath) as? CollectionHeader else { return UICollectionReusableView() }
         
-        
-        
-//        if (indexPath.section == 0) {
-//            headerView.sectionTitle.text = "hihi"
-//            headerView.sectionTitle.text = "받은 요청"
-//        }
-//        else {
-//            headerView.sectionTitle.text = "보낸 요청"
-//        }
-        
-        
+        if (indexPath.section == 0) {
+            headerView.text = "받은 요청"
+        }
+        else {
+            headerView.text = "보낸 요청"
+        }
         return headerView
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+           return UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
+        }
+    
+    
 }

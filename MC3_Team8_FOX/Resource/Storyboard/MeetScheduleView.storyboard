@@ -103,13 +103,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R7h-gG-dxu">
                                     <size key="itemSize" width="374" height="100"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReceivedRequestCell" id="hqp-XR-PNr" customClass="ReceivedRequestCell" customModule="MC3_Team8_FOX" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                        <rect key="frame" x="0.0" y="50" width="374" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="y1t-5G-kAO">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
@@ -179,6 +179,27 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionHeader" id="pSK-4S-PX8" customClass="CollectionHeader" customModule="MC3_Team8_FOX" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yn-5l-5uB">
+                                            <rect key="frame" x="23" y="8" width="343" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1Yn-5l-5uB" firstAttribute="leading" secondItem="pSK-4S-PX8" secondAttribute="leadingMargin" constant="15" id="DHI-xV-YDj"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1Yn-5l-5uB" secondAttribute="trailing" id="UuB-rS-37s"/>
+                                        <constraint firstItem="1Yn-5l-5uB" firstAttribute="top" secondItem="pSK-4S-PX8" secondAttribute="topMargin" id="Xg4-UL-gfg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1Yn-5l-5uB" secondAttribute="bottom" id="fnv-oQ-eEr"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="sectionTitleLabel" destination="1Yn-5l-5uB" id="UZA-i7-ofh"/>
+                                    </connections>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="J9J-m2-LwA"/>
