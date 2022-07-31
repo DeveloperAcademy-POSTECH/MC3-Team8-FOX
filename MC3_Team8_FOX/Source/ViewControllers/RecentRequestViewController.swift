@@ -39,7 +39,7 @@ extension RecentRequestViewController: UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
         // boundary area
         cell.backgroundColor = UIColor.white
-        cell.layer.cornerRadius = 15
+        cell.layer.cornerRadius = 12
         
         cell.meetDate.text = String(mockData[indexPath.row].startTime.dropLast(11).dropFirst(6))
         cell.meetDay.text = String(mockData[indexPath.row].startTime.dropFirst(12).dropLast(9)) + "요일"

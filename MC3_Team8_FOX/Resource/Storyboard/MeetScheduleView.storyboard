@@ -102,75 +102,64 @@
                                 <rect key="frame" x="0.0" y="44" width="374" height="567"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R7h-gG-dxu">
-                                    <size key="itemSize" width="374" height="128"/>
+                                    <size key="itemSize" width="374" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReceivedRequestCell" id="hqp-XR-PNr" customClass="ReceivedRequestCell" customModule="MC3_Team8_FOX" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="y1t-5G-kAO">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ui2-aR-hkh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="7.10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpZ-CB-Mbl" userLabel="Meet Date">
-                                                            <rect key="frame" x="12" y="10" width="80" height="60"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="80" id="3u5-OE-QL8"/>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="U18-Im-Cr4"/>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="76" id="W6a-FS-ElW"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="할머니 생신" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMq-Pa-FeX" userLabel="Meet Theme">
-                                                            <rect key="frame" x="112" y="7" width="92" height="35"/>
+                                                            <rect key="frame" x="93" y="12" width="92" height="28"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="35" id="SbL-U0-mFQ"/>
+                                                                <constraint firstAttribute="height" constant="28" id="SbL-U0-mFQ"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월요일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ux-4a-z5l" userLabel="Meet Day">
+                                                            <rect key="frame" x="23" y="48" width="39" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후 1:00 - 오후 9:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uN-ag-iFb" userLabel="Meet Time">
-                                                            <rect key="frame" x="112" y="50" width="216" height="19.5"/>
+                                                            <rect key="frame" x="93" y="48" width="144.5" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" systemColor="systemGrayColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="월요일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ux-4a-z5l" userLabel="Meet Day">
-                                                            <rect key="frame" x="12" y="89" width="80" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpZ-CB-Mbl" userLabel="Meet Date">
+                                                            <rect key="frame" x="20" y="12" width="45" height="28"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="80" id="1Gt-wV-a9Q"/>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="XQc-cK-BEr"/>
+                                                                <constraint firstAttribute="height" constant="28" id="DSG-r7-upr"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="0Ux-4a-z5l" firstAttribute="leading" secondItem="ui2-aR-hkh" secondAttribute="leading" constant="15" id="0hJ-lK-R33"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="4mh-4Z-ceL"/>
-                                                        <constraint firstItem="hpZ-CB-Mbl" firstAttribute="centerY" secondItem="ui2-aR-hkh" secondAttribute="centerY" id="Enc-aX-6tQ"/>
-                                                        <constraint firstItem="0Ux-4a-z5l" firstAttribute="top" secondItem="hpZ-CB-Mbl" secondAttribute="bottom" constant="20" id="LoW-ez-aOg"/>
+                                                        <constraint firstItem="0Ux-4a-z5l" firstAttribute="centerX" secondItem="hpZ-CB-Mbl" secondAttribute="centerX" id="3M2-B4-nku"/>
+                                                        <constraint firstItem="hpZ-CB-Mbl" firstAttribute="top" secondItem="ui2-aR-hkh" secondAttribute="top" constant="12" id="LH0-Sq-byW"/>
+                                                        <constraint firstItem="0Ux-4a-z5l" firstAttribute="top" secondItem="hpZ-CB-Mbl" secondAttribute="bottom" constant="8" id="LoW-ez-aOg"/>
                                                         <constraint firstItem="3uN-ag-iFb" firstAttribute="leading" secondItem="lMq-Pa-FeX" secondAttribute="leading" id="MX2-4A-36J"/>
-                                                        <constraint firstItem="hpZ-CB-Mbl" firstAttribute="leading" secondItem="ui2-aR-hkh" secondAttribute="leading" constant="12" id="X0K-qn-ICo"/>
-                                                        <constraint firstAttribute="trailing" secondItem="3uN-ag-iFb" secondAttribute="trailing" constant="46" id="Xde-fs-JZw"/>
-                                                        <constraint firstItem="lMq-Pa-FeX" firstAttribute="leading" secondItem="hpZ-CB-Mbl" secondAttribute="trailing" constant="20" id="ewa-Nq-V0o"/>
-                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="342" id="hNe-cF-4P5"/>
+                                                        <constraint firstItem="lMq-Pa-FeX" firstAttribute="leading" secondItem="hpZ-CB-Mbl" secondAttribute="trailing" constant="28" id="d7D-KT-nHU"/>
                                                         <constraint firstAttribute="width" constant="342" id="iQS-Ih-9aB"/>
-                                                        <constraint firstAttribute="height" constant="150" id="lCD-uJ-eLI"/>
+                                                        <constraint firstAttribute="height" constant="94" id="lCD-uJ-eLI"/>
                                                         <constraint firstItem="3uN-ag-iFb" firstAttribute="top" secondItem="lMq-Pa-FeX" secondAttribute="bottom" constant="8" symbolic="YES" id="oZ4-wp-8VQ"/>
-                                                        <constraint firstItem="hpZ-CB-Mbl" firstAttribute="top" secondItem="ui2-aR-hkh" secondAttribute="top" constant="10" id="oqg-h9-wN4"/>
-                                                        <constraint firstItem="lMq-Pa-FeX" firstAttribute="top" secondItem="ui2-aR-hkh" secondAttribute="top" constant="7" id="s8i-T9-48u"/>
-                                                        <constraint firstItem="0Ux-4a-z5l" firstAttribute="centerX" secondItem="hpZ-CB-Mbl" secondAttribute="centerX" id="zuo-wK-mft"/>
+                                                        <constraint firstItem="hpZ-CB-Mbl" firstAttribute="leading" secondItem="ui2-aR-hkh" secondAttribute="leading" constant="20" id="prp-6N-dhH"/>
+                                                        <constraint firstItem="lMq-Pa-FeX" firstAttribute="top" secondItem="ui2-aR-hkh" secondAttribute="top" constant="12" id="s8i-T9-48u"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -181,7 +170,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="ui2-aR-hkh" secondAttribute="trailing" id="mJs-5a-mgH"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="374" height="128"/>
+                                        <size key="customSize" width="374" height="100"/>
                                         <connections>
                                             <outlet property="meetDate" destination="hpZ-CB-Mbl" id="tdv-OH-pjQ"/>
                                             <outlet property="meetDay" destination="0Ux-4a-z5l" id="GEQ-ew-s17"/>
@@ -207,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Jq-fD-Tdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1334.7826086956522" y="672.65625"/>
+            <point key="canvasLocation" x="1289.8550724637682" y="670.64732142857144"/>
         </scene>
         <!--Meet Schedule View Controller-->
         <scene sceneID="ezH-k9-FFY">
