@@ -8,9 +8,10 @@
 import UIKit
 
 class ScheduleCell: UITableViewCell {
-    @IBOutlet weak var meetDate: UILabel!
-    @IBOutlet weak var meetTime: UILabel!
-    @IBOutlet weak var meetTitle: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var day: UILabel!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var time: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
