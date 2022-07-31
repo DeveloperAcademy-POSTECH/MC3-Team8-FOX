@@ -8,10 +8,14 @@
 import UIKit
 
 class RecentRequestViewController: UIViewController {
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var data : [NewRequest] = []
     let mockData = LoadReceivedData().appointment
     
+   
+    
+    @IBOutlet weak var collectionHeaderView: CollectionHeader!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -20,18 +24,20 @@ class RecentRequestViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .systemGray5
-        
         self.view.backgroundColor = UIColor.systemGray5
+        
+        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
     }
 }
 
 extension RecentRequestViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 1 {
-            data = appDelegate.newRequestArray
-            return data.count
-        }
+        // added data 화면 테스트 위해, 잠시 주석처리
+//        if section == 1 {
+//            data = appDelegate.newRequestArray
+//            return data.count
+//        }
         return mockData.count
     }
     
@@ -49,5 +55,32 @@ extension RecentRequestViewController: UICollectionViewDelegate, UICollectionVie
         return cell
     }
     
-    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+}
+
+
+extension RecentRequestViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
+        
+        // headerView check
+        headerView.backgroundColor = .red
+        
+        
+        
+        
+//        if (indexPath.section == 0) {
+//            headerView.sectionTitle.text = "hihi"
+//            headerView.sectionTitle.text = "받은 요청"
+//        }
+//        else {
+//            headerView.sectionTitle.text = "보낸 요청"
+//        }
+        
+        
+        return headerView
+    }
 }

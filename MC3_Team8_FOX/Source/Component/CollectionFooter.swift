@@ -8,5 +8,8 @@
 import UIKit
 
 class CollectionFooter: UICollectionReusableView {
-        
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }
