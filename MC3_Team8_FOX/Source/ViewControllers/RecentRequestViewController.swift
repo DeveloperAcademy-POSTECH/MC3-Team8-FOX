@@ -20,6 +20,7 @@ class RecentRequestViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        // backgroundColor
         collectionView.backgroundColor = .systemGray5
         self.view.backgroundColor = UIColor.systemGray5
     }

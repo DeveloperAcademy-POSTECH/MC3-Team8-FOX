@@ -148,6 +148,15 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BS7-Ce-wc6">
+                                                            <rect key="frame" x="329" y="24" width="37" height="31"/>
+                                                            <accessibility key="accessibilityConfiguration">
+                                                                <accessibilityTraits key="traits" none="YES"/>
+                                                            </accessibility>
+                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" title=""/>
+                                                        </button>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="0Ux-4a-z5l" firstAttribute="centerX" secondItem="hpZ-CB-Mbl" secondAttribute="centerX" id="3M2-B4-nku"/>
@@ -158,9 +167,11 @@
                                                         <constraint firstItem="lMq-Pa-FeX" firstAttribute="leading" secondItem="hpZ-CB-Mbl" secondAttribute="trailing" constant="31" id="d7D-KT-nHU"/>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="iQS-Ih-9aB"/>
                                                         <constraint firstAttribute="height" constant="100" id="lCD-uJ-eLI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BS7-Ce-wc6" secondAttribute="trailing" constant="16" id="mp7-Vx-uQ9"/>
                                                         <constraint firstItem="3uN-ag-iFb" firstAttribute="top" secondItem="lMq-Pa-FeX" secondAttribute="bottom" constant="7" id="oZ4-wp-8VQ"/>
                                                         <constraint firstItem="hpZ-CB-Mbl" firstAttribute="leading" secondItem="ui2-aR-hkh" secondAttribute="leading" constant="28" id="prp-6N-dhH"/>
                                                         <constraint firstItem="lMq-Pa-FeX" firstAttribute="top" secondItem="ui2-aR-hkh" secondAttribute="top" constant="23" id="s8i-T9-48u"/>
+                                                        <constraint firstItem="BS7-Ce-wc6" firstAttribute="top" secondItem="ui2-aR-hkh" secondAttribute="top" constant="24" id="sVa-aG-fOj"/>
                                                         <constraint firstAttribute="bottom" secondItem="3uN-ag-iFb" secondAttribute="bottom" constant="19" id="z49-mG-ADy"/>
                                                     </constraints>
                                                 </view>
@@ -302,6 +313,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
