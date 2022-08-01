@@ -34,8 +34,6 @@ class MeetScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        views = [meetScheduleTableView, recentRequestView]
-
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture(gesture:)))
         swipeLeft.direction = .left
         self.view.addGestureRecognizer(swipeLeft)
@@ -45,6 +43,10 @@ class MeetScheduleViewController: UIViewController {
         self.view.addGestureRecognizer(swipeRight)
         
 //        self.view.bringSubviewToFront(meetScheduleTableView)
+        
+//        self.tableView?.delegate = self
+//        self.tableView?.dataSource = self
+        
         
         self.view.backgroundColor = UIColor.systemGray5
 

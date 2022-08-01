@@ -8,26 +8,38 @@
 import UIKit
 
 class RecentRequestViewController: UIViewController {
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
+    var data : [NewRequest] = []
     let mockData = LoadReceivedData().appointment
-    var data: [NewRequest] = []
-    var receiveRequests: [NewRequest] = []
-
-    @IBOutlet weak var tableView: UITableView!
-
+    var receiveRequests: [NewRequest] = []    
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+//    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView?.delegate = self
-        self.tableView?.dataSource = self
-        self.tableView.backgroundColor = UIColor.systemGray5
+
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .systemGray5
         self.view.backgroundColor = UIColor.systemGray5
+        
+        // NotificationCenter.default.addObserver(self, selector: #selector(self.writeRequestModalDone(_:)), name: WriteRequestModalDone, object: nil)
 
-        self.tableView.frame = self.tableView.frame.inset(by: UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0))
+//        self.tableView?.delegate = self
+//        self.tableView?.dataSource = self
+//       self.tableView.backgroundColor = UIColor.systemGray5
+//      self.view.backgroundColor = UIColor.systemGray5
 
-        NotificationCenter.default.addObserver(self, selector: #selector(self.writeRequestModalDone(_:)), name: WriteRequestModalDone, object: nil)
+//        self.tableView.frame = self.tableView.frame.inset(by: UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0))
+
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.writeRequestModalDone(_:)), name: WriteRequestModalDone, object: nil)
+
     }
+    /*
 
     @objc func writeRequestModalDone(_ noti: Notification) {
         data = appDelegate.newRequestArray
@@ -44,16 +56,36 @@ extension RecentRequestViewController: UITableViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
     }
+    */
 }
 
-extension RecentRequestViewController: UITableViewDataSource {
+extension RecentRequestViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // 보낸요청
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         if section == 1 {
             data = appDelegate.newRequestArray
             return data.count
         }
+
+        // 받은요청
         return mockData.count
+        // array 방식으로 받아 올 경우 
+        // receiveRequests = appDelegate.mockRequestArray
+        // return receiveRequests.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
+        
+        // boundary area
+        cell.backgroundColor = UIColor.white
+        cell.layer.cornerRadius = 12
+
+//        return mockData.count
         
 //        switch section {
 //        case 0:
@@ -72,55 +104,74 @@ extension RecentRequestViewController: UITableViewDataSource {
 //        }
 //        receiveRequests = appDelegate.mockRequestArray
 //        return receiveRequests.count
-    }
+//    }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
 
         // boundary area
-        cell.backgroundColor = UIColor.white
-        cell.layer.cornerRadius = 15
+//        cell.backgroundColor = UIColor.white
+//        cell.layer.cornerRadius = 15
+
         
         cell.meetDate.text = String(mockData[indexPath.row].startTime.dropLast(11).dropFirst(6))
         cell.meetDay.text = String(mockData[indexPath.row].startTime.dropFirst(12).dropLast(9)) + "요일"
         cell.meetTime.text = String(mockData[indexPath.row].startTime.dropFirst(15)) + " - " + String(mockData[indexPath.row].endTime.dropFirst(15))
         cell.meetTheme.text = mockData[indexPath.row].title
-
+        
 //        if(indexPath.section == 0) {
-//            cell.meetDate.text = receiveRequests[0].startTime
-//            cell.meetTime.text = receiveRequests[0].startTime
-//            cell.meetTheme.text = receiveRequests[0].meetTitle
+//            cell.meetDate.text = receiveRequests[indexPath.row].startTime
+//            cell.meetTime.text = receiveRequests[indexPath.row].startTime
+//            cell.meetTitle.text = receiveRequests[indexPath.row].meetTitle
 //        } else {
 //            data = appDelegate.newRequestArray
 //
 //            if data.isEmpty == false {
 //                cell.meetDate.text = data[indexPath.row].startTime
+//                print(data[indexPath.row].startTime)
 //                cell.meetTime.text = data[indexPath.row].startTime
-//                cell.meetTheme.text = data[indexPath.row].meetTitle
+//                cell.meetTitle.text = data[indexPath.row].meetTitle
 //            } else {
 //                print("NO DATA")
 //            }
 //        }
         return cell
     }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
+}
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "받은 요청"
-        case 1:
-            return "보낸 요청"
-        default:
-            return nil
+
+extension RecentRequestViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if kind != UICollectionView.elementKindSectionHeader {
+            return UICollectionReusableView()
         }
+        
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionHeader", for: indexPath) as? CollectionHeader else { return UICollectionReusableView() }
+        
+        if (indexPath.section == 0) {
+            headerView.text = "받은 요청"
+        }
+        else {
+            headerView.text = "보낸 요청"
+
+        }
+        return headerView
+    }    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+           return UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
+        }
+
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 30
-    }
-}
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 30
+//    }
+
+//}
     

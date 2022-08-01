@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1507F07028967DA20002835D /* CollectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1507F06F28967DA20002835D /* CollectionFooter.swift */; };
 		15533CE62886218F0030C5CE /* ReceivedAppointment.json in Resources */ = {isa = PBXBuildFile; fileRef = 15533CE52886218F0030C5CE /* ReceivedAppointment.json */; };
 		15533CE9288656200030C5CE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15533CE8288656200030C5CE /* Model.swift */; };
 		1580AD2C288B813700704BCF /* ReceivedRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580AD2B288B813700704BCF /* ReceivedRequestCell.swift */; };
@@ -16,6 +17,7 @@
 		15C4AD7E289218AF000F55FB /* recentRequestArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C4AD7D289218AF000F55FB /* recentRequestArray.swift */; };
 		15DB14A92889957300225388 /* RecentRequestSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DB14A82889957300225388 /* RecentRequestSection.swift */; };
 		15E7907C28892EA200FAFFDA /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7907B28892EA200FAFFDA /* LoadData.swift */; };
+		15EAFBEA28966259004AB085 /* CollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EAFBE928966259004AB085 /* CollectionHeader.swift */; };
 		33B4E09D2887973500D02861 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B4E09C2887973500D02861 /* ScheduleCell.swift */; };
 		33F0F1522896613E000E715D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0F1512896613E000E715D /* UIColor+Extension.swift */; };
 		33F0F154289679AE000E715D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0F153289679AE000E715D /* UIView+Extension.swift */; };
@@ -44,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1507F06F28967DA20002835D /* CollectionFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionFooter.swift; path = MC3_Team8_FOX/Source/Component/CollectionFooter.swift; sourceTree = SOURCE_ROOT; };
 		15533CE52886218F0030C5CE /* ReceivedAppointment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ReceivedAppointment.json; sourceTree = "<group>"; };
 		15533CE8288656200030C5CE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1580AD2B288B813700704BCF /* ReceivedRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedRequestCell.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		15C4AD7D289218AF000F55FB /* recentRequestArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recentRequestArray.swift; sourceTree = "<group>"; };
 		15DB14A82889957300225388 /* RecentRequestSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentRequestSection.swift; sourceTree = "<group>"; };
 		15E7907B28892EA200FAFFDA /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
+		15EAFBE928966259004AB085 /* CollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionHeader.swift; path = MC3_Team8_FOX/Source/Component/CollectionHeader.swift; sourceTree = SOURCE_ROOT; };
 		33B4E09C2887973500D02861 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleCell.swift; path = MC3_Team8_FOX/Source/ViewControllers/ScheduleCell.swift; sourceTree = SOURCE_ROOT; };
 		33F0F1512896613E000E715D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		33F0F153289679AE000E715D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				9889796528800B1100840198 /* AcceptRequestViewController.swift */,
 				98A11F2628958F4F006826C9 /* AcceptRequestTableViewCell.swift */,
 				9889798F28800D3900840198 /* RecentRequestViewController.swift */,
+				15EAFBE928966259004AB085 /* CollectionHeader.swift */,
+				1507F06F28967DA20002835D /* CollectionFooter.swift */,
 				9889798B28800D2600840198 /* CompleteRequestViewController.swift */,
 				9889798D28800D2E00840198 /* ConnectingViewController.swift */,
 				9889799128800D4900840198 /* RejectReasonViewController.swift */,
@@ -309,14 +315,15 @@
 				9889796228800B1100840198 /* AppDelegate.swift in Sources */,
 
 				986E71A62892B267005347EB /* TextFieldOfTableViewCell.swift in Sources */,
-
 				1580AD2C288B813700704BCF /* ReceivedRequestCell.swift in Sources */,
 				9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */,
 				15C4AD7E289218AF000F55FB /* recentRequestArray.swift in Sources */,
 				9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */,
 				9889799028800D3900840198 /* RecentRequestViewController.swift in Sources */,
 				15533CE9288656200030C5CE /* Model.swift in Sources */,
+				15EAFBEA28966259004AB085 /* CollectionHeader.swift in Sources */,
 				15B46AEF288781FC00AA00F9 /* MeetScheduleViewController.swift in Sources */,
+				1507F07028967DA20002835D /* CollectionFooter.swift in Sources */,
 				9889796428800B1100840198 /* SceneDelegate.swift in Sources */,
 				9889796C28800B1100840198 /* MC3_Team8_FOX.xcdatamodeld in Sources */,
 				9893C692288BF6B200C74A63 /* SendingNoticeCell.swift in Sources */,
