@@ -41,7 +41,6 @@ class MeetScheduleViewController: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture(gesture:)))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
-<<<<<<< HEAD
         
         self.meetButtonTouched()
     }
@@ -51,10 +50,7 @@ class MeetScheduleViewController: UIViewController {
         meetButton.font = UIFont.boldSystemFont(ofSize: 17.0)
         requestButton.font = UIFont.systemFont(ofSize: 17.0)
         requestButton.textColor = UIColor(white: 0, alpha: 0.5)
-        
-=======
 
->>>>>>> 7534c179ca772c3492fa297f2636e236fec7333d
         self.view.bringSubviewToFront(meetScheduleTableView)
     }
     
@@ -84,12 +80,9 @@ class MeetScheduleViewController: UIViewController {
             }
         }
     }
-<<<<<<< HEAD
-=======
 
-    @IBAction func switchView(_ sender: UISegmentedControl) {
-        self.view.bringSubviewToFront(views[sender.selectedSegmentIndex]!)
-        index = segment.selectedSegmentIndex
-    }
->>>>>>> 7534c179ca772c3492fa297f2636e236fec7333d
+//    @IBAction func switchView(_ sender: UISegmentedControl) {
+//        self.view.bringSubviewToFront(views[sender.selectedSegmentIndex]!)
+//        index = segment.selectedSegmentIndex
+//    }
 }
