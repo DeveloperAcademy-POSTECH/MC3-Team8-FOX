@@ -9,9 +9,12 @@ import UIKit
 import UIKit
 
  class MeetScheduleTableViewController: UIViewController {
+     
+     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+     var data: [NewRequest] = []
+     var acceptRequests: [NewRequest] = []
 
      @IBOutlet weak var tableView: UITableView!
-     let data = LoadData().appointment
 
      override func viewDidLoad() {
          super.viewDidLoad()
@@ -19,22 +22,30 @@ import UIKit
          self.tableView?.delegate = self
          self.tableView?.dataSource = self
      }
+     override func viewWillAppear(_ animated: Bool) {
+         tableView.reloadData()
+     }
  }
 
- extension MeetScheduleTableViewController: UITableViewDelegate {
- }
-
- extension MeetScheduleTableViewController: UITableViewDataSource {
+ extension MeetScheduleTableViewController: UITableViewDataSource, UITableViewDelegate {
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         data = appDelegate.acceptRequestArray
          return data.count
      }
+     
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
          if let scheduleCell = cell as? ScheduleCell {
+<<<<<<< HEAD
 //             scheduleCell.meetDate.text = String(data[indexPath.row].startTime.dropLast(14).dropFirst(5))
 //             scheduleCell.meetTime.text = String(data[indexPath.row].startTime.dropLast(8).dropFirst(11))
 //             scheduleCell.meetTitle.text = data[indexPath.row].title
+=======
+             scheduleCell.meetDate.text = String(data[indexPath.row].startTime.dropLast(6))
+             scheduleCell.meetTime.text = String(data[indexPath.row].startTime.dropFirst(6))
+             scheduleCell.meetTitle.text = data[indexPath.row].meetTitle
+>>>>>>> 7534c179ca772c3492fa297f2636e236fec7333d
          }
          return cell
      }

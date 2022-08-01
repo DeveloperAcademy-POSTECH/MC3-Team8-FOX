@@ -39,6 +39,7 @@
 		9889799928800E2000840198 /* UIButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889799828800E2000840198 /* UIButtonComponent.swift */; };
 		9893C692288BF6B200C74A63 /* SendingNoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C691288BF6B200C74A63 /* SendingNoticeCell.swift */; };
 		98A11F25289584DB006826C9 /* MeetScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A11F24289584DB006826C9 /* MeetScheduleTableViewController.swift */; };
+		98A11F2728958F4F006826C9 /* AcceptRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A11F2628958F4F006826C9 /* AcceptRequestTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		9889799828800E2000840198 /* UIButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonComponent.swift; sourceTree = "<group>"; };
 		9893C691288BF6B200C74A63 /* SendingNoticeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingNoticeCell.swift; sourceTree = "<group>"; };
 		98A11F24289584DB006826C9 /* MeetScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetScheduleTableViewController.swift; sourceTree = "<group>"; };
+		98A11F2628958F4F006826C9 /* AcceptRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptRequestTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				9889796528800B1100840198 /* AcceptRequestViewController.swift */,
+				98A11F2628958F4F006826C9 /* AcceptRequestTableViewCell.swift */,
 				9889798F28800D3900840198 /* RecentRequestViewController.swift */,
 				9889798B28800D2600840198 /* CompleteRequestViewController.swift */,
 				9889798D28800D2E00840198 /* ConnectingViewController.swift */,
@@ -316,6 +319,7 @@
 				9889798C28800D2600840198 /* CompleteRequestViewController.swift in Sources */,
 				33B4E09D2887973500D02861 /* ScheduleCell.swift in Sources */,
 				9889798E28800D2E00840198 /* ConnectingViewController.swift in Sources */,
+				98A11F2728958F4F006826C9 /* AcceptRequestTableViewCell.swift in Sources */,
 				98A11F25289584DB006826C9 /* MeetScheduleTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

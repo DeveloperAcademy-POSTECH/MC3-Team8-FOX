@@ -8,7 +8,7 @@
 import UIKit
 
 class MeetScheduleViewController: UIViewController {
-
+    
     @IBOutlet weak var meetScheduleTableView: UIView!
     @IBOutlet weak var recentRequestView: UIView!
     @IBOutlet weak var meetButton: UILabel! {
@@ -28,10 +28,10 @@ class MeetScheduleViewController: UIViewController {
     
     var views: [UIView?] = []
     var index = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         views = [meetScheduleTableView, recentRequestView]
 
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture(gesture:)))
@@ -41,6 +41,7 @@ class MeetScheduleViewController: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture(gesture:)))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
+<<<<<<< HEAD
         
         self.meetButtonTouched()
     }
@@ -51,6 +52,9 @@ class MeetScheduleViewController: UIViewController {
         requestButton.font = UIFont.systemFont(ofSize: 17.0)
         requestButton.textColor = UIColor(white: 0, alpha: 0.5)
         
+=======
+
+>>>>>>> 7534c179ca772c3492fa297f2636e236fec7333d
         self.view.bringSubviewToFront(meetScheduleTableView)
     }
     
@@ -62,7 +66,6 @@ class MeetScheduleViewController: UIViewController {
         
         self.view.bringSubviewToFront(recentRequestView)
     }
-
 
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) {
         if index >= 0 && index < views.count {
@@ -81,4 +84,12 @@ class MeetScheduleViewController: UIViewController {
             }
         }
     }
+<<<<<<< HEAD
+=======
+
+    @IBAction func switchView(_ sender: UISegmentedControl) {
+        self.view.bringSubviewToFront(views[sender.selectedSegmentIndex]!)
+        index = segment.selectedSegmentIndex
+    }
+>>>>>>> 7534c179ca772c3492fa297f2636e236fec7333d
 }
