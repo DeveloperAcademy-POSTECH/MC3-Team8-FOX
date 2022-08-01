@@ -17,10 +17,9 @@ class AcceptRequestViewController: UIViewController {
     @IBOutlet weak var activity: UILabel!
     @IBOutlet weak var pickUpLocation: UITextField!
     @IBOutlet weak var sendingNotice: UITableView!
-
     @IBOutlet weak var acceptingBtn: UIButton!
     @IBOutlet weak var rejectingBtn: UIButton!
-
+    
     let data = LoadData().appointment
 
     override func viewDidLoad() {
@@ -28,21 +27,34 @@ class AcceptRequestViewController: UIViewController {
         self.sendingNotice.delegate = self
         self.sendingNotice.dataSource = self
         self.checkBoxView?.delegate = self
-
+        pickUpLocation.addLeftPadding()
+        pickUpLocation.text = "Test"
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.tintColor = .black
     }
-
+    
     @IBAction func tapAcceptingBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
-
+    
     @IBAction func tapRejectingBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}
 
+extension UITextField {
+    func addLeftPadding() {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.frame.height))
+        self.leftView = paddingView
+        self.leftViewMode = ViewMode.always
+    }
 }
 
 extension AcceptRequestViewController: UITableViewDelegate {
-    
 }
 
 extension AcceptRequestViewController: UITableViewDataSource {
@@ -50,12 +62,8 @@ extension AcceptRequestViewController: UITableViewDataSource {
         return data.count
     }
     
-// TODO: 공지사항에 대한 JSON 목데이터 필요.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SendingNoticeCell", for: indexPath)
-        if let sendingNoticeCell = cell as? SendingNoticeCell {
-            sendingNoticeCell.content.text = String(data[indexPath.row].startTime.dropLast(14).dropFirst(5))
-        }
         return cell
     }
     
@@ -73,6 +81,5 @@ extension AcceptRequestViewController: CheckBoxDelegate {
         } else {
             checkBox.checkLabel.isHidden = false
         }
-        
     }
 }
