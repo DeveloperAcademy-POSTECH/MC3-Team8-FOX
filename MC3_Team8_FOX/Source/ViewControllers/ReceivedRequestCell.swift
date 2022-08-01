@@ -9,9 +9,12 @@ import UIKit
 
 class ReceivedRequestCell: UITableViewCell {
 
+ 
     @IBOutlet weak var meetDate: UILabel!
+    @IBOutlet weak var meetDay: UILabel!
+    @IBOutlet weak var meetTheme: UILabel!
     @IBOutlet weak var meetTime: UILabel!
-    @IBOutlet weak var meetTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

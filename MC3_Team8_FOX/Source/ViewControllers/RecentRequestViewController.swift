@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecentRequestViewController: UIViewController, UITableViewDelegate {
+class RecentRequestViewController: UIViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var data: [NewRequest] = []
     var receiveRequests: [NewRequest] = []
@@ -19,6 +19,8 @@ class RecentRequestViewController: UIViewController, UITableViewDelegate {
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
 
+        self.tableView.frame = self.tableView.frame.inset(by: UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0))
+
         NotificationCenter.default.addObserver(self, selector: #selector(self.writeRequestModalDone(_:)), name: WriteRequestModalDone, object: nil)
     }
 
@@ -28,7 +30,12 @@ class RecentRequestViewController: UIViewController, UITableViewDelegate {
             self.tableView.reloadData()
         }
     }
+}
 
+extension RecentRequestViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 84
+    }
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
     }
@@ -37,9 +44,21 @@ class RecentRequestViewController: UIViewController, UITableViewDelegate {
 extension RecentRequestViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        switch section {
+        case 0:
+            // 받은 요청 갯수
+            return 2
+        case 1:
+            // 보낸 요청 갯수
+            return 3
+        default:
+            return 0
+        }
         if section == 1 {
             data = appDelegate.newRequestArray
             return data.count
+            
         }
         receiveRequests = appDelegate.mockRequestArray
         return receiveRequests.count
@@ -48,21 +67,21 @@ extension RecentRequestViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
 
-        if(indexPath.section == 0) {
-            cell.meetDate.text = receiveRequests[indexPath.row].startTime
-            cell.meetTime.text = receiveRequests[indexPath.row].startTime
-            cell.meetTitle.text = receiveRequests[indexPath.row].meetTitle
-        } else {
-            data = appDelegate.newRequestArray
-
-            if data.isEmpty == false {
-                cell.meetDate.text = data[indexPath.row].startTime
-                cell.meetTime.text = data[indexPath.row].startTime
-                cell.meetTitle.text = data[indexPath.row].meetTitle
-            } else {
-                print("NO DATA")
-            }
-        }
+//        if(indexPath.section == 0) {
+//            cell.meetDate.text = receiveRequests[0].startTime
+//            cell.meetTime.text = receiveRequests[0].startTime
+//            cell.meetTheme.text = receiveRequests[0].meetTitle
+//        } else {
+//            data = appDelegate.newRequestArray
+//
+//            if data.isEmpty == false {
+//                cell.meetDate.text = data[indexPath.row].startTime
+//                cell.meetTime.text = data[indexPath.row].startTime
+//                cell.meetTheme.text = data[indexPath.row].meetTitle
+//            } else {
+//                print("NO DATA")
+//            }
+//        }
         return cell
     }
 
@@ -71,14 +90,14 @@ extension RecentRequestViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
+        switch section {
+        case 0:
             return "받은 요청"
-        }
-        else if section == 1 {
+        case 1:
             return "보낸 요청"
-        }
-        else {
-            return ""
+        default:
+            return nil
         }
     }
 }
+    
