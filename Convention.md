@@ -201,4 +201,4 @@ ex) 같은 프로퍼티 사용 말고 enum문을 사용하는건 어떤가요?
 
 (tip: ‘In progress’를 최대한 잘게 쪼개기)
 
-출처: https://github.com/DeveloperAcademy-POSTECH/MC2-Team12-EcoTales
+출처: [세계수 팀 - 에코테일즈](https://github.com/DeveloperAcademy-POSTECH/MC2-Team12-EcoTales) 깃 컨벤션
