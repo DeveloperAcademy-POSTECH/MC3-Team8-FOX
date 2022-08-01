@@ -334,7 +334,7 @@
                                             <outlet property="meetDay" destination="0Ux-4a-z5l" id="E68-jv-DOy"/>
                                             <outlet property="meetTheme" destination="lMq-Pa-FeX" id="yZ5-Uy-DRk"/>
                                             <outlet property="meetTime" destination="3uN-ag-iFb" id="mJs-sB-CRS"/>
-                                            <segue destination="dWR-xp-3j0" kind="show" id="Mld-CF-Pv2"/>
+                                            <segue destination="dWR-xp-3j0" kind="show" id="G0z-SY-AwD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

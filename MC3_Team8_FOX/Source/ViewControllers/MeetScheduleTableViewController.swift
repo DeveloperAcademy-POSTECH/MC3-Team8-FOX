@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import UIKit
 
  class MeetScheduleTableViewController: UIViewController {
      
@@ -29,17 +28,19 @@ import UIKit
 
  extension MeetScheduleTableViewController: UITableViewDataSource, UITableViewDelegate {
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         data = appDelegate.acceptRequestArray
+         data = appDelegate.mockRequestArray
          return data.count
      }
-     
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
          if let scheduleCell = cell as? ScheduleCell {
-//             scheduleCell.meetDate.text = String(data[indexPath.row].startTime.dropLast(6))
-//             scheduleCell.meetTime.text = String(data[indexPath.row].startTime.dropFirst(6))
-//             scheduleCell.meetTitle.text = data[indexPath.row].meetTitle
+             // TODO: 일단, UT를 위한 임시 코드. 수정 반드시 해야함.
+             scheduleCell.date.text = String(data[indexPath.row].startTime.dropLast(9))
+             scheduleCell.day.text = String((data[indexPath.row].startWeekDay ?? "목") + "요일")
+             scheduleCell.title.text = String(data[indexPath.row].meetTitle)
+             scheduleCell.time.text = String(data[indexPath.row].startTime.dropFirst(8)) + " - " +
+             String(data[indexPath.row].endTime.dropFirst(8))
          }
          return cell
      }

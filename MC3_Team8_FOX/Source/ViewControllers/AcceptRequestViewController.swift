@@ -56,11 +56,11 @@ class AcceptRequestViewController: UIViewController {
         sendingNotice: sending.textField?.text ?? ""
         )
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.acceptRequestArray.append(newRequest)
+        appDelegate.mockRequestArray.append(newRequest)
     }
 
     @IBAction func tapRejectingBtn(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popViewController(animated: true)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -84,10 +84,8 @@ extension AcceptRequestViewController: UITableViewDataSource {
         return data.count
     }
 
-// TODO: 공지사항에 대한 JSON 목데이터 필요.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SendingNoticeCell", for: indexPath)
-        
         return cell
     }
 

@@ -15,19 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var mockRequestArray: [NewRequest] = [
         NewRequest(
             meetTitle: "저녁 식사",
-            startTime: "8.11. 16:00",
-            endTime: "8.11. 21:00",
+            startTime: "8.11. 오후 4:00",
+            endTime: "8.11. 오후 9:00",
             destination: "영일대",
             activity: "저녁 식사, 산책",
-            pickUpLocation: "효자 교회 정문"
+            pickUpLocation: "효자 교회 정문",
+            startWeekDay: "목",
+            endWeekDay: "목"
         ),
         NewRequest(
             meetTitle: "여름 휴가",
-            startTime: "8.25. 13:00",
-            endTime: "8.26. 21:00",
+            startTime: "8.25. 오후 1:00",
+            endTime: "8.26. 오후 9:00",
             destination: "",
             activity: "바다 수영",
-            pickUpLocation: "포항역"
+            pickUpLocation: "포항역",
+            startWeekDay: "토",
+            endWeekDay: "금"
         )
     ]
     
