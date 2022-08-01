@@ -13,4 +13,3 @@ class ConnectingViewController: UIViewController {
         super.viewDidLoad()
     }
 }
-
