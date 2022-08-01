@@ -8,16 +8,18 @@
 import UIKit
 
 class ScheduleCell: UITableViewCell {
-    @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var day: UILabel!
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var meetDate: UILabel!
+    @IBOutlet weak var meetTime: UILabel!
+    @IBOutlet weak var meetTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
+//         Configure the view for the selected state
     }
 }

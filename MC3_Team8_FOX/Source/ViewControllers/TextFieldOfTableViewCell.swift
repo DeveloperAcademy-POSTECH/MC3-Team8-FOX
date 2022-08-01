@@ -10,7 +10,6 @@ import UIKit
 class TextFieldOfTableViewCell: UITableViewCell {
 
     @IBOutlet weak var sendingNotice: UITextField!
-
     override func awakeFromNib() {
         super.awakeFromNib()
     }

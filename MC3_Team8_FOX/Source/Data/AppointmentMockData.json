@@ -74,30 +74,13 @@
         "randomCode": "connected",
       },
       "appointmentID": 5,
-      "title": "비정기 만남",
-      "destination": "키즈카페",
+      "title": "나는 만남일정에 나올 수 없다",
+      "destination": "어디로 갈까",
       "startTime": "2022-08-13T13:00:00.000Z",
       "endTime": "2022-08-14T00:00:00.000Z",
-      "activity": "키즈카페, 식사",
-      "pickUpLocation": "효자초등학교 정문",
-      "approval": "waiting",
-      "isUnreading": true,
-      "rejectReason": ""
-    },
-    {
-      "userID": {
-        "userID": 1,
-        "partnerID": 2,
-        "randomCode": "connected",
-      },
-      "appointmentID": 6,
-      "title": "사촌 졸업식",
-      "destination": "효자중학교",
-      "startTime": "2022-08-23T13:00:00.000Z",
-      "endTime": "2022-08-23T21:00:00.000Z",
       "activity": "포항 송도 해수욕장",
       "pickUpLocation": "C5 투썸",
-      "approval": "waiting",
+      "approval": "approved",
       "isUnreading": true,
       "rejectReason": ""
     }
