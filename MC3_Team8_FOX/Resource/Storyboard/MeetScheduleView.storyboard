@@ -50,21 +50,12 @@
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ply-5t-xr0">
-
-<!--                                <rect key="frame" x="16" y="231" width="382" height="611"/>-->
-<!--=======-->
                                 <rect key="frame" x="0.0" y="231" width="390" height="579"/>
-<!-->>>>>>> recentRequestView_collectionView-->
-
                                 <connections>
                                     <segue destination="WsF-t9-0d3" kind="embed" id="Zf8-pt-Zbs"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCm-9u-Uce">
-
-<!--                                <rect key="frame" x="16" y="231" width="382" height="611"/>-->
-<!--=======-->
-<!-->>>>>>> recentRequestView_collectionView-->
                                 <rect key="frame" x="0.0" y="231" width="390" height="579"/>
                                 <connections>
                                     <segue destination="j3e-Tx-ve1" kind="embed" id="FlW-dJ-ekP"/>
@@ -74,29 +65,13 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-
-<!--                            <constraint firstItem="ply-5t-xr0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="B1M-GD-BE4"/>-->
-<!--=======-->
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TCm-9u-Uce" secondAttribute="bottom" id="5Qb-SA-8nv"/>
                             <constraint firstItem="ply-5t-xr0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9W2-ng-RYi"/>
                             <constraint firstItem="TCm-9u-Uce" firstAttribute="top" secondItem="UhQ-C0-zaz" secondAttribute="bottom" constant="20" id="DAi-g8-XfM"/>
-<!-->>>>>>> recentRequestView_collectionView-->
-<!--                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TCm-9u-Uce" secondAttribute="bottom" id="5Qb-SA-8nv"/>-->
-<!--                            <constraint firstItem="ply-5t-xr0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9W2-ng-RYi"/>-->
-<!--                            <constraint firstItem="TCm-9u-Uce" firstAttribute="top" secondItem="UhQ-C0-zaz" secondAttribute="bottom" constant="20" id="DAi-g8-XfM"/>-->
                             <constraint firstItem="cxw-Lf-fT4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="Egx-Fw-4uz"/>
                             <constraint firstItem="ply-5t-xr0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HcL-hg-jwI"/>
                             <constraint firstItem="zZc-5W-hPY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="KP3-BP-GON"/>
                             <constraint firstItem="UhQ-C0-zaz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="PCe-u8-W3Q"/>
-
-<!--                            <constraint firstItem="TCm-9u-Uce" firstAttribute="top" secondItem="UhQ-C0-zaz" secondAttribute="bottom" constant="20" id="T7k-Wy-aOk"/>-->
-<!--                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TCm-9u-Uce" secondAttribute="trailing" constant="16" id="VhV-f3-lsq"/>-->
-<!--                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cxw-Lf-fT4" secondAttribute="trailing" constant="20" id="Yc1-cb-W3t"/>-->
-<!--                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ply-5t-xr0" secondAttribute="trailing" constant="16" id="Z7a-Bx-yYu"/>-->
-<!--                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TCm-9u-Uce" secondAttribute="bottom" constant="20" id="bRj-7N-PFR"/>-->
-<!--                            <constraint firstItem="TCm-9u-Uce" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="gtc-QB-2I1"/>-->
-<!--=======-->
-
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TCm-9u-Uce" secondAttribute="trailing" id="UFg-NH-UQF"/>
                             <constraint firstItem="TCm-9u-Uce" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Upi-zq-wCF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cxw-Lf-fT4" secondAttribute="trailing" constant="20" id="Yc1-cb-W3t"/>
@@ -105,7 +80,6 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ply-5t-xr0" secondAttribute="trailing" id="np6-fs-PH6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ply-5t-xr0" secondAttribute="trailing" id="pGm-0r-ulA"/>
                             <constraint firstItem="ply-5t-xr0" firstAttribute="top" secondItem="UhQ-C0-zaz" secondAttribute="bottom" constant="20" id="r9r-M0-1Vq"/>
-
                             <constraint firstItem="UhQ-C0-zaz" firstAttribute="top" secondItem="zZc-5W-hPY" secondAttribute="bottom" constant="43" id="tU2-pq-YUB"/>
                             <constraint firstItem="zZc-5W-hPY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="zRV-0s-WGm"/>
                         </constraints>
@@ -125,15 +99,11 @@
             <objects>
                 <viewController id="WsF-t9-0d3" customClass="RecentRequestViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="br3-Xz-hzr">
-
-<!--                        <rect key="frame" x="0.0" y="0.0" width="382" height="611"/>-->
-<!--=======-->
-<!-->>>>>>> recentRequestView_collectionView-->
                         <rect key="frame" x="0.0" y="0.0" width="390" height="579"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TBF-oe-uRM">
-                                <rect key="frame" x="0.0" y="44" width="382" height="567"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="535"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R7h-gG-dxu">
                                     <size key="itemSize" width="382" height="100"/>
@@ -143,14 +113,10 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReceivedRequestCell" id="hqp-XR-PNr" customClass="ReceivedRequestCell" customModule="MC3_Team8_FOX" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="382" height="100"/>
+                                        <rect key="frame" x="4" y="50" width="382" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="y1t-5G-kAO">
-<!--<<<<<<< HEAD-->
-<!--                                            <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>-->
-<!--=======-->
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
-
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ui2-aR-hkh">
@@ -172,7 +138,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후 1:00 - 오후 9:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uN-ag-iFb" userLabel="Meet Time">
-                                                            <rect key="frame" x="108" y="55" width="136.5" height="26"/>
+                                                            <rect key="frame" x="107.99999999999999" y="55" width="136.66666666666663" height="26"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" systemColor="systemGrayColor"/>
                                                             <nil key="highlightedColor"/>
@@ -231,18 +197,18 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionHeader" id="pSK-4S-PX8" customClass="CollectionHeader" customModule="MC3_Team8_FOX" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yn-5l-5uB">
-                                            <rect key="frame" x="8" y="8" width="366" height="18"/>
+                                            <rect key="frame" x="26" y="8" width="356" height="18"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="1Yn-5l-5uB" firstAttribute="leading" secondItem="pSK-4S-PX8" secondAttribute="leadingMargin" id="DHI-xV-YDj"/>
+                                        <constraint firstItem="1Yn-5l-5uB" firstAttribute="leading" secondItem="pSK-4S-PX8" secondAttribute="leadingMargin" constant="18" id="DHI-xV-YDj"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="1Yn-5l-5uB" secondAttribute="trailing" id="UuB-rS-37s"/>
                                         <constraint firstItem="1Yn-5l-5uB" firstAttribute="top" secondItem="pSK-4S-PX8" secondAttribute="topMargin" id="Xg4-UL-gfg"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="1Yn-5l-5uB" secondAttribute="bottom" constant="16" id="fnv-oQ-eEr"/>
@@ -260,7 +226,6 @@
                             <constraint firstItem="TBF-oe-uRM" firstAttribute="top" secondItem="J9J-m2-LwA" secondAttribute="top" id="fgh-Fj-pYm"/>
                             <constraint firstItem="TBF-oe-uRM" firstAttribute="leading" secondItem="J9J-m2-LwA" secondAttribute="leading" id="foR-KM-0ky"/>
                             <constraint firstItem="J9J-m2-LwA" firstAttribute="trailing" secondItem="TBF-oe-uRM" secondAttribute="trailing" id="t6w-zT-flV"/>
-
                         </constraints>
                     </view>
                     <connections>
@@ -270,17 +235,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Jq-fD-Tdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1289.8550724637682" y="670.64732142857144"/>
-
         </scene>
         <!--Meet Schedule Table View Controller-->
         <scene sceneID="ezH-k9-FFY">
             <objects>
                 <viewController id="j3e-Tx-ve1" customClass="MeetScheduleTableViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Ac-1I-b1P">
-
-<!--                        <rect key="frame" x="0.0" y="0.0" width="382" height="611"/>-->
-<!--=======-->
-<!-->>>>>>> recentRequestView_collectionView-->
                         <rect key="frame" x="0.0" y="0.0" width="390" height="579"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -289,39 +249,26 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scheduleCell" id="MvD-JJ-6Tb" customClass="ScheduleCell" customModule="MC3_Team8_FOX" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MvD-JJ-6Tb" id="quY-dT-NGA">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc3-AJ-Vdi">
-<!--<<<<<<< HEAD-->
-<!--                                                    <rect key="frame" x="20" y="11" width="32.5" height="21.5"/>-->
-<!--=======-->
-                                                    <rect key="frame" x="20" y="11" width="32.5" height="21"/>
-
+                                                    <rect key="frame" x="19.999999999999996" y="10.999999999999998" width="32.666666666666657" height="21.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdQ-oS-Vav">
-<!--<<<<<<< HEAD-->
-<!--                                                    <rect key="frame" x="112.5" y="11.5" width="32.5" height="21"/>-->
-<!--=======-->
-                                                    <rect key="frame" x="112.5" y="11" width="32.5" height="21"/>
-
-
+                                                    <rect key="frame" x="112.66666666666667" y="11.333333333333336" width="32.333333333333329" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="444-sF-KVC" userLabel="meetTitle">
-<!--<<<<<<< HEAD-->
-<!--                                                    <rect key="frame" x="205" y="12" width="33" height="20"/>-->
-<!--=======-->
-                                                    <rect key="frame" x="205" y="11.5" width="33" height="20"/>
-
+                                                    <rect key="frame" x="205" y="11.666666666666664" width="33" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -375,17 +322,10 @@
         </scene>
     </scenes>
     <resources>
-
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-<!--=======-->
-<!-->>>>>>> recentRequestView_collectionView-->
-
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
