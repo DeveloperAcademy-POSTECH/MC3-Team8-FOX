@@ -65,7 +65,6 @@ public class LoadData {
     }
 }
 
-// loade receivedAppointments
 public class LoadReceivedData {
     @Published var appointment = [Appointments]()
     

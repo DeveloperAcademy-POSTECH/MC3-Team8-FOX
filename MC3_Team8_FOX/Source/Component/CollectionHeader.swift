@@ -9,8 +9,7 @@ import UIKit
 
 class CollectionHeader: UICollectionReusableView {
     @IBOutlet weak var sectionTitleLabel: UILabel!
-    
-    // TODO: init, awakeFromNib, draw, viewDidLoad
+
     var text: String = "" {
         didSet {
             setSectionTitleLabel()
@@ -26,5 +25,4 @@ class CollectionHeader: UICollectionReusableView {
     func setSectionTitleLabel() {
         self.sectionTitleLabel.text = text
     }
-    
 }
