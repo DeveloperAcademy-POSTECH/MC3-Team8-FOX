@@ -11,6 +11,7 @@ class AcceptRequestViewController: UIViewController {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
+    var receivingRequests = RecentRequestViewController().receiveRequests
     let sending = AcceptRequestTableViewCell()
 
     @IBOutlet weak var meetTitle: UILabel!
@@ -22,8 +23,10 @@ class AcceptRequestViewController: UIViewController {
     @IBOutlet weak var sendingNotice: UITableView!
     @IBOutlet weak var acceptingBtn: UIButton!
     @IBOutlet weak var rejectingBtn: UIButton!
-    
+
     let data = LoadData().appointment
+
+    let mockRequest =  AppDelegate().mockRequestArray
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +36,14 @@ class AcceptRequestViewController: UIViewController {
         pickUpLocation.text = "Test"
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.navigationBar.tintColor = .black
+
+        receivingRequests = appDelegate.mockRequestArray
+        meetTitle.text = receivingRequests[0].meetTitle
+        startTime.text = receivingRequests[0].startTime
+        endTime.text = receivingRequests[0].endTime
+        destination.text = receivingRequests[0].destination
     }
-    
+
     @IBAction func tapAcceptingBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
         let newRequest: NewRequest = NewRequest (
@@ -49,11 +58,11 @@ class AcceptRequestViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.acceptRequestArray.append(newRequest)
     }
-    
+
     @IBAction func tapRejectingBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -74,13 +83,14 @@ extension AcceptRequestViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
-    
+
 // TODO: 공지사항에 대한 JSON 목데이터 필요.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SendingNoticeCell", for: indexPath)
+        
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 30
     }

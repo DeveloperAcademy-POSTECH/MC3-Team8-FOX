@@ -37,9 +37,9 @@ import UIKit
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
          if let scheduleCell = cell as? ScheduleCell {
-             scheduleCell.meetDate.text = String(data[indexPath.row].startTime.dropLast(6))
-             scheduleCell.meetTime.text = String(data[indexPath.row].startTime.dropFirst(6))
-             scheduleCell.meetTitle.text = data[indexPath.row].meetTitle
+//             scheduleCell.meetDate.text = String(data[indexPath.row].startTime.dropLast(6))
+//             scheduleCell.meetTime.text = String(data[indexPath.row].startTime.dropFirst(6))
+//             scheduleCell.meetTitle.text = data[indexPath.row].meetTitle
          }
          return cell
      }
