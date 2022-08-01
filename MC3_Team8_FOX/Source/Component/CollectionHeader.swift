@@ -19,7 +19,8 @@ class CollectionHeader: UICollectionReusableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        sectionTitleLabel.textColor = .systemGray
+        sectionTitleLabel.textColor = .black
+        sectionTitleLabel.font = .systemFont(ofSize: 18, weight: .semibold)
     }
     
     func setSectionTitleLabel() {
