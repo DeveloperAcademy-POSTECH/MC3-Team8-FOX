@@ -1,19 +1,15 @@
 //
-//  ReceivedRequestCell.swift
+//  AcceptRequestTableViewCell.swift
 //  MC3_Team8_FOX
 //
-//  Created by yeekim on 2022/07/23.
+//  Created by 지준용 on 2022/07/31.
 //
 
 import UIKit
 
-class ReceivedRequestCell: UITableViewCell {
+class AcceptRequestTableViewCell: UITableViewCell {
 
- 
-    @IBOutlet weak var meetDate: UILabel!
-    @IBOutlet weak var meetDay: UILabel!
-    @IBOutlet weak var meetTheme: UILabel!
-    @IBOutlet weak var meetTime: UILabel!
+    @IBOutlet var textField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
