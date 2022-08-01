@@ -66,7 +66,7 @@
                                     <fragment content="Appoint">
                                         <attributes>
                                             <color key="NSColor" red="0.06275" green="0.18431" blue="0.32940999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="24" name="Montserrat-SemiBold"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
