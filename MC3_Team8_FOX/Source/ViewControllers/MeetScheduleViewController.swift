@@ -34,7 +34,6 @@ class MeetScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // test
 //        LoadRecentRequest()
 
         views = [meetScheduleTableView, recentRequestView]
