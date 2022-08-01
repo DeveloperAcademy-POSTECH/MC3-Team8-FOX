@@ -85,7 +85,7 @@ extension RecentRequestViewController: UICollectionViewDelegate, UICollectionVie
         cell.backgroundColor = UIColor.white
         cell.layer.cornerRadius = 12
 
-        return mockData.count
+//        return mockData.count
         
 //        switch section {
 //        case 0:
@@ -104,7 +104,7 @@ extension RecentRequestViewController: UICollectionViewDelegate, UICollectionVie
 //        }
 //        receiveRequests = appDelegate.mockRequestArray
 //        return receiveRequests.count
-    }
+//    }
 
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
@@ -173,5 +173,5 @@ extension RecentRequestViewController: UICollectionViewDelegateFlowLayout {
 //        return 30
 //    }
 
-}
+//}
     

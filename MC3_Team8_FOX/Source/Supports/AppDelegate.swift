@@ -11,6 +11,7 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var newRequestArray: [NewRequest] = []
+    var acceptRequestArray: [NewRequest] = []
     var mockRequestArray: [NewRequest] = [
         NewRequest(
             meetTitle: "저녁 식사",
