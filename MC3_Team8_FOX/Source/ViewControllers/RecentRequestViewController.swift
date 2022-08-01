@@ -54,15 +54,14 @@ extension RecentRequestViewController: UITableViewDataSource {
             return 3
         default:
             return 0
-            
-            if section == 1 {
-                data = appDelegate.newRequestArray
-                return data.count
-                
-            }
-            receiveRequests = appDelegate.mockRequestArray
-            return receiveRequests.count
         }
+        if section == 1 {
+            data = appDelegate.newRequestArray
+            return data.count
+            
+        }
+        receiveRequests = appDelegate.mockRequestArray
+        return receiveRequests.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
