@@ -9,9 +9,12 @@ import UIKit
 
 class ReceivedRequestCell: UITableViewCell {
 
+ 
     @IBOutlet weak var meetDate: UILabel!
+    @IBOutlet weak var meetDay: UILabel!
+    @IBOutlet weak var meetTheme: UILabel!
     @IBOutlet weak var meetTime: UILabel!
-    @IBOutlet weak var meetTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,6 +24,12 @@ class ReceivedRequestCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0))
     }
 
 }

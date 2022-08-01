@@ -8,10 +8,9 @@
 import UIKit
 
 class SendingNoticeCell: UITableViewCell {
-    
-    @IBOutlet weak var checkBoxView: CheckBoxView!
+
     @IBOutlet weak var content: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }

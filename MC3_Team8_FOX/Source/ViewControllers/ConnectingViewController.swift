@@ -7,22 +7,10 @@
 
 import UIKit
 
-class ConnectingViewController: UIViewController, UITextFieldDelegate {
-    
-    @IBOutlet weak var appNameLabel: UILabel!
-    @IBOutlet weak var inputCodeTextField: UITextField!
-    @IBOutlet weak var inputCodeButton: UIButton!
+class ConnectingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        inputCodeTextField.layer.cornerRadius = 12
-        inputCodeButton.layer.cornerRadius = 12
-        
-        inputCodeTextField.delegate = self
-        inputCodeButton.isUserInteractionEnabled = false
-        inputCodeTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        
     }
     
     @objc func textFieldDidChange(sender: UITextField) {
@@ -35,3 +23,4 @@ class ConnectingViewController: UIViewController, UITextFieldDelegate {
         }
     }
 }
+

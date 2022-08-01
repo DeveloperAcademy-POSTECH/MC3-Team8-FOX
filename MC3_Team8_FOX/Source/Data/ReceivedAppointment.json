@@ -1,0 +1,36 @@
+[
+    {
+      "userID": {
+        "userID": 1,
+        "partnerID": 2,
+        "randomCode": "connected",
+      },
+      "appointmentID": 1,
+      "title": "저녁 식사",
+      "destination": "영일대",
+      "startTime": "2022.08.10 (목) 오후 4:00",
+      "endTime": "2022.08.11 (목) 오후 9:00",
+      "activity": "밥 먹기, 바다 산책",
+      "pickUpLocation": "효자교회",
+      "approval": "approved",
+      "isUnreading": false,
+      "rejectReason": ""
+    },
+    {
+      "userID": {
+        "userID": 1,
+        "partnerID": 2,
+        "randomCode": "connected",
+      },
+      "appointmentID": 2,
+      "title": "생일파티",
+      "destination": "효자동",
+      "startTime": "2022.08.25 (목) 오후 1:00",
+      "endTime": "2022.08.26 (금) 오후 9:00",
+      "activity": "치킨 먹는 날",
+      "pickUpLocation": "효자교회",
+      "approval": "approved",
+      "isUnreading": false,
+      "rejectReason": ""
+    }
+]
