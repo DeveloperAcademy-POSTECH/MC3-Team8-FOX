@@ -38,7 +38,6 @@
 		9889799228800D4900840198 /* RejectReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889799128800D4900840198 /* RejectReasonViewController.swift */; };
 		9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889799328800D5500840198 /* WriteRequestViewController.swift */; };
 		9889799928800E2000840198 /* UIButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889799828800E2000840198 /* UIButtonComponent.swift */; };
-		9893C692288BF6B200C74A63 /* SendingNoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C691288BF6B200C74A63 /* SendingNoticeCell.swift */; };
 		98A11F25289584DB006826C9 /* MeetScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A11F24289584DB006826C9 /* MeetScheduleTableViewController.swift */; };
 		98A11F2728958F4F006826C9 /* AcceptRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A11F2628958F4F006826C9 /* AcceptRequestTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -77,7 +76,6 @@
 		9889799128800D4900840198 /* RejectReasonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectReasonViewController.swift; sourceTree = "<group>"; };
 		9889799328800D5500840198 /* WriteRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteRequestViewController.swift; sourceTree = "<group>"; };
 		9889799828800E2000840198 /* UIButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonComponent.swift; sourceTree = "<group>"; };
-		9893C691288BF6B200C74A63 /* SendingNoticeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingNoticeCell.swift; sourceTree = "<group>"; };
 		98A11F24289584DB006826C9 /* MeetScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetScheduleTableViewController.swift; sourceTree = "<group>"; };
 		98A11F2628958F4F006826C9 /* AcceptRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptRequestTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,18 +185,15 @@
 		9889798928800CBB00840198 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */,
 				9889796528800B1100840198 /* AcceptRequestViewController.swift */,
-				98A11F2628958F4F006826C9 /* AcceptRequestTableViewCell.swift */,
-				9889798F28800D3900840198 /* RecentRequestViewController.swift */,
 				9889798B28800D2600840198 /* CompleteRequestViewController.swift */,
+				9889798F28800D3900840198 /* RecentRequestViewController.swift */,
 				9889798D28800D2E00840198 /* ConnectingViewController.swift */,
 				9889799128800D4900840198 /* RejectReasonViewController.swift */,
 				9889799328800D5500840198 /* WriteRequestViewController.swift */,
-				986E71A52892B267005347EB /* TextFieldOfTableViewCell.swift */,
-				15B46AEE288781FC00AA00F9 /* MeetScheduleViewController.swift */,
 				98A11F24289584DB006826C9 /* MeetScheduleTableViewController.swift */,
 				33B4E09C2887973500D02861 /* ScheduleCell.swift */,
-				9893C691288BF6B200C74A63 /* SendingNoticeCell.swift */,
 				1580AD2B288B813700704BCF /* ReceivedRequestCell.swift */,
 			);
 			path = ViewControllers;
@@ -218,6 +213,8 @@
 		9889799728800E0200840198 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				98A11F2628958F4F006826C9 /* AcceptRequestTableViewCell.swift */,
+				986E71A52892B267005347EB /* TextFieldOfTableViewCell.swift */,
 				9889799828800E2000840198 /* UIButtonComponent.swift */,
 			);
 			path = Component;
@@ -307,9 +304,7 @@
 				15E7907C28892EA200FAFFDA /* LoadData.swift in Sources */,
 				15DB14A92889957300225388 /* RecentRequestSection.swift in Sources */,
 				9889796228800B1100840198 /* AppDelegate.swift in Sources */,
-
 				986E71A62892B267005347EB /* TextFieldOfTableViewCell.swift in Sources */,
-
 				1580AD2C288B813700704BCF /* ReceivedRequestCell.swift in Sources */,
 				9889799428800D5500840198 /* WriteRequestViewController.swift in Sources */,
 				15C4AD7E289218AF000F55FB /* recentRequestArray.swift in Sources */,
@@ -319,7 +314,6 @@
 				15B46AEF288781FC00AA00F9 /* MeetScheduleViewController.swift in Sources */,
 				9889796428800B1100840198 /* SceneDelegate.swift in Sources */,
 				9889796C28800B1100840198 /* MC3_Team8_FOX.xcdatamodeld in Sources */,
-				9893C692288BF6B200C74A63 /* SendingNoticeCell.swift in Sources */,
 				33F0F154289679AE000E715D /* UIView+Extension.swift in Sources */,
 				9889799928800E2000840198 /* UIButtonComponent.swift in Sources */,
 				9889798C28800D2600840198 /* CompleteRequestViewController.swift in Sources */,
