@@ -34,6 +34,4 @@ class ConnectingViewController: UIViewController, UITextFieldDelegate {
             inputCodeButton.isUserInteractionEnabled = true
         }
     }
-    
-    
 }
