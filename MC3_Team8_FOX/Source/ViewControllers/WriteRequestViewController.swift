@@ -73,7 +73,7 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     
     @objc func doneStartTime() {
         let formatter = DateFormatter()
-        formatter.dateFormat = "M.dd.(EEEEE) a h:mm"
+        formatter.dateFormat = "M.d.(EEEEE) a h:mm"
         formatter.locale = Locale(identifier: "ko_KO")
 
         self.startTime.text = formatter.string(from: datePicker.date)
@@ -82,7 +82,7 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
     
     @objc func doneEndTime() {
         let formatter = DateFormatter()
-        formatter.dateFormat = "M.dd.(EEEEE) a h:mm"
+        formatter.dateFormat = "M.d.(EEEEE) a h:mm"
         formatter.locale = Locale(identifier: "ko_KO")
 
         self.endTime.text = formatter.string(from: datePicker.date)
@@ -146,6 +146,7 @@ class WriteRequestViewController: UIViewController, UITextFieldDelegate {
 struct NewRequest {
     var meetTitle, startTime, endTime, destination, activity: String
     var pickUpLocation, sendingNotice: String?
+    var startWeekDay, endWeekDay: String?
 }
 
 extension WriteRequestViewController: UITableViewDataSource, UITableViewDelegate {
