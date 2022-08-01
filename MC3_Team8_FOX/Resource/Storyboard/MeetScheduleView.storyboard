@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TcO-pL-W5E">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
+
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -12,11 +14,13 @@
         <!--Meet Schedule View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="MeetScheduleViewController" id="Y6W-OH-hqX" customClass="MeetScheduleViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MeetSchedule" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MeetScheduleViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
+
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appoint" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZc-5W-hPY">
                                 <rect key="frame" x="18" y="127" width="81.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -35,6 +39,7 @@
                                     <segue destination="zl6-Vi-zTn" kind="presentation" id="CTF-sB-rDQ"/>
                                 </connections>
                             </button>
+
                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ply-5t-xr0">
                                 <rect key="frame" x="16" y="245" width="382" height="617"/>
                                 <userDefinedRuntimeAttributes>
@@ -42,10 +47,12 @@
                                         <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+
                                 <connections>
                                     <segue destination="WsF-t9-0d3" kind="embed" id="Duu-Cd-tdn"/>
                                 </connections>
                             </containerView>
+
                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCm-9u-Uce">
                                 <rect key="frame" x="16" y="245" width="382" height="617"/>
                                 <userDefinedRuntimeAttributes>
@@ -53,6 +60,7 @@
                                         <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+
                                 <connections>
                                     <segue destination="j3e-Tx-ve1" kind="embed" id="FlW-dJ-ekP"/>
                                 </connections>
@@ -84,6 +92,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+
                             <constraint firstItem="ply-5t-xr0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="B1M-GD-BE4"/>
                             <constraint firstItem="cxw-Lf-fT4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="39" id="Egx-Fw-4uz"/>
                             <constraint firstItem="szI-HF-nDS" firstAttribute="top" secondItem="zZc-5W-hPY" secondAttribute="bottom" constant="41" id="GhH-Bn-XaE"/>
@@ -98,6 +107,7 @@
                             <constraint firstItem="TCm-9u-Uce" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="gtc-QB-2I1"/>
                             <constraint firstItem="TCm-9u-Uce" firstAttribute="top" secondItem="szI-HF-nDS" secondAttribute="bottom" constant="27.5" id="snr-13-GXs"/>
                             <constraint firstItem="zZc-5W-hPY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="39" id="zRV-0s-WGm"/>
+
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="66u-Fx-FAU"/>
@@ -247,6 +257,7 @@
             <objects>
                 <viewController id="WsF-t9-0d3" customClass="RecentRequestViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="br3-Xz-hzr">
+
                         <rect key="frame" x="0.0" y="0.0" width="382" height="617"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -258,6 +269,7 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Man-wi-u7u" id="ODn-KM-HtM" customClass="ReceivedRequestCell" customModule="MC3_Team8_FOX" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="43.5"/>
+
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpZ-CB-Mbl">
@@ -297,10 +309,12 @@
                         <viewLayoutGuide key="safeArea" id="J9J-m2-LwA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+
                             <constraint firstItem="5cc-IP-gDj" firstAttribute="leading" secondItem="J9J-m2-LwA" secondAttribute="leading" constant="16" id="4sZ-SN-q1T"/>
                             <constraint firstItem="J9J-m2-LwA" firstAttribute="trailing" secondItem="5cc-IP-gDj" secondAttribute="trailing" constant="16" id="6u1-3Q-djL"/>
                             <constraint firstItem="5cc-IP-gDj" firstAttribute="bottom" secondItem="J9J-m2-LwA" secondAttribute="bottom" id="YHI-E6-rWS"/>
                             <constraint firstItem="5cc-IP-gDj" firstAttribute="top" secondItem="br3-Xz-hzr" secondAttribute="top" id="ezd-na-quK"/>
+
                         </constraints>
                     </view>
                     <connections>
@@ -309,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Jq-fD-Tdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1289.8550724637682" y="704.79910714285711"/>
+            <point key="canvasLocation" x="1289.2307692307693" y="704.14691943127957"/>
         </scene>
         <!--AcceptRequest-->
         <scene sceneID="8RF-jC-WBK">
@@ -321,6 +335,7 @@
             </objects>
             <point key="canvasLocation" x="411" y="763"/>
         </scene>
+
         <!--Meet Schedule Table View Controller-->
         <scene sceneID="ezH-k9-FFY">
             <objects>
@@ -381,6 +396,7 @@
                                                         <constraint firstItem="jT6-a3-bRW" firstAttribute="leading" secondItem="fZB-jA-0tp" secondAttribute="leading" constant="3" id="WqL-12-UXu"/>
                                                     </constraints>
                                                 </stackView>
+
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -409,6 +425,7 @@
                             <constraint firstItem="2XB-47-I8g" firstAttribute="bottom" secondItem="SJf-iT-alt" secondAttribute="bottom" id="g70-8P-SL7"/>
                             <constraint firstItem="2XB-47-I8g" firstAttribute="top" secondItem="8Ac-1I-b1P" secondAttribute="top" id="oZm-xI-pRH"/>
                             <constraint firstItem="2XB-47-I8g" firstAttribute="leading" secondItem="SJf-iT-alt" secondAttribute="leading" constant="16" id="sNn-YQ-M51"/>
+
                         </constraints>
                     </view>
                     <connections>
@@ -429,9 +446,11 @@
         </scene>
     </scenes>
     <resources>
+
         <namedColor name="Navy">
             <color red="0.062745098039215685" green="0.18431372549019609" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

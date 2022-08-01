@@ -11,6 +11,7 @@ class MeetScheduleViewController: UIViewController {
     
     @IBOutlet weak var meetScheduleTableView: UIView!
     @IBOutlet weak var recentRequestView: UIView!
+
     @IBOutlet weak var meetButton: UILabel! {
         didSet {
             let gesture = UITapGestureRecognizer(target: self, action: #selector(meetButtonTouched))
@@ -65,14 +66,17 @@ class MeetScheduleViewController: UIViewController {
 
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) {
         if index >= 0 && index < views.count {
-            if gesture.direction == UISwipeGestureRecognizer.Direction.right {
+            if gesture.direction == .right {
+                segment?.selectedSegmentIndex = 0
+                
                 if index != 0 {
                     index -= 1
                     self.view.bringSubviewToFront(views[index]!)
                 }
             }
 
-            if gesture.direction == UISwipeGestureRecognizer.Direction.left {
+            if gesture.direction == .left {
+                segment?.selectedSegmentIndex = 1
                 if index != views.count - 1 {
                     index += 1
                     self.view.bringSubviewToFront(views[index]!)
@@ -80,9 +84,9 @@ class MeetScheduleViewController: UIViewController {
             }
         }
     }
-
 //    @IBAction func switchView(_ sender: UISegmentedControl) {
 //        self.view.bringSubviewToFront(views[sender.selectedSegmentIndex]!)
 //        index = segment.selectedSegmentIndex
 //    }
 }
+
