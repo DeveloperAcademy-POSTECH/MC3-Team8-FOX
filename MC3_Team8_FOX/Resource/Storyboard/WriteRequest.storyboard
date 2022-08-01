@@ -11,7 +11,7 @@
         <!--Write Request View Controller-->
         <scene sceneID="o6b-Ka-0nQ">
             <objects>
-                <viewController storyboardIdentifier="WriteRequest" modalPresentationStyle="fullScreen" id="Cfz-t7-I7Z" customClass="WriteRequestViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WriteRequest" id="Cfz-t7-I7Z" customClass="WriteRequestViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RVe-LZ-FwR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

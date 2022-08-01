@@ -84,9 +84,10 @@ extension AcceptRequestViewController: UITableViewDataSource {
         return data.count
     }
 
+// TODO: 공지사항에 대한 JSON 목데이터 필요.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SendingNoticeCell", for: indexPath)
-
+        
         return cell
     }
 
