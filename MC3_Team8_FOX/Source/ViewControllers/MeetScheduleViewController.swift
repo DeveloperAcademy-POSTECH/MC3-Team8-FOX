@@ -31,15 +31,8 @@ class MeetScheduleViewController: UIViewController {
     
     let data = LoadData().appointment
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-//        views = [meetScheduleTableView, recentRequestView]
-
-
 
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture(gesture:)))
         swipeLeft.direction = .left
@@ -56,7 +49,6 @@ class MeetScheduleViewController: UIViewController {
         
         
         self.view.backgroundColor = UIColor.systemGray5
-        
 
         self.meetButtonTouched()
     }
