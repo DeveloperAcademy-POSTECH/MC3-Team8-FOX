@@ -30,11 +30,18 @@ class RecentRequestViewController: UIViewController {
         // NotificationCenter.default.addObserver(self, selector: #selector(self.writeRequestModalDone(_:)), name: WriteRequestModalDone, object: nil)
     }
     /*
+
     @objc func writeRequestModalDone(_ noti: Notification) {
         data = appDelegate.newRequestArray
         OperationQueue.main.addOperation {
             self.tableView.reloadData()
         }
+    }
+}
+
+extension RecentRequestViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 84
     }
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
@@ -46,9 +53,11 @@ extension RecentRequestViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // 보낸요청
+
         if section == 1 {
             data = appDelegate.newRequestArray
             return data.count
+            
         }
         // 받은요청
         return mockData.count
@@ -85,7 +94,6 @@ extension RecentRequestViewController: UICollectionViewDelegate, UICollectionVie
 //                print("NO DATA")
 //            }
 //        }
-
         return cell
     }
     
@@ -110,13 +118,12 @@ extension RecentRequestViewController: UICollectionViewDelegateFlowLayout {
         }
         else {
             headerView.text = "보낸 요청"
+
         }
         return headerView
-    }
-    
+    }    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
            return UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
         }
-    
-    
 }
+    
