@@ -1,15 +1,15 @@
 //
-//  SendingNoticeCell.swift
+//  TextFieldOfTableViewCell.swift
 //  MC3_Team8_FOX
 //
-//  Created by 지준용 on 2022/07/22.
+//  Created by 지준용 on 2022/07/28.
 //
 
 import UIKit
 
-class SendingNoticeCell: UITableViewCell {
+class TextFieldOfTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var content: UILabel!
+    @IBOutlet weak var sendingNotice: UITextField!
 
     override func awakeFromNib() {
         super.awakeFromNib()
