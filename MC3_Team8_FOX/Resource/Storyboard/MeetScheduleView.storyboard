@@ -50,21 +50,22 @@
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ply-5t-xr0">
-<!--<<<<<<< HEAD-->
+
 <!--                                <rect key="frame" x="16" y="231" width="382" height="611"/>-->
 <!--=======-->
                                 <rect key="frame" x="0.0" y="231" width="390" height="579"/>
 <!-->>>>>>> recentRequestView_collectionView-->
+
                                 <connections>
                                     <segue destination="WsF-t9-0d3" kind="embed" id="Zf8-pt-Zbs"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCm-9u-Uce">
-<!--<<<<<<< HEAD-->
+
 <!--                                <rect key="frame" x="16" y="231" width="382" height="611"/>-->
 <!--=======-->
-                                <rect key="frame" x="0.0" y="231" width="390" height="579"/>
 <!-->>>>>>> recentRequestView_collectionView-->
+                                <rect key="frame" x="0.0" y="231" width="390" height="579"/>
                                 <connections>
                                     <segue destination="j3e-Tx-ve1" kind="embed" id="FlW-dJ-ekP"/>
                                 </connections>
@@ -73,18 +74,21 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-<!--<<<<<<< HEAD-->
+
 <!--                            <constraint firstItem="ply-5t-xr0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="B1M-GD-BE4"/>-->
 <!--=======-->
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TCm-9u-Uce" secondAttribute="bottom" id="5Qb-SA-8nv"/>
                             <constraint firstItem="ply-5t-xr0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9W2-ng-RYi"/>
                             <constraint firstItem="TCm-9u-Uce" firstAttribute="top" secondItem="UhQ-C0-zaz" secondAttribute="bottom" constant="20" id="DAi-g8-XfM"/>
 <!-->>>>>>> recentRequestView_collectionView-->
+<!--                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TCm-9u-Uce" secondAttribute="bottom" id="5Qb-SA-8nv"/>-->
+<!--                            <constraint firstItem="ply-5t-xr0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9W2-ng-RYi"/>-->
+<!--                            <constraint firstItem="TCm-9u-Uce" firstAttribute="top" secondItem="UhQ-C0-zaz" secondAttribute="bottom" constant="20" id="DAi-g8-XfM"/>-->
                             <constraint firstItem="cxw-Lf-fT4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="Egx-Fw-4uz"/>
                             <constraint firstItem="ply-5t-xr0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HcL-hg-jwI"/>
                             <constraint firstItem="zZc-5W-hPY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="KP3-BP-GON"/>
                             <constraint firstItem="UhQ-C0-zaz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="PCe-u8-W3Q"/>
-<!--<<<<<<< HEAD-->
+
 <!--                            <constraint firstItem="TCm-9u-Uce" firstAttribute="top" secondItem="UhQ-C0-zaz" secondAttribute="bottom" constant="20" id="T7k-Wy-aOk"/>-->
 <!--                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TCm-9u-Uce" secondAttribute="trailing" constant="16" id="VhV-f3-lsq"/>-->
 <!--                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cxw-Lf-fT4" secondAttribute="trailing" constant="20" id="Yc1-cb-W3t"/>-->
@@ -92,6 +96,7 @@
 <!--                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TCm-9u-Uce" secondAttribute="bottom" constant="20" id="bRj-7N-PFR"/>-->
 <!--                            <constraint firstItem="TCm-9u-Uce" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="gtc-QB-2I1"/>-->
 <!--=======-->
+
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TCm-9u-Uce" secondAttribute="trailing" id="UFg-NH-UQF"/>
                             <constraint firstItem="TCm-9u-Uce" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Upi-zq-wCF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cxw-Lf-fT4" secondAttribute="trailing" constant="20" id="Yc1-cb-W3t"/>
@@ -100,7 +105,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ply-5t-xr0" secondAttribute="trailing" id="np6-fs-PH6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ply-5t-xr0" secondAttribute="trailing" id="pGm-0r-ulA"/>
                             <constraint firstItem="ply-5t-xr0" firstAttribute="top" secondItem="UhQ-C0-zaz" secondAttribute="bottom" constant="20" id="r9r-M0-1Vq"/>
-<!-->>>>>>> recentRequestView_collectionView-->
+
                             <constraint firstItem="UhQ-C0-zaz" firstAttribute="top" secondItem="zZc-5W-hPY" secondAttribute="bottom" constant="43" id="tU2-pq-YUB"/>
                             <constraint firstItem="zZc-5W-hPY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="zRV-0s-WGm"/>
                         </constraints>
@@ -120,11 +125,11 @@
             <objects>
                 <viewController id="WsF-t9-0d3" customClass="RecentRequestViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="br3-Xz-hzr">
-<!--<<<<<<< HEAD-->
+
 <!--                        <rect key="frame" x="0.0" y="0.0" width="382" height="611"/>-->
 <!--=======-->
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="579"/>
 <!-->>>>>>> recentRequestView_collectionView-->
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="579"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TBF-oe-uRM">
@@ -146,7 +151,6 @@
 <!--=======-->
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
 
-<!-->>>>>>> recentRequestView_collectionView-->
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ui2-aR-hkh">
@@ -273,11 +277,11 @@
             <objects>
                 <viewController id="j3e-Tx-ve1" customClass="MeetScheduleTableViewController" customModule="MC3_Team8_FOX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Ac-1I-b1P">
-<!--<<<<<<< HEAD-->
+
 <!--                        <rect key="frame" x="0.0" y="0.0" width="382" height="611"/>-->
 <!--=======-->
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="579"/>
 <!-->>>>>>> recentRequestView_collectionView-->
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="579"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2XB-47-I8g">
@@ -297,7 +301,6 @@
 <!--=======-->
                                                     <rect key="frame" x="20" y="11" width="32.5" height="21"/>
 
-<!-->>>>>>> recentRequestView_collectionView-->
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -308,7 +311,7 @@
 <!--=======-->
                                                     <rect key="frame" x="112.5" y="11" width="32.5" height="21"/>
 
-<!-->>>>>>> recentRequestView_collectionView-->
+
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -319,7 +322,6 @@
 <!--=======-->
                                                     <rect key="frame" x="205" y="11.5" width="33" height="20"/>
 
-<!-->>>>>>> recentRequestView_collectionView-->
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -373,7 +375,7 @@
         </scene>
     </scenes>
     <resources>
-<!--<<<<<<< HEAD-->
+
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -383,6 +385,7 @@
         </systemColor>
 <!--=======-->
 <!-->>>>>>> recentRequestView_collectionView-->
+
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

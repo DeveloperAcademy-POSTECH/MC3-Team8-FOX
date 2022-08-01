@@ -69,7 +69,7 @@ extension RecentRequestViewController: UICollectionViewDelegate, UICollectionVie
         cell.meetDay.text = String(mockData[indexPath.row].startTime.dropFirst(12).dropLast(9)) + "요일"
         cell.meetTime.text = String(mockData[indexPath.row].startTime.dropFirst(15)) + " - " + String(mockData[indexPath.row].endTime.dropFirst(15))
         cell.meetTheme.text = mockData[indexPath.row].title
-        
+    
 //        if(indexPath.section == 0) {
 //            cell.meetDate.text = receiveRequests[indexPath.row].startTime
 //            cell.meetTime.text = receiveRequests[indexPath.row].startTime
@@ -86,6 +86,7 @@ extension RecentRequestViewController: UICollectionViewDelegate, UICollectionVie
 //                print("NO DATA")
 //            }
 //        }
+
         return cell
     }
     
