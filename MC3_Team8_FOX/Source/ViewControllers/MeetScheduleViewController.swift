@@ -8,35 +8,87 @@
 import UIKit
 
 class MeetScheduleViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var meetScheduleTableView: UIView!
+    @IBOutlet weak var recentRequestView: UIView!
+    @IBOutlet weak var meetButton: UILabel! {
+        didSet {
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(meetButtonTouched))
+            meetButton.addGestureRecognizer(gesture)
+            meetButton.isUserInteractionEnabled = true
+        }
+    }
+    @IBOutlet weak var requestButton: UILabel! {
+        didSet {
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(requestButtonTouched))
+            requestButton.addGestureRecognizer(gesture)
+            requestButton.isUserInteractionEnabled = true
+        }
+    }
+    
+    var views: [UIView?] = []
+    var index = 0
     
     let data = LoadData().appointment
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-    }
-}
 
-extension MeetScheduleViewController: UITableViewDelegate {
-    
-}
+        views = [meetScheduleTableView, recentRequestView]
 
-extension MeetScheduleViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture(gesture:)))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
+
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture(gesture:)))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+        
+//        self.view.bringSubviewToFront(meetScheduleTableView)
+        
+        self.view.backgroundColor = UIColor.systemGray5
+
+        self.meetButtonTouched()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
-        if let scheduleCell = cell as? ScheduleCell {
-            scheduleCell.leftTime.text = String(data[indexPath.row].startTime.dropLast(14).dropFirst(5))
-            scheduleCell.middleTime.text = String(data[indexPath.row].startTime.dropLast(8).dropFirst(11))
-            scheduleCell.meetTitle.text = data[indexPath.row].title
+    @objc func meetButtonTouched() {
+        meetButton.textColor = UIColor(hex: "102F54")
+        meetButton.font = UIFont.boldSystemFont(ofSize: 17.0)
+        requestButton.font = UIFont.systemFont(ofSize: 17.0)
+        requestButton.textColor = UIColor(white: 0, alpha: 0.5)
+
+        self.view.bringSubviewToFront(meetScheduleTableView)
+    }
+    
+    @objc func requestButtonTouched() {
+        requestButton.textColor = UIColor(hex: "102F54")
+        requestButton.font = UIFont.boldSystemFont(ofSize: 17.0)
+        meetButton.font = UIFont.systemFont(ofSize: 17.0)
+        meetButton.textColor = UIColor(white: 0, alpha: 0.5)
+        
+        self.view.bringSubviewToFront(recentRequestView)
+    }
+
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) {
+        if index >= 0 && index < views.count {
+            if gesture.direction == UISwipeGestureRecognizer.Direction.right {
+                if index != 0 {
+                    index -= 1
+                    self.view.bringSubviewToFront(views[index]!)
+                }
+            }
+
+            if gesture.direction == UISwipeGestureRecognizer.Direction.left {
+                if index != views.count - 1 {
+                    index += 1
+                    self.view.bringSubviewToFront(views[index]!)
+                }
+            }
         }
-        return cell
     }
+
+//    @IBAction func switchView(_ sender: UISegmentedControl) {
+//        self.view.bringSubviewToFront(views[sender.selectedSegmentIndex]!)
+//        index = segment.selectedSegmentIndex
+//    }
 }
-
-

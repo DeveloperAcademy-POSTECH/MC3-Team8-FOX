@@ -11,14 +11,17 @@ import Foundation
 struct Appointments: Codable {
     let userID: UserID
     let appointmentID: Int
-    let title, destination, startTime, endTime: String
-    let activity, pickUpLocation, rejectReason: String?
+    let title, destination, startTime, endTime, activity: String
+    let pickUpLocation, rejectReason: String?
     let isUnreading: Bool
-    enum approval: String {
-        case waiting
-        case rejected
-        case approved
-    }
+    let approval: approvalStatus
+    
+}
+
+enum approvalStatus: String, Codable {
+        case waiting = "waiting"
+        case rejected = "rejected"
+        case approved = "approved"
 }
 
 // MARK: - UserID
