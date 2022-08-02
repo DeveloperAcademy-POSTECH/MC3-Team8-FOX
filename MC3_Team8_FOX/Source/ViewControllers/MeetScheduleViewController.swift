@@ -29,7 +29,7 @@ class MeetScheduleViewController: UIViewController {
     var views: [UIView?] = []
     var index = 0
     
-    let data = LoadData().appointment
+//    let data = LoadData().appointment
     
     override func viewDidLoad() {
         super.viewDidLoad()
