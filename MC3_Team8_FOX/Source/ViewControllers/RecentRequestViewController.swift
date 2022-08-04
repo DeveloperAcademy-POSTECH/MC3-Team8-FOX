@@ -36,7 +36,7 @@ class RecentRequestViewController: UIViewController {
 
 extension RecentRequestViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 124
+        return 106
     }
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
@@ -64,8 +64,7 @@ extension RecentRequestViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReceivedRequestCell", for: indexPath) as! ReceivedRequestCell
 
-        cell.backgroundColor = UIColor.white
-        cell.layer.cornerRadius = 12
+        cell.backgroundColor = .systemGray5
         
         if (indexPath.section == 0) {
             cell.meetDate.text = String(mockData[indexPath.row].startTime.dropLast(11).dropFirst(6))
