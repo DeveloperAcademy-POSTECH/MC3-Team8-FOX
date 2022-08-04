@@ -15,11 +15,12 @@ class ReceivedRequestCell: UITableViewCell {
     @IBOutlet weak var meetTheme: UILabel!
     @IBOutlet weak var meetTime: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -28,7 +29,10 @@ class ReceivedRequestCell: UITableViewCell {
     
     override func layoutSubviews() {
       super.layoutSubviews()
-      contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0))
+      contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0))
+//        contentView.backgroundColor = .brown
+        
+//        contentView.layer.borderColor = .red
     }
 
 }

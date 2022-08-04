@@ -36,7 +36,7 @@ class RecentRequestViewController: UIViewController {
 
 extension RecentRequestViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 94
+        return 124
     }
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
